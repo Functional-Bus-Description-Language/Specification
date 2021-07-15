@@ -1,4 +1,4 @@
-\documentclass[11pt, a4paper]{report}
+\documentclass[twoside, 11pt, a4paper]{report}
 
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
@@ -51,11 +51,32 @@
 %\setlength{\marginparwidth}{15mm}
 
 \setlength{\oddsidemargin}{3cm}
-%\setlength{\evensidemargin}{2.5cm}
+\setlength{\evensidemargin}{3cm}
 
 \setlength{\textwidth}{16.8cm}
 
 \usepackage{url}
+
+\usepackage{fancyhdr}
+ 
+\fancypagestyle{normalpage}{
+	\fancyhead{} % clear all header fields
+	\fancyhead[LE, RO]{\small Functional Bus Description Language}
+	\fancyhead[RE, LO]{\small Specification}
+
+	\fancyfoot{} % clear all footer fields
+	\fancyfoot[LE,RO]{\thepage}
+	\fancyfoot[RE,LO]{\small ver. \VersionNumber}
+	%\fancyfoot[CE,CO]{\small Copyright}
+
+	\renewcommand{\headrulewidth}{0pt}
+	\renewcommand{\footrulewidth}{0pt}
+}
+
+% Redefine the plain page style
+\fancypagestyle{plain}{%
+}
+\pagestyle{normalpage}
 
 % Specification custom commands.
 \newcommand{\VersionNumber}{0.0.0}
