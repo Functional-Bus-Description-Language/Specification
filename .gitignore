@@ -1,0 +1,8 @@
+images/
+src/*.aux
+*.aux
+*.log
+*.lof
+*.lot
+*.toc
+_minted-thesis/
