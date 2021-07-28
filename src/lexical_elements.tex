@@ -35,7 +35,7 @@ func,
 import,
 mask,
 memory,
-namespace,
+package,
 param,
 range,
 true,
@@ -45,7 +45,63 @@ true,
 
 \subsection{Number literals}
 
+\begin{bnf}
+\hs{1}underscore ::= \tbf{\_}
+\end{bnf}
+
+\begin{bnf}
+\hs{1}zero\_digit ::= \tbf{0}
+\end{bnf}
+
+\begin{bnf}
+\hs{1}non\_zero\_decimal\_digit ::= \tbf{1} | \tbf{2} | \tbf{3} | \tbf{4} | \tbf{5} | \tbf{6} | \tbf{7} | \tbf{8} | \tbf{9}
+\end{bnf}
+
+\begin{bnf}
+\hs{1}decimal\_digit ::= zero\_digit | non\_zero\_decimal\_digit
+\end{bnf}
+
+\begin{bnf}
+\hs{1}binary\_base ::= \tbf{0B} | \tbf{0b}
+\end{bnf}
+
+\begin{bnf}
+\hs{1}binary\_digit ::= \tbf{0} | \tbf{1}
+\end{bnf}
+
+\begin{bnf}
+\hs{1}octal\_base ::= \tbf{0O} | \tbf{0o}
+\end{bnf}
+
+\begin{bnf}
+\hs{1}octal\_digit ::= \tbf{0} | \tbf{1} | \tbf{2} | \tbf{3} | \tbf{4} | \tbf{5} | \tbf{6} | \tbf{7}
+\end{bnf}
+
+\begin{bnf}
+\hs{1}hex\_base ::= \tbf{0X} | \tbf{0x}
+\end{bnf}
+
+\begin{bnf}
+\hs{1}hex\_digit ::= \tbf{0} | \tbf{1} | \tbf{2} | \tbf{3} | \tbf{4} | \tbf{5} | \tbf{6} | \tbf{7} | \tbf{8} | \tbf{9} | \tbf{A} | \tbf{a} | \tbf{B} | \tbf{b} | \tbf{C} | \tbf{c} | \tbf{D} | \tbf{d} | \tbf{E} | \tbf{e} | \tbf{F} | \tbf{f}
+\end{bnf}
+
 \subsubsection{Integer literals}
+
+\begin{bnf}
+\hs{1}decimal\_literal ::=  non\_zero\_decimal\_digit \{ [ underscore ] decimal\_digit \}
+\end{bnf}
+
+\begin{bnf}
+\hs{1}binary\_literal ::= binary\_base  binary\_digit \{ [ underscore ] binary\_digit \}
+\end{bnf}
+
+\begin{bnf}
+\hs{1}octal\_literal ::= octal\_base  octal\_digit \{ [ underscore ] octal\_digit \}
+\end{bnf}
+
+\begin{bnf}
+\hs{1}hex\_literal ::= hex\_base  hex\_digit \{ [ underscore ] hex\_digit \}
+\end{bnf}
 
 \subsubsection{Real literals}
 
