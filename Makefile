@@ -11,6 +11,7 @@ SRCS = \
 	src/lexical_elements.ms \
 	src/expressions.ms \
 	src/functionalities/functionalities.ms \
+	src/functionalities/block.ms \
 	src/functionalities/config.ms \
 	src/functionalities/func.ms \
 	src/functionalities/mask.ms \
