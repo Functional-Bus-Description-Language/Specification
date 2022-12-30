@@ -4,3 +4,5 @@
 .de BL
 .IP \(bu 3
 ..
+.\"
+.ds rev 0.0

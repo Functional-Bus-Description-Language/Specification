@@ -11,6 +11,10 @@
 .nr GROWPS 4
 .nr PSINCR 2p
 .\"
+.\" Headers
+.\"
+.EH 'Rev. \*[rev]'%'FBDL Specification'
+.OH 'FBDL Specification'%'Rev. \*[rev]'
 .\" Add document identification meta-data
 .\"
 .pdfinfo /Title     Functional Bus Description Language - Specification
