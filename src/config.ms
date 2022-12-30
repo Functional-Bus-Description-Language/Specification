@@ -13,8 +13,8 @@
 .\"
 .\" Headers
 .\"
-.EH 'Rev. \*[rev]'%'FBDL Specification'
-.OH 'FBDL Specification'%'Rev. \*[rev]'
+.EH '\s9Rev. \*[rev]'%'FBDL Specification'
+.OH '\s9FBDL Specification'%'Rev. \*[rev]'
 .\" Add document identification meta-data
 .\"
 .pdfinfo /Title     Functional Bus Description Language - Specification
