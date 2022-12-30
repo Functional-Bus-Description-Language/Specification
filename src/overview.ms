@@ -14,6 +14,28 @@ This document is intended for the implementers of tools supporting the language 
 The focus is on defining the valid language constructs, their meanings and implications for the hardware and software that is specified or configured, how compliant tools are required to behave, and how to use the language.
 .
 .NH 2
+.XN Motivation
+.LP
+Describing and managing registers can be a tedious and error-prone task.
+The information about registers is utilized by software, hardware and verification engineers.
+Typically a specification of the registers is designed by the hardware designer or system architect.
+During the design and implementation phases it changes multiple times due to different reasons such as bugs, requirement changes, technical limitations, etc.
+A simple change in a single register may imply adjustments in both hardware and software.
+These adjustments cost money and time.
+.LP
+Several formal and informal tools exist to address issues related with registers management.
+However, they all share the same concept of describing registers at very low level.
+That is, the user has to implicitly define the registers layout.
+For example, in case of register containing multiple statuses, its user responsibility to specify the bit position for every status.
+.LP
+The FBDL is different in this terms.
+The user specifies the functionality of the elements that must be placed in the registers.
+The register layout is generated based on the functional requirements of the elements.
+Such an approach allows to generate much more hardware description and software code than classical approach.
+Not only the register masks, addresses, and single read, write functions can be generated, but complete custom functions with optimized access methods.
+This in turn leads to shorter design iterations and fewer bugs.
+.
+.NH 2
 .XN "Word usage"
 .LP
 The terms "must", "must not", "required", "shall", "shall not", "should", "should not", "recommended", "may", and "optional" in this document are to be interpreted as described in the IETF Best Practices Document 14, RFC 2119.1.
@@ -63,4 +85,4 @@ In such cases bold font is used.
 Braces { } enclose a repeated item or items on the right-hand side of a production.
 The items may appear zero or more times.
 .IP g)
-The term \f[I]declared identifier\f[] is used for any occurrence of an identier that already denotes some declared item.
+The term \f[I]declared identifier\f[] is used for any occurrence of an identifier that already denotes some declared item.
