@@ -2,7 +2,7 @@
 .NH 2
 .XN Expressions
 .LP
-An expression is a formula that denes the computation of a value.
+An expression is a formula that defines the computation of a value.
 
 There are 4 types in FBDL: \f[I]bool, integer, real, string\f[].
 Types are implicit and they are not declared.
