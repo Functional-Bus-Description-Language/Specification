@@ -16,7 +16,7 @@ The focus is on defining the valid language constructs, their meanings and impli
 .NH 2
 .XN "Word usage"
 .LP
-The terms "required", "shall", "shall not", "should", "should not", "recommended", "may", and "optional" in this document are to be interpreted as described in the IETF Best Practices Document 14, RFC 2119.1.
+The terms "must", "must not", "required", "shall", "shall not", "should", "should not", "recommended", "may", and "optional" in this document are to be interpreted as described in the IETF Best Practices Document 14, RFC 2119.1.
 .
 .NH 2
 .XN "Syntactic description"
@@ -24,7 +24,7 @@ The terms "required", "shall", "shall not", "should", "should not", "recommended
 The formal syntax of the FBDL is described by means of context-free syntax using a simple variant of the Backus-Naur Form (BNF).
 In particular:
 .IP a)
-Lowercase words in roman font, some containing embedded underscores, are used to denote syntactic categories, for example:
+Lowercase words in \f[CW]constant-width\f[] font, some containing embedded underscores, are used to denote syntactic categories, for example:
 .sp 0.5
     \f[CW]single_import_statement\f[]
 .sp 0.5
@@ -45,9 +45,9 @@ A vertical bar ( | ) separates alternative items on the right-hand side of a pro
 .sp 0.5
     \f[CW]decimal_digit ::= zero_digit | non_zero_decimal_digit\f[]
 .br
-    \f[CW]choices ::= choice { | choice } }\f[]
+    \f[CW]choices ::= choice { | choice }\f[]
 .sp 0.5
-In the rst instance, an occurrence of decimal_digit can be replaced by either zero digit or non zero decimal digit.
+In the first instance, an occurrence of decimal digit can be replaced by either zero digit or non zero decimal digit.
 In the second case, "choices" can be replaced by a list of "choice", separated by vertical bars, see item f) for the meaning of braces.
 .IP e)
 Square brackets [ ] enclose optional items on the right-hand side of a production.
@@ -63,4 +63,4 @@ In such cases bold font is used.
 Braces { } enclose a repeated item or items on the right-hand side of a production.
 The items may appear zero or more times.
 .IP g)
-The term \f[I]declared_identifier\f[] is used for any occurrence of an identier that already denotes some declared item.
+The term \f[I]declared identifier\f[] is used for any occurrence of an identier that already denotes some declared item.
