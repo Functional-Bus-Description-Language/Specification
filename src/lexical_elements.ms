@@ -3,17 +3,17 @@
 .XN "Lexical elements"
 .LP
 FBDL has following types of lexical tokens:
-.IP \[bu]
+.BL
 comment,
-.IP \[bu]
+.BL
 identifier,
-.IP \[bu]
+.BL
 indent,
-.IP \[bu]
+.BL
 keyword,
-.IP \[bu]
+.BL
 literal,
-.IP \[bu]
+.BL
 newline.
 .
 .

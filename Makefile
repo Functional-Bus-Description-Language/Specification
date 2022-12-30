@@ -3,6 +3,7 @@ TITLE = FBDL
 BUILD_DIR = build/
 
 SRCS = \
+	src/defs.ms \
 	src/config.ms \
 	src/participants.ms \
 	src/overview.ms \

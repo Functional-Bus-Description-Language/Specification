@@ -9,9 +9,9 @@
 .XN "Scope rules"
 .LP
 The following elements define a new scope in the FBDL:
-.IP \[bu]
+.BL
 package,
-.IP \[bu]
+.BL
 element definition,
-.IP \[bu]
+.BL
 element anonymous instantiation.
