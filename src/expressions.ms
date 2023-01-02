@@ -3,29 +3,32 @@
 .XN Expressions
 .LP
 An expression is a formula that defines the computation of a value.
-.LP
-There are 4 types in FBDL: \f[I]bool, integer, real, string\f[].
-Types are implicit and they are not declared.
-Each property must have concrete type.
-The type of the value evaluated from an expression must be checked before any assignment or comparison.
-If there is a type mismatch that can be resolved with implicit rules, then it should be resolved.
-In case of type mismatch that cannot be resolved, an error must be reported.
-.LP
-Conversion from integer to real in expressions is implicit.
-Conversion from real to integer must be explicit, and must be done by calling any function returning integer type, for example \f[CW]ceil(), floor()\f[].
-Conversion from integer to bool in expressions is implicit.
-Bool cannot be converted to any type.
 .
 .NH 2
 .XN Operators
 .LP
+.TS
+tab(;) center;
+c s s
+c | c | c .
+FBDL operators
+_
+Operator token;Name;Name
+_
++;foo;bar
+*;foo;bar
+.TE
 .
 .NH 2
 .XN Functions
 .LP
 The FBDL does not allow defining custom functions for value computations.
 However, FBDL has following built-in functions:
-.IP "\f[CB]ceil\f[CW](x float) integer\f[]" 0.2i
+.IP "\f[CB]bool\f[CW](x integer) bool\f[]" 0.2i
+Bool returns a value of the bool type converted from a value x of the integer type.
+If x equals 0, then the \fCfalse\fR is returned.
+In all other cases the \fCtrue\fR is returned.
+.IP "\f[CB]ceil\f[CW](x float) integer\f[]"
 Ceil returns the least integer value greater than or equal to x.
 .IP "\f[CB]floor\f[CW](x float) integer\f[]"
 Floor returns the greatest integer value less than or equal to x.

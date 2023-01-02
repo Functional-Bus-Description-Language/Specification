@@ -9,6 +9,7 @@ SRCS = \
 	src/overview.ms \
 	src/references.ms \
 	src/lexical_elements.ms \
+	src/data_types.ms \
 	src/expressions.ms \
 	src/functionalities/functionalities.ms \
 	src/functionalities/block.ms \
@@ -26,7 +27,7 @@ SRCS = \
 
 # Build targets
 $(TITLE).pdf: $(BUILD_DIR)$(TITLE).ms src/cover.ms | .build-dir
-	@pdfroff -mspdf --stylesheet=src/cover.ms $< > $@
+	@pdfroff -mspdf --stylesheet=src/cover.ms -t $< > $@
 
 $(BUILD_DIR)$(TITLE).ms: $(SRCS) | .build-dir
 	@cat $(SRCS) > $@
