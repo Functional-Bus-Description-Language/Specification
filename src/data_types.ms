@@ -2,7 +2,7 @@
 .NH
 .XN Data types
 .LP
-There are 4 data types in FBDL:
+There are 5 data types in FBDL:
 .BL
 bool,
 .BL
@@ -10,7 +10,9 @@ integer,
 .BL
 real,
 .BL
-string.
+string,
+.BL
+time.
 .LP
 Types are implicit and are not declared.
 The type of the value evaluated from an expression must be checked before any assignment or comparison.
@@ -44,3 +46,23 @@ Implicit conversion of a value of the integer type to a value of the bool type i
 This is becuase values of the bool type are often used to count the number of elements or to arbitrarily enable/disable an element generation.
 However, a value of the integer type appearing in a place where a value of the bool type is required is usually a sign of a mistake.
 To convert a value of the integer type to a value of the bool type the built-in  \f[CB]bool\f[]\fC()\fR function must be called.
+.NH 2
+.XN Time
+.LP
+The value of time type can be created explicitly using time literal.
+.LP
+.br
+\f[CW]time_unit ::= \fBns\fR | \fBus\fR | \fBms\fR | \fBs\fR
+.br
+\f[CW]time_literal ::= integer_literal time_unit
+.LP
+The time type is only used for assigning value to the properties expressed in time.
+Values of time type can be added regardless of their time units.
+Values of the time type can also be multiplied by values of the integer type.
+All of below property assignments are valid.
+.QP
+\fC\f[CB]sleep\f[] = 1 \f[CB]s\f[] + 1 \f[CB]ms\f[] + 1 \f[CB]us\f[] + 1 \f[CB]ns\f[]
+.br
+\fC\f[CB]sleep\f[] = 5 * 60 \f[CB]s\f[] # Sleep for 5 minutes.
+.br
+\fC\f[CB]sleep\f[] = 10 \f[CB]ms\f[] * 4 + 7 * 8 \f[CB]us\f[]
