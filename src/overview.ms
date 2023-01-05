@@ -30,11 +30,22 @@ For example, in case of register containing multiple statuses, its user responsi
 .LP
 The FBDL is different in this terms.
 The user specifies the functionalities that must be served by the registers.
-The register layout is generated based on the functional requirements of the elements.
+The register layout is generated based on the functional requirements.
 Such an approach allows to generate much more hardware description and software code than classical approach.
 Not only the register masks, addresses, and single read, write functions can be generated, but complete custom functions with optimized access methods.
 This in turn leads to shorter design iterations and fewer bugs.
 .
+.NH 2
+.XN Nomenclature
+.LP
+The code generated from the FBDL description can be conceptually divided into two parts.
+The requesting side and the serving side\*[*].
+The requesting side usually refers to the generated software or firmware implemented in typical programming languages such as: Ada, C, C++, Go, Java, Python, Rust etc.
+The serving side usually refers to the generated gateware or hardware implemented in hardware description languages or frameworks such as: VHDL, SystemVerilog, SystemC, Bluespec, PipelineC, MyHDL, Chisel etc.
+However, implementing the serving side for example as a firmware, using C and microcontroller, is practically doable and valid.
+.FS
+The terms requesting part, requesting side and serving part, serving side are used interchangeably within the document.
+.FE
 .NH 2
 .XN "Word usage"
 .LP
