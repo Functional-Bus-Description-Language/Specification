@@ -20,7 +20,7 @@ newline.
 .NH 2
 .XN Comments
 .LP
-There is only a single type of comment, a \f[I]single-line comment\f[].
+There is only a single type of comment, a \fIsingle-line comment\fR.
 A single line comment starts with '#' character and extends up to the end of the line.
 A single-line comment can appear on any line of a FBDL file and may contain any character.
 The presence or absence of comments has no influence on whether a description is legal or illegal.
@@ -36,7 +36,7 @@ Their sole purpose is to enlighten the human reader.
 .LP
 Keywords cannot be used as identifiers.
 
-FBDL has following keywords: \f[B]atomic, bus, const, default, doc, false, func, import, mask, memory, package, param, range, return, static, stream, true\f[].
+FBDL has following keywords: \fBatomic, bus, const, default, doc, false, func, import, mask, memory, package, param, range, return, static, stream, true\fR.
 .
 .
 .NH 2
