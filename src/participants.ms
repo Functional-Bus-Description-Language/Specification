@@ -4,5 +4,5 @@
 .ps
 
 .DS C
-Michał Kruszewski, \f[I]Chair, Technical Editor, mkru@protonmail.com\f[]
+Michal Kruszewski, \f[I]Chair, Technical Editor, mkru@protonmail.com\f[]
 .DE
