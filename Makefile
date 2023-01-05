@@ -14,10 +14,10 @@ SRCS = \
 	src/functionalities/functionalities.ms \
 	src/functionalities/block.ms \
 	src/functionalities/config.ms \
-	src/functionalities/func.ms \
 	src/functionalities/mask.ms \
 	src/functionalities/memory.ms \
 	src/functionalities/param.ms \
+	src/functionalities/proc.ms \
 	src/functionalities/return.ms \
 	src/functionalities/static.ms \
 	src/functionalities/status.ms \

@@ -2,7 +2,9 @@
 .NH
 .XN Data types
 .LP
-There are 5 data types in FBDL:
+There are 6 data types in FBDL:
+.BL
+bit string,
 .BL
 bool,
 .BL
@@ -23,6 +25,8 @@ Conversion from integer to real in expressions is implicit.
 Conversion from real to integer must be explicit, and must be done by calling any function returning integer type, for example \f[CW]ceil(), floor()\f[].
 Conversion from integer to bool in expressions is implicit.
 Bool cannot be converted to any type.
+.NH 2
+.XN Bit string
 .NH 2
 .XN Bool
 .LP
@@ -46,6 +50,12 @@ Implicit conversion of a value of the integer type to a value of the bool type i
 This is becuase values of the bool type are often used to count the number of elements or to arbitrarily enable/disable an element generation.
 However, a value of the integer type appearing in a place where a value of the bool type is required is usually a sign of a mistake.
 To convert a value of the integer type to a value of the bool type the built-in  \f[CB]bool\f[]\fC()\fR function must be called.
+.NH 2
+.XN Integer
+.NH 2
+.XN Real
+.NH 2
+.XN String
 .NH 2
 .XN Time
 .LP
