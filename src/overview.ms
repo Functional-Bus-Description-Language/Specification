@@ -36,16 +36,19 @@ Not only the register masks, addresses, and single read, write functions can be 
 This in turn leads to shorter design iterations and fewer bugs.
 .
 .NH 2
-.XN Nomenclature
+.XN Concept
 .LP
-The code generated from the FBDL description can be conceptually divided into two parts.
-The requesting side and the serving side\*[*].
-The requesting side usually refers to the generated software or firmware implemented in typical programming languages such as: Ada, C, C++, Go, Java, Python, Rust etc.
-The serving side usually refers to the generated gateware or hardware implemented in hardware description languages or frameworks such as: VHDL, SystemVerilog, SystemC, Bluespec, PipelineC, MyHDL, Chisel etc.
-However, implementing the serving side for example as a firmware, using C and microcontroller, is practically doable and valid.
-.FS
-The terms requesting part, requesting side and serving part, serving side are used interchangeably within the document.
-.FE
+The concept behind the FBDL is based on the fact, that if there is a part with the registers that can be accessed, then there is at least one more part accessing these registers.
+The part acessing the registers is called the
+.I requester .
+The part containing the registers is called the
+.I provider
+as it provides functions via particular functionalities.
+.LP
+The code generated from the FBDL description can be conceptually divided into two parts, the requester part and the provider part.
+The requester code usually refers to the generated software or firmware implemented in typical programming languages such as: Ada, C, C++, Go, Java, Python, Rust etc.
+The provider code usually refers to the generated gateware or hardware implemented in hardware description languages or frameworks such as: VHDL, SystemVerilog, SystemC, Bluespec, PipelineC, MyHDL, Chisel etc.
+However, implementing the provider for example as a firmware, using the C language and a microcontroller, is practically doable and valid.
 .NH 2
 .XN "Word usage"
 .LP
