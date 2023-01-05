@@ -1,4 +1,4 @@
-NH 2
+.NH 2
 .XN Return
 .LP
 The return functionality is an inner functionality of the proc and stream functionalities.
