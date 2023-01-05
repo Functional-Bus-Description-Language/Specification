@@ -29,7 +29,7 @@ That is, the user has to implicitly define the registers layout.
 For example, in case of register containing multiple statuses, its user responsibility to specify the bit position for every status.
 .LP
 The FBDL is different in this terms.
-The user specifies the functionality of the elements that must be placed in the registers.
+The user specifies the functionalities that must be served by the registers.
 The register layout is generated based on the functional requirements of the elements.
 Such an approach allows to generate much more hardware description and software code than classical approach.
 Not only the register masks, addresses, and single read, write functions can be generated, but complete custom functions with optimized access methods.
@@ -54,7 +54,7 @@ Whenever the name of a syntactic category is used, apart from the syntax rules t
 .IP b)
 Boldface words are used to denote keywords, for example:
 .sp 0.5
-    \f[B]mask\f[]
+    \fBmask\fR
 .sp 0.5
 Keywords shall be used only in those places indicated by the syntax.
 .IP c)
@@ -85,4 +85,4 @@ In such cases bold font is used.
 Braces { } enclose a repeated item or items on the right-hand side of a production.
 The items may appear zero or more times.
 .IP g)
-The term \f[I]declared identifier\f[] is used for any occurrence of an identifier that already denotes some declared item.
+The term \fIdeclared identifier\fR is used for any occurrence of an identifier that already denotes some declared item.
