@@ -29,7 +29,7 @@ That is, the user has to implicitly define the registers layout.
 For example, in case of register containing multiple statuses, its user responsibility to specify the bit position for every status.
 .LP
 The FBDL is different in this terms.
-The user specifies the functionalities that must be served by the registers.
+The user specifies the functionalities that must be provided by the registers.
 The register layout is generated based on the functional requirements.
 Such an approach allows to generate much more hardware description and software code than classical approach.
 Not only the register masks, addresses, and single read, write functions can be generated, but complete custom functions with optimized access methods.
