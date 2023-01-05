@@ -12,6 +12,6 @@ The following elements define a new scope in the FBDL:
 .BL
 package,
 .BL
-element definition,
+functionality definition,
 .BL
-element anonymous instantiation.
+functionality anonymous instantiation.
