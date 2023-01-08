@@ -54,6 +54,21 @@ Main \f[CB]bus\fC
 	cfg1 \f[CB]config\fC # Valid
 .br
 	1cfg \f[CB]config\fC # Invalid
+.LP
+.NH 3
+.XN Declared identifier
+.LP
+Declared identifier is used for any occurrence of an identifier that already denotes some declared item.
+.LP
+\fCdeclared_identifier ::= letter { underscore | letter_or_digit }\fR
+.NH 3
+.XN Qualified identifier
+.LP
+The qualified identifier is used to reference a symbol from foreign package.
+.LP
+\fCqualified_identifier ::= declared_identifier\f[CB].\fCdeclared_identifier
+.LP
+The first declared identifier denotes the package, and the second one denotes the symbol from this package.
 .
 .NH 2
 .XN Indent

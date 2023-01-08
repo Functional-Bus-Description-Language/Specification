@@ -13,6 +13,7 @@ SRCS = \
 	src/expressions.ms \
 	src/functionalities/functionalities.ms \
 	src/functionalities/block.ms \
+	src/functionalities/bus.ms \
 	src/functionalities/config.ms \
 	src/functionalities/mask.ms \
 	src/functionalities/memory.ms \
