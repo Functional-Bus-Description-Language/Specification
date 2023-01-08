@@ -24,7 +24,9 @@ _
 .LP
 The FBDL does not allow defining custom functions for value computations.
 However, FBDL has following built-in functions:
-.IP "\f[CB]bool\f[CW](x integer) bool\f[]" 0.2i
+.IP "\f[CB]abs\f[CW](x integer|real) integer|real\f[]" 0.2i
+Abs returns the absolute value of x.
+.IP "\f[CB]bool\f[CW](x integer) bool\f[]"
 Bool returns a value of the bool type converted from a value x of the integer type.
 If x equals 0, then the \fCfalse\fR is returned.
 In all other cases the \fCtrue\fR is returned.
