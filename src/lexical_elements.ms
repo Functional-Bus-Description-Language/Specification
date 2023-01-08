@@ -95,3 +95,28 @@ Real numbers expressed with a decimal point shall have at least one digit on eac
 .XN "Bit string literals"
 .LP
 We will see if there is a need for for bit string literal.
+.
+.NH 2
+.XN Indent
+.LP
+The indentation has semantics meaning in the FBDL.
+There is only single indent character, the horizontal tab (U+0009).
+.LP
+\fCindent ::= \\t\fR
+.LP
+Not only the indent alignment is important, but also its level.
+In the following code the first type definition is correct, as the indent level for the definition body is increased by one.
+The second type definition is incorrect, even though the indent within the definition body is aligned, as the indent level is increased by two.
+.QP
+\f[CB]type\fC cfg1_t \f[CB]config\fC
+.br
+	\f[CB]atomic\fC = \f[CB]false\fC
+.br
+.br
+	\f[CB]width\fC = 8
+.br
+\f[CB]type\fC cfg2_t \f[CB]config\fC
+.br
+		\f[CB]atomic\fC = \f[CB]false\fC
+.br
+		\f[CB]width\fC = 8
