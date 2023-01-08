@@ -29,6 +29,31 @@ Their sole purpose is to enlighten the human reader.
 .
 .NH 2
 .XN Identifiers
+.LP
+Identifiers are used as names.
+An identifier shall start with a letter.
+.LP
+\fCuppercase_letter ::= \f[CB]A\fC | \f[CB]B\fC | \f[CB]C\fC | \f[CB]D\fC | \f[CB]E\fC | \f[CB]F\fC | \f[CB]G\fC | \f[CB]H\fC | \f[CB]I\fC | \f[CB]J\fC | \f[CB]K\fC | \f[CB]L\fC | \f[CB]M\fC | \f[CB]N\fC | \f[CB]O\fC | \f[CB]P\fC | \f[CB]R\fC | \f[CB]S\fC | \f[CB]T\fC | \f[CB]U\fC | \f[CB]V\fC | \f[CB]W\fC | \f[CB]X\fC | \f[CB]Y\fC | \f[CB]Z\fR
+.LP
+\fClowercase_letter ::= \f[CB]a\fC | \f[CB]b\fC | \f[CB]c\fC | \f[CB]d\fC | \f[CB]e\fC | \f[CB]f\fC | \f[CB]g\fC | \f[CB]h\fC | \f[CB]i\fC | \f[CB]j\fC | \f[CB]k\fC | \f[CB]l\fC | \f[CB]m\fC | \f[CB]n\fC | \f[CB]o\fC | \f[CB]p\fC | \f[CB]r\fC | \f[CB]s\fC | \f[CB]t\fC | \f[CB]u\fC | \f[CB]v\fC | \f[CB]w\fC | \f[CB]x\fC | \f[CB]y\fC | \f[CB]z\fR
+.LP
+\fCletter ::= uppercase_letter | lowercase_letter\fR
+.LP
+\fCletter_or_digit ::= letter | decimal_digit\fR
+.LP
+\fCidentifier ::= letter { underscore | letter_or_digit }\fR
+.LP
+Following code contains some valid and invalid identifiers.
+.QP
+\f[CB]const\fC C_20 = 20 # Valid
+.br
+\f[CB]const\fC _C20 = 20 # Invalid
+.br
+Main \f[CB]bus\fC
+.br
+	cfg1 \f[CB]config\fC # Valid
+.br
+	1cfg \f[CB]config\fC # Invalid
 .
 .NH 2
 .XN Indent
