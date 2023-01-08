@@ -13,5 +13,10 @@ If atomic is true, then the provider must guarantee that any change of the confi
 This is especially important when the config spans more than single register, as in case of single register write the change is always atomic.
 .IP "\f[CB]default\f[CW] bit string | integer (undefined)\f[]"
 The default property defines the initial value of the config.
+.IP "\f[CB]once\f[CW] bool (\f[CB]false\fC)\f[]"
+The once property determines whether the config can be written only once.
 .IP "\f[CB]width\f[CW] integer (bus width)\f[]"
 The width property defines the bit width of the config.
+.
+.LP
+The code generated for the requester must provide methods for writing and reading the config.

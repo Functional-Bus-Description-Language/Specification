@@ -55,5 +55,5 @@ line <-> from M2.n to C2.s
 line <-> from R2.n to M2.s
 .PE
 .LP
-The requester number 1 can acces both config \fCC\fR and status \fCS\fR
+The requester number 1 can acces both config \fCC\fR and status \fCS\fR.
 However, the requester number 2 can access only the status \fCS\fR.
