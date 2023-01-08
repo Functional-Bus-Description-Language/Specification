@@ -4,7 +4,7 @@
 The config functionality represents a configuration data.
 A configuration data is a data that is automatically read by the provider from its registers.
 As the config is automatically read by the provider, there is no need for additional signal, associated with the config, indicating config write by the requester.
-By default, a config can be written and read by a requester.
+By default, a config can be written and read by the requester.
 .LP
 The config functionality has following properties:
 .IP "\f[CB]atomic\f[CW] bool (\f[CB]true\fC)\f[]" 0.2i

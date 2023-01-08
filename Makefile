@@ -27,7 +27,7 @@ SRCS = \
 
 # Build targets
 $(TITLE).pdf: $(BUILD_DIR)$(TITLE).ms src/cover.ms | .build-dir
-	@pdfroff -mspdf --stylesheet=src/cover.ms -t $< > $@
+	@pdfroff -mspdf --stylesheet=src/cover.ms -p -t $< > $@
 
 $(BUILD_DIR)$(TITLE).ms: $(SRCS) | .build-dir
 	@cat $(SRCS) > $@
