@@ -29,6 +29,8 @@ status,
 .IP 11)
 stream.
 .
+.NH 2
+.XN Properties
 .LP
 Each functionality has associated properties.
 Properties allow configuration of functionalities.
@@ -38,21 +40,35 @@ If the default value is \fCbus width\fR, then it means that the default value eq
 If the default value is \fCundefined\fR, then ...
 If the target language for the provider code does not have a concept of undefined value, then values such as 0, \fCNull\fR, \fCNone\fR, \fCnil\fR etc. shall be used.
 .LP
+\fCproperty_assignment ::= declared_identifier \f[CB]=\fC expression
+.LP
+\fCproperty_assignments ::=
+.br
+	property_assignment
+.br
+	{ \f[CB];\fC property_assignment }
+.br
+	newline
+.LP
+\fCsemicolon_and_property_assignments ::= \f[CB];\fC property_assignments
+.
+.NH 2
+.XN Instantiation
+.LP
+.LP
 A functionality can be instantiated in a single line or in multiple lines.
 .LP
 \fCsingle_line_instantiation ::=
 .br
 	identifier
 .br
-	[array_marker]
+	[ array_marker ]
 .br
 	declared_identifier | qualified_identifier
 .br
-	[argument_list]
+	[ argument_list ]
 .br
-	[\f[CB];\fC multi_property_assignment]
-.br
-	newline\fR
+	newline | semicolon_and_property_assignments\fR
 .LP
 Following code shows examples of single line instantiations:
 .QP

@@ -62,13 +62,13 @@ In particular:
 .IP a)
 Lowercase words in \f[CW]constant-width\f[] font, some containing embedded underscores, are used to denote syntactic categories, for example:
 .sp 0.5
-    \f[CW]single_import_statement\f[]
+	\f[CW]single_import_statement\f[]
 .sp 0.5
 Whenever the name of a syntactic category is used, apart from the syntax rules themselves, underscores are replaced with spaces thus, "single import statement" would appear in the narrative description when referring to the syntactic category.
 .IP b)
 Boldface words are used to denote keywords, for example:
 .sp 0.5
-    \fBmask\fR
+	\fBmask\fR
 .sp 0.5
 Keywords shall be used only in those places indicated by the syntax.
 .IP c)
@@ -79,9 +79,9 @@ Any occurrence of the left-hand side may be replaced by an instance of the right
 .IP d)
 A vertical bar ( | ) separates alternative items on the right-hand side of a production unless it occurs immediately after an opening brace, in which case it stands for itself, for example:
 .sp 0.5
-    \f[CW]decimal_digit ::= zero_digit | non_zero_decimal_digit\f[]
+	\f[CW]decimal_digit ::= zero_digit | non_zero_decimal_digit\f[]
 .br
-    \f[CW]choices ::= choice { | choice }\f[]
+	\f[CW]choices ::= choice { | choice }\f[]
 .sp 0.5
 In the first instance, an occurrence of decimal digit can be replaced by either zero digit or non zero decimal digit.
 In the second case, "choices" can be replaced by a list of "choice", separated by vertical bars, see item f) for the meaning of braces.
@@ -89,9 +89,9 @@ In the second case, "choices" can be replaced by a list of "choice", separated b
 Square brackets [ ] enclose optional items on the right-hand side of a production.
 For example, the following two productions are equivalent:
 .sp 0.5
-    \f[CW]parameters_list ::= ([parameters])\f[]
+	\fCparameters_list ::= \f[CB](\fC [ parameters ] \f[CB])\fC
 .br
-    \f[CW]parameters_list ::= () | (parameters)\f[]
+	\fCparameters_list ::= \f[CB]()\fC | \f[CB](\fC parameters \f[CB])\fR
 .sp 0.5
 Note, however, sometimes square brackets in the right-hand side of the production are part of the syntax.
 In such cases bold font is used.
