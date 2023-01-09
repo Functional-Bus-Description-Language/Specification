@@ -14,7 +14,7 @@ package,
 .BL
 type definition,
 .BL
-functionality anonymous instantiation.
+functionality instantiation.
 .LP
 Following example presents all scopes.
 .QP
@@ -44,7 +44,7 @@ Main \f[CB]bus\fC
 .br
 		Cfg30 cfg_t(C30)
 .LP
-The \fCWIDTH\fR constant has package scope, and it is visible at the package level, in the \fCMain\fR bus anonymous instantiaiton and in the \fCBlk\fR block anonymous instantiaiton.
+The \fCWIDTH\fR constant has package scope, and it is visible at the package level, in the \fCMain\fR bus instantiaiton and in the \fCBlk\fR block instantiaiton.
 It would also be visible in the \fCcfg_t\fR type definition.
 However, the \fCcfg_t\fR type has the parameter with the same name \fCWIDTH\fR.
 As a result, only the \fCWIDTH\fR parameter is visible within the type definition.
