@@ -11,6 +11,7 @@ SRCS = \
 	src/lexical_elements.ms \
 	src/data_types.ms \
 	src/expressions.ms \
+	src/const.ms \
 	src/functionalities/functionalities.ms \
 	src/functionalities/block.ms \
 	src/functionalities/bus.ms \

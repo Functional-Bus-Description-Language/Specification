@@ -58,6 +58,8 @@ If the target language for the provider code does not have a concept of undefine
 .LP
 A functionality can be instantiated in a single line or in multiple lines.
 .LP
+\fCinstantiation ::= single_line_instantiation | multi_line_instantiation
+.LP
 \fCsingle_line_instantiation ::=
 .br
 	identifier
