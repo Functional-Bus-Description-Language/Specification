@@ -1,3 +1,0 @@
-.bp
-.NH
-.XN Constants

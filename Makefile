@@ -11,7 +11,6 @@ SRCS = \
 	src/lexical_elements.ms \
 	src/data_types.ms \
 	src/expressions.ms \
-	src/const.ms \
 	src/functionalities/functionalities.ms \
 	src/functionalities/block.ms \
 	src/functionalities/bus.ms \
@@ -24,6 +23,7 @@ SRCS = \
 	src/functionalities/static.ms \
 	src/functionalities/status.ms \
 	src/functionalities/stream.ms \
+	src/parametrization.ms \
 	src/scope_and_visibility.ms \
 	src/toc.ms
 
