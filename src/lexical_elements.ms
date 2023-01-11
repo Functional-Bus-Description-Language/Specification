@@ -64,7 +64,7 @@ Declared identifier is used for any occurrence of an identifier that already den
 .NH 3
 .XN Qualified identifier
 .LP
-The qualified identifier is used to reference a symbol from foreign package.
+The qualified identifier is used to reference a symbol from foreign .
 .LP
 \fCqualified_identifier ::= declared_identifier\f[CB].\fCdeclared_identifier
 .LP
@@ -119,7 +119,7 @@ The second type definition is incorrect, even though the indent within the defin
 .LP
 Keywords cannot be used as identifiers.
 
-FBDL has following keywords: \fBatomic, bus, const, default, doc, false, func, import, mask, memory, package, param, range, return, static, stream, true\fR.
+FBDL has following keywords: \fBatomic, block, bus, const, default, doc, false, import, mask, memory, param, proc, range, return, static, stream, true\fR.
 .
 .
 .NH 2
