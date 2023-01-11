@@ -4,6 +4,45 @@
 .
 .NH 2
 .XN "Import and package system"
+.LP
+The FBDL has a concept of packages and allows importing packages into the file scope using import statements.
+A package can be imported in a single line using single line import statement or as a part of the multi import statement.
+.LP
+\fCsingle_import_statement ::= \f[CB]import\fC [ identifier ] string_literal
+.LP
+Examples of single import statement:
+.QP
+\f[CB]import\fC \f[CI]"uart"\fC
+.br
+\f[CB]import\fC spi \f[CI]"custom_spi"\fC
+.LP
+\fCmulti_import_statement ::=
+.br
+	\f[CB]import\fC newline
+.br
+	indent
+.br
+	[ identifier ] string_literal
+.br
+	{ [ identifier ] string_literal }
+.br
+	dedent
+.LP
+Example of multi import statement:
+.QP
+\f[CB]import
+.br
+	\fC\f[CI]"uart"\fC
+.br
+	spi \f[CI]"custom_spi"\fC
+.
+.LP
+The string literal is the path of the package.
+The path might not but be complete, but shall be unambiguous.
+For example, if two paths are visible by the import statement (\f[CI]"foo/bar/uart"\fR and \f[CI]"baz/zaz/uart"\fR), and both ends with \f[CI]"uart\fR", then \f[CI]"uart"\fR path is ambiguous, but \f[CI]"bar/uart"\fR and \f[CI]"zaz/uart"\fR are not.
+.LP
+The optional identifier is an identifier that shall denote the imported packaged within the importing file.
+If the identifier is omitted, then the implicit identifier for the package is the last part of its path.
 .
 .NH 2
 .XN "Scope rules"
