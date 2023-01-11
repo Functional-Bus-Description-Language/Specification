@@ -79,23 +79,23 @@ It is hard to express the indent and dedent using BNF.
 Ident is the increase of the indentation level and dedent is the decrease of the indentation level.
 In the following code the indent happens in the lines number 2, 5 and 7 and the dedent happens in the line number 4.
 What is more 2 dedents happens at the EOF.
-The number of indents always equals the number of dedents in syntactically and semantically correct file.
+The number of indents always equals the number of dedents in the syntactically and semantically correct file.
 .QP
 \fC1: \f[CB]type\fC cfg_t \f[CB]config\fC
 .br
-2:    \f[CB]atomic\fC = \f[CB]false\fC
+2:     \f[CB]atomic\fC = \f[CB]false\fC
 .br
-3:    \f[CB]width\fC = 64
+3:     \f[CB]width\fC = 64
 .br
 4: Main \f[CB]bus\fC
 .br
-5:    C cfg_t
+5:     C cfg_t
 .br
-6:    Blk \f[CB]block\fC
+6:     Blk \f[CB]block\fC
 .br
-7:        C cfg_t
+7:          C cfg_t
 .br
-8:        S \f[CB]status\fC
+8:          S \f[CB]status\fC
 .LP
 Not only the indent alignment is important, but also its level.
 In the following code the first type definition is correct, as the indent level for the definition body is increased by one.
