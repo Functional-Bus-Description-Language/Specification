@@ -7,7 +7,7 @@ The block might also be used to limit the access for particular provider to only
 .LP
 The block functionality has following properties:
 .IP "\f[CB]masters\f[CW] integer (1)\f[]" 0.2i
-The master property specifies the number of block masters.
+The masters property specifies the number of block masters.
 .LP
 The following example presents how to limit the scope of access for particular requester.
 .QP
