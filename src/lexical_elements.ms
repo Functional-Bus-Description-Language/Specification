@@ -25,7 +25,7 @@ A single line comment starts with '#' character and extends up to the end of the
 A single-line comment can appear on any line of a FBDL file and may contain any character, including glyphs and special characters.
 The presence or absence of comments has no influence on whether a description is legal or illegal.
 Their sole purpose is to enlighten the human reader.
-.NH 2
+.NH 3
 .XN Documentation comments
 .LP
 Documentation comments are comments that appear immediately before package scope constant definitions and before functionality instantiations with no intervening newlines.
