@@ -25,7 +25,37 @@ A single line comment starts with '#' character and extends up to the end of the
 A single-line comment can appear on any line of a FBDL file and may contain any character, including glyphs and special characters.
 The presence or absence of comments has no influence on whether a description is legal or illegal.
 Their sole purpose is to enlighten the human reader.
-.
+.NH 2
+.XN Documentation comments
+.LP
+Documentation comments are comments that appear immediately before package scope constant definitions and before functionality instantiations with no intervening newlines.
+Following code shows examples of documentation comments:
+.QP
+\fC# Number of receivers
+.br
+\f[CB]const\fC RECEIVERS_COUNT = 7 
+.br
+Main \f[CB]bus\fC
+.br
+	# Data receivers
+.br
+	Receivers [RECEIVERS_COUNT]\f[CB]block\fC
+.br
+		# 0 disable receiver, 1 enable receiver.
+.br
+		Enable \f[CB]config\fC; \f[CB]width\fC = 1
+.br
+		# Number of frames in the buffer
+.br
+		Frame_Count \f[CB]status\fC
+.br
+		# Read_Frame reads single data frame
+.br
+		Read_Frame \f[CB]proc\fC
+.br
+			data [4]\f[CB]return\fC; \f[CB]width\fC = 8
+.br
+.LP
 .
 .NH 2
 .XN Identifiers
