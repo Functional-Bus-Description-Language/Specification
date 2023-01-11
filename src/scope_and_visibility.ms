@@ -5,8 +5,16 @@
 .NH 2
 .XN "Import and package system"
 .LP
-The FBDL has a concept of packages and allows importing packages into the file scope using import statements.
-A package can be imported in a single line using single line import statement or as a part of the multi import statement.
+The FBDL has a concept of packages and allows importing packages into the file scope using the import statements.
+A package consists of files with \fC.fbd\fR extension placed in the same directory.
+A package must have at least one file and shall not be placed in more than single directory.
+A package is uniquely identified by its path. 
+The name of a package is equivalent to the last part of its path.
+That is, it is the same as the name of the directory containing package files.
+However, if the package name starts with the "fbd-" prefix, then the prefix is not included in the package name.
+For example, two packages with following paths \fCfoo/bar/uart\fR and \fCbaz/zaz/fbd-uart\fR have exactly the same name \fCuart\fR.
+.LP
+A package can be imported in a single line using the single line import statement or as a part of the multi import statement.
 .LP
 \fCsingle_import_statement ::= \f[CB]import\fC [ identifier ] string_literal
 .LP
