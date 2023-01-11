@@ -25,8 +25,8 @@ For example lets consider the following bus description:
 .LP
 The code generated for the requester, implemented in the C language, might include following function prototypes:
 .QP
-\f[CB]int\fC vfbdb_Main_P(\f[CB]const uint32_t\fC p);
+\f[CB]int\fC Main_P(\f[CB]const uint32_t\fC p);
 .br
-\f[CB]int\fC vfbdb_Main_S(\f[CB]const uint32_t\fC * p, \f[CB]size_t\fC count);
+\f[CB]int\fC Main_S(\f[CB]const uint32_t\fC * p, \f[CB]size_t\fC count);
 .LP
 The stream functionality has following properties.
