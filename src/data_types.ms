@@ -59,7 +59,7 @@ To convert a value of the integer type to a value of the bool type the built-in 
 .NH 2
 .XN Time
 .LP
-The value of time type can be created explicitly using time literal.
+The value of time type can be created explicitly using the time literal.
 .LP
 .br
 \f[CW]time_unit ::= \fBns\fR | \fBus\fR | \fBms\fR | \fBs\fR
