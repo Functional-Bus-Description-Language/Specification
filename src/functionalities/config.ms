@@ -15,8 +15,22 @@ This is especially important when the config spans more than single register, as
 The default property defines the initial value of the config.
 .IP "\f[CB]once\f[CW] bool (\f[CB]false\fC)\f[]"
 The once property determines whether the config can be written only once.
+.IP "\f[CB]range\f[CW] integer | [integer] (None)\f[]"
+The range property specifies the range of valid values.
+If the range value is of integer type then, the valid range is from 0 to the value, including the value.
+If the range value is an integer list, then it must have even number of elements.
+Odd elements specify lower bounds of the subranges and even elements specify upper bounds of the subranges.
+For instance, \fCwidth = [1, 3, 7, 8]\fR means that the valid values are: 1, 2, 3, 7 and 8.
+Range bound values shall not be negative.
+This is because the FBDL makes no assumptions on the negative values encoding.
+To accomplish negative range checks functions such as u2 must be explicitly called.
+The range property shall not be explicitly set if the width property is already set.
+If the range property is not set, then the actual range implies from the width property.
+The code generated for the provider is not required to check or report if the value provided for the config write is within the valid range.
+The recommended way is to implement compiler parameter allowing enabling/disabling range check generation.
 .IP "\f[CB]width\f[CW] integer (bus width)\f[]"
 The width property defines the bit width of the config.
+The width property shall not be explicitly set if the range property is already set.
 .
 .LP
 The code generated for the requester must provide methods for writing and reading the config.
