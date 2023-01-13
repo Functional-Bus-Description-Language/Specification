@@ -71,8 +71,8 @@ Values of time type can be added regardless of their time units.
 Values of the time type can also be multiplied by values of the integer type.
 All of below property assignments are valid.
 .QP
-\fC\f[CB]sleep\f[] = 1 \f[CB]s\f[] + 1 \f[CB]ms\f[] + 1 \f[CB]us\f[] + 1 \f[CB]ns\f[]
+\fC\f[CB]delay\f[] = 1 \f[CB]s\f[] + 1 \f[CB]ms\f[] + 1 \f[CB]us\f[] + 1 \f[CB]ns\f[]
 .br
-\fC\f[CB]sleep\f[] = 5 * 60 \f[CB]s\f[] # Sleep for 5 minutes.
+\fC\f[CB]delay\f[] = 5 * 60 \f[CB]s\f[] # Sleep for 5 minutes.
 .br
-\fC\f[CB]sleep\f[] = 10 \f[CB]ms\f[] * 4 + 7 * 8 \f[CB]us\f[]
+\fC\f[CB]delay\f[] = 10 \f[CB]ms\f[] * 4 + 7 * 8 \f[CB]us\f[]
