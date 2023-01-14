@@ -38,3 +38,6 @@ Floor returns the greatest integer value less than or equal to x.
 Log2 returns the binary logarithm of x.
 .IP "\f[CB]log10\f[CW](x float) integer|float\f[]"
 Log10 returns the decimal logarithm of x.
+.IP "\f[CB]u2\f[CW](x, w integer) integer\f[]"
+U2 returns two's complement representation of x as an integer assuming width w.
+For example \fCu2(-1, 8)\fR returns 255.

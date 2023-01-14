@@ -20,10 +20,11 @@ The range property specifies the range of valid values.
 If the range value is of integer type then, the valid range is from 0 to the value, including the value.
 If the range value is an integer list, then it must have even number of elements.
 Odd elements specify lower bounds of the subranges and even elements specify upper bounds of the subranges.
-For instance, \fCwidth = [1, 3, 7, 8]\fR means that the valid values are: 1, 2, 3, 7 and 8.
+For instance, \fCrange = [1, 3, 7, 8]\fR means that the valid values are: 1, 2, 3, 7 and 8.
 Range bound values shall not be negative.
 This is because the FBDL makes no assumptions on the negative values encoding.
 To accomplish negative range checks functions such as u2 must be explicitly called.
+For example, following assignment limits the possible range from -16 to -8: \fCrange = [u2(-8, 8), u2(-16, 8)]\fR.
 The range property shall not be explicitly set if the width property is already set.
 If the range property is not set, then the actual range implies from the width property.
 The code generated for the provider is not required to check or report if the value provided for the config write is within the valid range.
