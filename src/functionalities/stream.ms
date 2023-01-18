@@ -30,3 +30,5 @@ The code generated for the requester, implemented in the C language, might inclu
 \f[CB]int\fC Main_S(\f[CB]const uint32_t\fC * p, \f[CB]size_t\fC count);
 .LP
 The stream functionality has following properties.
+.IP "\f[CB]delay\f[CW] time (None)\f[]" 0.2i
+The delay property defines the time delay between writing/reading consecutive datasets for a downstream/upstream.
