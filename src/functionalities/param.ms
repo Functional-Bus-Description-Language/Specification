@@ -7,6 +7,9 @@ It represents a data fed to a proc or streamed by a downstream.
 The param functionality has following properties:
 .IP "\f[CB]width\f[CW] integer (bus width)\f[]" 0.2i
 The width property defines the bit width of the param.
+.IP "\f[CB]range\f[CW] integer | [integer] (None)\f[]"
+The range property specifies the range of valid values.
+The range property on param behaves exactly the same as the range property on config.
 .LP
 Following example presents the definition of a downstream with three parameters.
 .QP
