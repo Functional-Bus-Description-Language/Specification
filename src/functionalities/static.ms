@@ -6,6 +6,11 @@ The static functionality represents an information, placed at the provider, that
 The static functionality has following properties:
 .IP "\f[CB]default\f[CW] bit string | integer (obligatory)\f[]" 0.2i
 The default property defines the value of the static.
+.IP "\f[CB]groups\f[CW] string | [string] (None)\f[]"
+The groups property defines the groups the static belongs to.
+In case of a single group, the value can be a string.
+In case of multiple groups the value shall be a list of strings.
+Groups are thoroughly described in the grouping section.
 .IP "\f[CB]once\f[CW] bool (\f[CB]false\f[CW])\f[]"
 The once property determines whether the static can be read only once.
 If once is true, then after the first read the provider must return the value of ... property on every static read.
