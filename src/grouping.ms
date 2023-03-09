@@ -140,6 +140,7 @@ Virtual groups are used to group functionalities without generating the group in
 .LP
 Groups must be registerified in the order they appear in the groups lists.
 If the order is not unequivocal, then the compiler is free to choose the order.
+A compiler must issue an error if the order of any groups is not the same in all groups lists.
 The order of groups might be used to prioritize the groups, so that an access to some groups is more efficient than to the other groups.
 Below listing serves as an example.
 .QP
