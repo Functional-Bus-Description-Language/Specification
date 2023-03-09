@@ -138,5 +138,41 @@ Virtual groups are used to group functionalities without generating the group in
 .NH 2
 .XN "Registerification order"
 .LP
-Groups must be registerified in the order they appear.
+Groups must be registerified in the order they appear in the groups lists.
 If the order is not unequivocal, then the compiler is free to choose the order.
+The order of groups might be used to prioritize the groups, so that an access to some groups is more efficient than to the other groups.
+Below listing serves as an example.
+.QP
+\fCMain \f[CB]bus\fC
+.br
+	C1 \f[CB]config\fC; \f[CB]width\fC = 20; \f[CB]groups\fC = ["\f[CI]a\fC"]
+.br
+	C2 \f[CB]config\fC; \f[CB]width\fC = 12; \f[CB]groups\fC = ["\f[CI]a\fC", "\f[CI]b\fC"]
+.br
+	C3 \f[CB]config\fC; \f[CB]width\fC = 20; \f[CB]groups\fC = ["\f[CI]b\fC"]
+.LP
+As group \fCa\fR has higher priority than group \fCb\fR (its index is lower in the groups list for functionality \fCC2\fR), access to the group \fCa\fR will be more efficient, as functionalities \fCC1\fR and \fCC2\fR will be placed in the same register.
+Possible arrangement is presented in the below snippet.
+.QP
+\fCNth register     Nth + 1 register
+.br
+-------------  ----------------------
+.br
+|| C1 | C2 ||  || C3 | 12 bits gap ||
+.br
+-------------  ----------------------
+\fR
+.LP
+If the order of the groups in the groups list for functionality \fCC2\fR was reverse, then the access to the group \fCb\fR would be more efficient.
+Possible arrangement of functionalities in such case could look as follows.
+.QP
+\fCNth register     Nth + 1 register
+.br
+-------------  ----------------------
+.br
+|| C2 | C3 ||  || C1 | 12 bits gap ||
+.br
+-------------  ----------------------
+\fR
+.LP
+\fBTODO: Add example with unequivocal group order.\fR
