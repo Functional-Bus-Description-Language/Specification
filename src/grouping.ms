@@ -5,7 +5,8 @@
 Grouping is a feature of the FBDL used to inform a compiler that particular functionalities might be accessed together and theirs register location must meet additional constraints.
 This is achieved using the \f[C]groups\fR property.
 The following functionalities can be grouped: \fCconfig\fR,  \fCmask\fR,  \fCstatic\fR,  \fCstatus\fR.
-Following snippet presents three grouped configs.
+A functionality may belong to multiple groups and groups must be registerified in the order they appear.
+The following snippet presents three grouped configs.
 .QP
 \fCMain \f[CB]bus\fC
 .br
@@ -25,7 +26,8 @@ Any FBDL compliant compiler must place all three configs (\fCA\fR, \fCB\fR, \fCC
 The single register groups are groups of elements that fit single register.
 The overall width of all functionalities is not greater than the single register width.
 In such case all functionalities must be placed in the same register.
-Following listing presents an example bus description with three groups.
+The specification does not impose any specific order of the functionalities within the register, and it is left to the compiler implementation.
+The following listing presents an example bus description with three single register groups.
 .QP
 \fCMain \f[CB]bus\fC
 .br
@@ -62,7 +64,79 @@ In this case the compiler must generate method only for reading the group.
 It must also generate methods for reading particular functionalities.
 .
 .NH 2
+.XN "Multi register groups"
+.LP
+The multi register groups are groups with functionalities that overall width is greater than the width of a single register.
+The specification does not impose any order of functionalities or registers in such case, and it is left to the compiler implementation.
+However, the compiler must not split functionalities narrower or equal to the register width into multiple registers.
+This implies that any functionality with width not greater than the register width is always read or written using single read or write access.
+The following snippet presents bus description with one multi register group.
+.QP
+\fCMain \f[CB]bus\fC
+.br
+	C  \f[CB]config\fC; \f[CB]width\fC = 10; \f[CB]groups\f[C] = ["\f[CI]group"\fC]
+.br
+	M  \f[CB]mask\fC;   \f[CB]width\fC = 10; \f[CB]groups\f[C] = ["\f[CI]group"\fC]
+.br
+	SC \f[CB]static\fC; \f[CB]width\fC = 10; \f[CB]groups\f[C] = ["\f[CI]group"\fC]
+.br
+	SS \f[CB]status\fC; \f[CB]width\fC = 10; \f[CB]groups\f[C] = ["\f[CI]group"\fC]
+.LP
+The compiler must generate code for the requester allowing to write all writable functionalities of the group as well as the code allowing reading all readable functionalities of the groups.
+It must also generate methods for reading or writing particular functionalities.
+.LP
+There are multiple ways to place functionalities from the above example into registers.
+The following snippet presents one possible way.
+.QP
+\fC        Nth register              Nth + 1 register
+.br
+-----------------------------  ----------------------
+.br
+|| C | M | SC | 2 bits gap ||  || SS | 22 bits gap ||
+.br
+-----------------------------  ----------------------
+\fR
+.LP
+However, the above arrangement might not be optimal if there is a need to read both \fCSC\fR and \fCSS\fR at the same time as it would require reading two registers not a single one.
+Below listing presents how to group elements within the group using subgroups.
+.QP
+\fCMain \f[CB]bus\fC
+.br
+	C  \f[CB]config\fC; \f[CB]width\fC = 10; \f[CB]groups\f[C] = ["\f[CI]csubgroup\fC", "\f[CI]group"\fC]
+.br
+	M  \f[CB]mask\fC;   \f[CB]width\fC = 10; \f[CB]groups\f[C] = ["\f[CI]csubgroup\fC", "\f[CI]group"\fC]
+.br
+	SC \f[CB]static\fC; \f[CB]width\fC = 10; \f[CB]groups\f[C] = ["\f[CI]ssubgroup\fC", "\f[CI]group"\fC]
+.br
+	SS \f[CB]status\fC; \f[CB]width\fC = 10; \f[CB]groups\f[C] = ["\f[CI]ssubgroup\fC", "\f[CI]group"\fC]
+.LP
+The set of possible functionalities placements within the registers is now limited as the groups are registerified in the order they appear.
+Below snippet shows possible arrangement.
+.QP
+\fC       Nth register              Nth + 1 register
+.br
+-------------------------  ---------------------------
+.br
+|| C | M | 12 bits gap ||  || SC | SS | 12 bits gap ||
+.br
+-------------------------  ---------------------------
+\fR
+.LP
+This time reading both \fCSC\fR and \fCSS\fR requires reading only one register, while reading the whole \fCgroup\fR still requires reading two registers.
+.
+.NH 2
+.XN "Array groups"
+.LP
+.NH 2
+.XN "Mixed groups"
+.LP
+.NH 2
 .XN "Virtual groups"
 .LP
 Virtual groups are groups that name starts with the underscore ('_'), for example "\f[CI]_group\fR".
 Virtual groups are used to group functionalities without generating the group interface for the requester code.
+.NH 2
+.XN "Registerification order"
+.LP
+Groups must be registerified in the order they appear.
+If the order is not unequivocal, then the compiler is free to choose the order.

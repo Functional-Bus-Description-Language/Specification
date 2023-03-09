@@ -19,7 +19,7 @@ Existence or absence of call and exit signals is summarized in below table.
 tab(;) center;
 c s s s s
 c | | c | c | c | c.
-Proc call and exit signals occurrence
+Proc call and exit signals occurrence.
 _
 Delay Set;Empty;Only Params;Only Returns;Params & Returns
 _
