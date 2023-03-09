@@ -18,6 +18,6 @@
 .\" Add document identification meta-data
 .\"
 .pdfinfo /Title     Functional Bus Description Language - Specification
-.\".pdfinfo /Author    Michał Kruszewski
+.\".pdfinfo /Author    Michal Kruszewski
 .\".pdfinfo /Subject   Tips and Techniques for Exploiting PDF Features with GNU Troff
 .\".pdfinfo /Keywords  groff troff PDF pdfmark
