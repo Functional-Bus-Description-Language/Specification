@@ -1,7 +1,7 @@
 .NH 2
 .XN Status
 .LP
-The status represents an information that is produced by the provider and is only read by the requester.
+The status represents a data that is produced by the provider and is only read by the requester.
 .LP
 The status functionality has following properties:
 .IP "\f[CB]atomic\f[CW] bool (\f[CB]true\fC)\f[]" 0.2i

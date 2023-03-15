@@ -1,7 +1,7 @@
 .NH 2
 .XN Static
 .LP
-The static functionality represents an information, placed at the provider, that shall never change.
+The static functionality represents a data, placed at the provider, that shall never change.
 .LP
 The static functionality has following properties:
 .IP "\f[CB]default\f[CW] bit string | integer (obligatory)\f[]" 0.2i
