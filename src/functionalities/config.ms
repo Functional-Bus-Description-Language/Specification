@@ -34,6 +34,9 @@ The range property shall not be explicitly set if the width property is already 
 If the range property is not set, then the actual range implies from the width property.
 The code generated for the provider is not required to check or report if the value provided for the config write is within the valid range.
 The recommended way is to implement compiler parameter allowing enabling/disabling range check generation.
+.IP "\f[CB]read-value\f[CW] bit string | integer (None)\f[]"
+The read-value specifies the value returned by the provider on the config read.
+If the read-value is not set, then the provider must return the actual value of the config.
 .IP "\f[CB]width\f[CW] integer (bus width)\f[]"
 The width property defines the bit width of the config.
 The width property shall not be explicitly set if the range property is already set.

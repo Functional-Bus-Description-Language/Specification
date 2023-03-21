@@ -16,6 +16,9 @@ If atomic is true, then the provider must guarantee that any change of the mask 
 This is especially important when the mask spans more than single register, as in case of single register write the change is always atomic.
 .IP "\f[CB]init-value\f[CW] bit string | integer (undefined)\f[]"
 The init-value property defines the initial value of the mask.
+.IP "\f[CB]read-value\f[CW] bit string | integer (None)\f[]"
+The read-value specifies the value returned by the provider on the mask read.
+If the read-value is not set, then the provider must return the actual value of the mask.
 .IP "\f[CB]width\f[CW] integer (bus width)\f[]"
 The width property defines the bit width of the mask.
 .
