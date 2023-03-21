@@ -11,8 +11,6 @@ The config functionality has following properties:
 The atomic property defines whether an access to the config must be atomic.
 If atomic is true, then the provider must guarantee that any change of the config value, triggered by the requester write, is seen as an atomic change by the other modules of the provider.
 This is especially important when the config spans more than single register, as in case of single register write the change is always atomic.
-.IP "\f[CB]default\f[CW] bit string | integer (undefined)\f[]"
-The default property defines the initial value of the config.
 .IP "\f[CB]groups\f[CW] string | [string] (None)\f[]"
 The groups property defines the groups the config belongs to.
 In case of a single group, the value can be a string.
@@ -20,6 +18,8 @@ In case of multiple groups the value shall be a list of strings.
 Groups are thoroughly described in the grouping section.
 .IP "\f[CB]once\f[CW] bool (\f[CB]false\fC)\f[]"
 The once property determines whether the config can be written only once.
+.IP "\f[CB]init-value\f[CW] bit string | integer (undefined)\f[]"
+The init-value property defines the initial value of the config.
 .IP "\f[CB]range\f[CW] integer | [integer] (None)\f[]"
 The range property specifies the range of valid values.
 If the range value is of integer type then, the valid range is from 0 to the value, including the value.

@@ -4,13 +4,13 @@
 The static functionality represents a data, placed at the provider, that shall never change.
 .LP
 The static functionality has following properties:
-.IP "\f[CB]default\f[CW] bit string | integer (obligatory)\f[]" 0.2i
-The default property defines the value of the static.
-.IP "\f[CB]groups\f[CW] string | [string] (None)\f[]"
+.IP "\f[CB]groups\f[CW] string | [string] (None)\f[]" 0.2i
 The groups property defines the groups the static belongs to.
 In case of a single group, the value can be a string.
 In case of multiple groups the value shall be a list of strings.
 Groups are thoroughly described in the grouping section.
+.IP "\f[CB]init-value\f[CW] bit string | integer (obligatory)\f[]" 0.2i
+The init-value property defines the value of the static.
 .IP "\f[CB]once\f[CW] bool (\f[CB]false\f[CW])\f[]"
 The once property determines whether the static can be read only once.
 If once is true, then after the first read the provider must return the value of ... property on every static read.
@@ -23,7 +23,7 @@ The static functionality may be used for example for versioning, bus id, bus gen
 .br
 	\f[CB]width = \fC8
 .br
-	\f[CB]default = \fC113
+	\f[CB]init-value = \fC113
 .br
 	\f[CB]once \fC= \f[CB]true
 .br

@@ -149,7 +149,7 @@ The second type definition is incorrect, even though the indent within the defin
 .LP
 Keywords cannot be used as identifiers.
 
-FBDL has following keywords: \fBatomic, block, bus, const, default, doc, false, import, mask, memory, param, proc, range, return, static, stream, true\fR.
+FBDL has following keywords: \fBatomic, block, bus, const, doc, false, import, init-value, mask, memory, param, proc, range, return, static, stream, true\fR.
 .
 .
 .NH 2

@@ -78,6 +78,6 @@ Following code shows examples of single line instantiations:
 .br
 \fCC \f[CB]config\fC; \f[CB]width\fC = 8
 .br
-\fCM [8]\f[CB]mask\fC; \f[CB]atomic\fC = false; \f[CB]width\fC = 128; \f[CB]default\fC = 0
+\fCM [8]\f[CB]mask\fC; \f[CB]atomic\fC = false; \f[CB]width\fC = 128; \f[CB]init-value\fC = 0
 .br
 \fCerr error_t(48)\fC; \f[CB]atomic\fC = false
