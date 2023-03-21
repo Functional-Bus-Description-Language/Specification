@@ -13,8 +13,9 @@ The groups property defines the groups the status belongs to.
 In case of a single group, the value can be a string.
 In case of multiple groups the value shall be a list of strings.
 Groups are thoroughly described in the grouping section.
-.IP "\f[CB]once\f[CW] bool (\f[CB]false\fC)\f[]"
-The once property determines whether the status can be read only once.
+.IP "\f[CB]read-value\f[CW] bit string | integer (None)\f[]"
+The read-value property specifies the value that must be returned by the provider on the status read after the first read.
+If the read-value property is set, then the actual value of the status can be read only once.
 .IP "\f[CB]width\f[CW] integer (bus width)\f[]"
 The width property defines the bit width of the status.
 .LP
