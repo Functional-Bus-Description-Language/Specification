@@ -7,9 +7,11 @@ SRCS = \
 	src/config.ms \
 	src/participants.ms \
 	src/overview.ms \
-	src/concepts/concepts.ms \
-	src/concepts/addressing.ms \
 	src/references.ms \
+	src/concepts/concepts.ms \
+	src/concepts/properties.ms \
+	src/concepts/instantiation.ms \
+	src/concepts/addressing.ms \
 	src/lexical_elements.ms \
 	src/data_types.ms \
 	src/expressions.ms \
