@@ -32,7 +32,7 @@ stream.
 .NH 2
 .XN Properties
 .LP
-Each functionality has associated properties.
+Each data in the FBDL description has associated functionality and each functionality has associated properties.
 Properties allow configuration of functionalities.
 Each property must have concrete type.
 The default value of each property is specified in the round brackets () in the functionality subsections.
