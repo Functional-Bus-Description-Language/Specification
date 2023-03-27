@@ -1,0 +1,16 @@
+define edge {
+	line from ($1, $2) to ($1 + 0.3, $2)
+	line -> to ($1 + 0.3, $2 + 0.4)
+	line to ($1 + 0.3, $2 + 0.5)
+	line to ($1 + 0.6, $2 + 0.5)
+	line to ($1 + 0.6, $2)
+	line to ($1 + 0.9, $2)
+	"Edge" at ($1 - 0.2, $2 + 0.5)
+}
+
+define level {
+	line from ($1, $2) to ($1 + 0.5, $2)
+	line to ($1 + 0.5, $2 + 0.5)
+	line to ($1 + 1.0, $2 + 0.5)
+	"Level" at ($1, $2 + 0.5)
+}

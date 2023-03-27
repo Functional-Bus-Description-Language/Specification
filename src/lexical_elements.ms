@@ -21,7 +21,7 @@ newline.
 .XN Comments
 .LP
 There is only a single type of comment, a \fIsingle-line comment\fR.
-A single line comment starts with '#' character and extends up to the end of the line.
+A single line comment starts with the '#' character and extends up to the end of the line.
 A single-line comment can appear on any line of a FBDL file and may contain any character, including glyphs and special characters.
 The presence or absence of comments has no influence on whether a description is legal or illegal.
 Their sole purpose is to enlighten the human reader.
@@ -31,25 +31,25 @@ Their sole purpose is to enlighten the human reader.
 Documentation comments are comments that appear immediately before package scope constant definitions and before functionality instantiations with no intervening newlines.
 Following code shows examples of documentation comments:
 .QP
-\fC# Number of receivers
+\f[CI]# Number of receivers\fC
 .br
 \f[CB]const\fC RECEIVERS_COUNT = 7 
 .br
 Main \f[CB]bus\fC
 .br
-	# Data receivers
+	\f[CI]# Data receivers\fC
 .br
 	Receivers [RECEIVERS_COUNT]\f[CB]block\fC
 .br
-		# 0 disable receiver, 1 enable receiver.
+		\f[CI]# 0 disable receiver, 1 enable receiver\fC
 .br
 		Enable \f[CB]config\fC; \f[CB]width\fC = 1
 .br
-		# Number of frames in the buffer
+		\f[CI]# Number of frames in the buffer\fC
 .br
 		Frame_Count \f[CB]status\fC
 .br
-		# Read_Frame reads single data frame
+		\f[CI]# Read_Frame reads single data frame\fC
 .br
 		Read_Frame \f[CB]proc\fC
 .br
@@ -75,15 +75,15 @@ An identifier shall start with a letter.
 .LP
 Following code contains some valid and invalid identifiers.
 .QP
-\f[CB]const\fC C_20 = 20 # Valid
+\f[CB]const\fC C_20 = 20 \f[CI]# Valid\fC
 .br
-\f[CB]const\fC _C20 = 20 # Invalid
+\f[CB]const\fC _C20 = 20 \f[CI]# Invalid\fC
 .br
 Main \f[CB]bus\fC
 .br
-	cfg1 \f[CB]config\fC # Valid
+	cfg1 \f[CB]config\fC \f[CI]# Valid\fC
 .br
-	1cfg \f[CB]config\fC # Invalid
+	1cfg \f[CB]config\fC \f[CI]# Invalid\fC
 .LP
 .NH 3
 .XN Declared identifier
@@ -94,7 +94,7 @@ Declared identifier is used for any occurrence of an identifier that already den
 .NH 3
 .XN Qualified identifier
 .LP
-The qualified identifier is used to reference a symbol from foreign .
+The qualified identifier is used to reference a symbol from foreign package.
 .LP
 \fCqualified_identifier ::= declared_identifier\f[CB].\fCdeclared_identifier
 .LP
@@ -131,12 +131,16 @@ Not only the indent alignment is important, but also its level.
 In the following code the first type definition is correct, as the indent level for the definition body is increased by one.
 The second type definition is incorrect, even though the indent within the definition body is aligned, as the indent level is increased by two.
 .QP
+\f[CI]# Valid indent\fC
+.br
 \f[CB]type\fC cfg1_t \f[CB]config\fC
 .br
 	\f[CB]atomic\fC = \f[CB]false\fC
 .br
 .br
 	\f[CB]width\fC = 8
+.br
+\f[CI]# Invalid indent, indent increased by two\fC
 .br
 \f[CB]type\fC cfg2_t \f[CB]config\fC
 .br
@@ -147,10 +151,10 @@ The second type definition is incorrect, even though the indent within the defin
 .NH 2
 .XN Keywords
 .LP
-Keywords cannot be used as identifiers.
-
-FBDL has following keywords: \fBatomic, block, bus, const, doc, false, import, init-value, mask, memory, param, proc, range, read-value, return, static, stream, true\fR.
-.
+FBDL has following keywords: \fBatomic, block, bus, const, doc, false, import, init-value, irq, mask, memory, param, proc, range, read-value, reset-value, return, static, stream, true\fR.
+.LP
+Keywords can be used as identifiers with one exception.
+Keywords denoting built-in types (functionalities) cannot be used as identifiers for custom types.
 .
 .NH 2
 .XN Literals
