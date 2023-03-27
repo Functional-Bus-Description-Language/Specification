@@ -8,7 +8,7 @@ Params are procedure parameters and returns represent data returned from the pro
 The proc has associated signals at the provider side, the \fCcall\fR signal and the \fCexit\fR signal.
 The call signal must be driven active for one clock cycle after all registers storing the parameters have been written.
 The exit signal must be driven active for one clock cycle after all registers storing the returns have been read.
-An empty proc, proc without params and returns, by default has only the call signal.
+An empty proc (proc without params and returns) by default has only the call signal.
 However, if an empty proc has the delay property set, then it has both, the call signal and the exit signal.
 A proc having only parameters has by default only the call signal.
 However, if a proc having only parameters has the delay property set, then it also has the exit signal.
