@@ -9,7 +9,7 @@ If the default value is \fCbus width\fR, then it means that the default value eq
 If the default value is \fCundefined\fR, then it shall be represented as the undefined meta value at the provider side.
 If the target language for the provider code does not have a concept of undefined value, then values such as 0, \fCNull\fR, \fCNone\fR, \fCnil\fR etc. shall be used.
 .LP
-\fCproperty_assignment ::= declared_identifier \f[CB]=\fC expression
+\fCproperty_assignment ::= property_identifier \f[CB]=\fC expression
 .LP
 \fCproperty_assignments ::=
 .br
@@ -20,3 +20,7 @@ If the target language for the provider code does not have a concept of undefine
 	newline
 .LP
 \fCsemicolon_and_property_assignments ::= \f[CB];\fC property_assignments
+.LP
+\fCproperty_identifier ::= \f[CB]atomic\fC | \f[CB]delay\fC | \f[CB]groups\fC | \f[CB]masters\fC | \f[CB]range\fC |
+.br
+    \f[CB]width\fC | \f[CB]init-value\fC | \f[CB]read-value \fC | \f[CB]reset-value

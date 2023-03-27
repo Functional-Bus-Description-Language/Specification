@@ -29,26 +29,12 @@ That is, the user has to implicitly define the registers layout.
 For example, in case of register containing multiple statuses, its user responsibility to specify the bit position for every status.
 .LP
 The FBDL is different in this terms.
-The user specifies the functionalities that must be provided by the registers.
-The register layout is generated based on the functional requirements.
+The user specifies the functionalities that must be provided by the data stored in the registers.
+The register layout is automatically generated based on the functional requirements.
 Such an approach allows to generate much more hardware description and software code than classical approach.
 Not only the register masks, addresses, and single read, write functions can be generated, but complete custom functions with optimized access methods.
 This in turn leads to shorter design iterations and fewer bugs.
 .
-.NH 2
-.XN Concept
-.LP
-The concept behind the FBDL is based on the fact, that if there is a part with the registers that can be accessed, then there is at least one more part accessing these registers.
-The part acessing the registers is called the
-.I requester .
-The part containing the registers is called the
-.I provider
-as it provides functions via particular functionalities.
-.LP
-The code generated from the FBDL description can be conceptually divided into two parts, the requester part and the provider part.
-The requester code usually refers to the generated software or firmware implemented in typical programming languages such as: Ada, C, C++, Go, Java, Python, Rust etc.
-The provider code usually refers to the generated gateware or hardware implemented in hardware description languages or frameworks such as: VHDL, SystemVerilog, SystemC, Bluespec, PipelineC, MyHDL, Chisel etc.
-However, implementing the provider for example as a firmware, using the C language and a microcontroller, is practically doable and valid.
 .NH 2
 .XN "Word usage"
 .LP
