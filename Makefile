@@ -30,7 +30,8 @@ SRCS = \
 	src/functionalities/stream.ms \
 	src/parametrization.ms \
 	src/scope_and_visibility.ms \
-	src/grouping.ms \
+	src/grouping/grouping.ms \
+	src/grouping/irq.ms \
 	src/toc.ms
 
 # Build targets
