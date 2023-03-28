@@ -6,7 +6,13 @@ Grouped irqs have common interrupt consumer signal.
 Each irq must belong at most to one group and each irq group must have at least two irqs.
 Irqs belonging to the same group might have different values of the producer trigger, but all of them must have the same value for the consumer trigger.
 In case of level triggered interrupt consumer the information on the interrupt source can be read from the interrupt group flag register.
-Below picture presents possible logical block diagram of irq group with level trigger for the interrupt consumer and enable register.
+
+Below picture presents possible logical block diagram of the irq group with level trigger for the interrupt consumer and enable register.
+The "Clear On Read" signal is driven on every Flag Register read.
+The "Explicit Clear" signal must be driven when requester calls a method for clearing given interrupt flags.
+Probably the easiest form of the "Explicit Clear" implementation is clear on Flag Register write, where the clear bit-mask is the value of the data bus.
+The Flag Register is to some extent a virtual register, as it has an address, but it does not have any storage elements.
+The flag is stored in the interrupt producer in case of a level triggered producer, or in the Edge Detector in case of an edge triggered producer.
 .PS
 copy "pic/grid"
 copy "pic/irq"
