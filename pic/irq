@@ -39,6 +39,16 @@ define or3 {
 	arc radius 0.8 to ($1, $2)
 }
 
+# Four input or gate.
+define or4 {
+	# $1 - x coordinate
+	# $2 - y coordinate
+	line from($1, $2) to ($1 + 0.6, $2)
+	arc cw radius 0.6 to ($1 + 0.6, $2 - 1.2)
+	line to ($1, $2 - 1.2)
+	arc radius 1 to ($1, $2)
+}
+
 define dot {
 	# $1 - x coordinate
 	# $2 - y coordinate

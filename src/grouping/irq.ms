@@ -7,6 +7,21 @@ Each irq must belong at most to one group and each irq group must have at least 
 Irqs belonging to the same group might have different values of the producer trigger, but all of them must have the same value for the consumer trigger.
 In case of level triggered interrupt consumer the information on the interrupt source can be read from the interrupt group flag register.
 
+Below snippet shows an example of irq group for level sensitive interrupt consumer.
+.QP
+\fCMain \f[CB]bus\fC
+.br
+	\f[CB]type\fC irq_t \f[CB]irq\fC; \f[CB]groups\fC = \f[CI]"IRQ"\fC
+.br
+	IRQ0 irq_t
+.br
+	IRQ1 irq_t; \f[CB]clear\fC = \f[CI]"On Read"\fC
+.br
+	IRQ2 irq_t; \f[CB]in-trigger\fC = \f[CI]"Edge"\fC
+.br
+	IRQ3 irq_t; \f[CB]in-trigger\fC = \f[CI]"Edge"\fC; \f[CB]clear\fC = \f[CI]"On Read"\fC
+.br
+.LP
 Below picture presents possible logical block diagram of the irq group with level trigger for the interrupt consumer and enable register.
 The "Clear On Read" signal is driven on every Flag Register read.
 The "Explicit Clear" signal must be driven when requester calls a method for clearing given interrupt flags.
@@ -19,60 +34,81 @@ copy "pic/irq"
 
 scale = 2.54
 
-h = 0.6
-w = 1
+h = 1
+w = 1.6
+
+c0 = x0
+c1 = x15
+c2 = x46
+c3 = x70
+c4 = x85
+
+rm1 = y15
+r0 = y0
+r1 = ym20
+r2 = ym40
+r3 = ym60
+r4 = ym75
+
+IRQ_BLOCK: box "" ht h*11  wid w*4.7 at (x64, ym25)
+
+# IRQ0
+IRQ0: box "IRQ0" "Producer"  ht h  wid w  at (c0, r0)
+LVL0: level(c1 - 0.2, r0 + 0.4)
+line -> from (c0 + w/2, r0 + h/4) to (c2 - 0.5, r0 + h/4)
+AND0: and2(c2 - 0.5, r0 + 0.4)
+line from (c2 + 0.1, r0 + 0.1) to (c3 - 0.9, r0 + 0.1); line -> to (c3 - 0.9, rm1 - 0.3)
 
 
-IRQ0: box "IRQ0"  ht h  wid w  at (x0, y0)
-IRQ1: box "IRQ1"  ht h  wid w  at (x0, ym15)
-IRQ2: box "IRQ2"  ht h  wid w  at (x0, ym30)
+# IRQ1
+IRQ1: box "IRQ1" "Producer"  ht h  wid w  at (c0, r1)
+LVL1: level(c1 - 0.2, r1 + 0.4)
+line -> from (c0 + w/2, r1 + h/4) to (c2 - 0.5, r1 + h/4)
+AND1: and2(c2 - 0.5, r1 + 0.4)
+line from (c2 + 0.1, r1 + 0.1) to (c3 - 0.3, r1 + 0.1); line -> to (c3 - 0.3, rm1 - 0.3)
 
-AND0: and2(x30, y3)
-AND1: and2(x30, ym12)
+#IRQ2
+IRQ2: box "IRQ2" "Producer"  ht h  wid w  at (c0, r2)
+EDGE2: edge(c1, r2 + 0.1)
+EDGE_DETECTOR2: box "Edge" "Detector"  ht h  wid w  at (c2, r2)
+arrow from IRQ2.e to EDGE_DETECTOR2.w
+line from EDGE_DETECTOR2.e to (c3 + 0.3, r2); line -> to (c3 + 0.3, rm1 - 0.3)
 
-OR3: or3(x70, ym10)
 
-IRQ_BLOCK: box "" ht h*13  wid w*6.5 at (x51, ym11)
+#IRQ3
+IRQ3: box "IRQ3" "Producer"  ht h  wid w  at (c0, r3)
+EDGE3: edge(c1, r3 + 0.1)
+EDGE_DETECTOR3: box "Edge" "Detector"  ht h  wid w  at (c2, r3)
+arrow from IRQ3.e to EDGE_DETECTOR3.w
+line from EDGE_DETECTOR3.e to (c3 + 0.9, r3); line -> to (c3 + 0.9, rm1 - 0.3)
 
-ENABLE_REG: box "Enable Register"  ht h  wid w*2.4  at (x50, ym45)
-FLAG_REG:   box "Flag Register"    ht h  wid w*2.4  at (x50, y15)
 
-LVL0: level(x7, y3)
-LVL0: level(x7, ym12)
+ENABLE_REG: box "Enable Register"  ht h*0.6  wid w*1.6  at (c3, r4)
+line from (c3 - 0.9, r4 + 0.3) to (c3 - 0.9, r4 + 0.5); line to (c2, r4 + 0.5); arrow to EDGE_DETECTOR3.s
+line from (c3 - 0.3, r4 + 0.3) to (c3 - 0.3, r4 + 0.7); line to (c3 - 1.4, r4 + 0.7); line to (c3 - 1.4, r2 - 0.9); line to (c2, r2 - 0.9); arrow to EDGE_DETECTOR2.s
+line from (c3 + 0.3, r4 + 0.3) to (c3 + 0.3, r4 + 0.9); line to (c3 - 1.2, r4 + 0.9); line to (c3 - 1.2, r1 - 0.5); line to (c2 - 0.9, r1 - 0.5); line to (c2 - 0.9, r1 - 0.05); arrow to (c2 - 0.5, r1 - 0.05)
+line from (c3 + 0.9, r4 + 0.3) to (c3 + 0.9, r4 + 1.1); line to (c3 - 1, r4 + 1.1); line to (c3 - 1, r0 - 0.5); line to (c2 - 0.9, r0 - 0.5); line to (c2 - 0.9, r0 - 0.05); arrow to (c2 - 0.5, r0 - 0.05)
 
-EDGE0: edge(x8, ym29)
-EDGE_DETECTOR0: box "Edge" "Detector"  ht h*1.6  wid w*1.6  at (x31, ym30)
 
-# IRQ0 line
-line -> from 1/2 of the way between IRQ0.ne and IRQ0.e to (x30, (y1+y2)/2)
-line from (x36, y0) to (x43, y0); arrow up 1.2
-dot(x43, y0)
-line from(x43, y0) to (x60, y0); line to (x60, ym12); arrow right 1.1
-line from (x57, ym42) to (x57, ym34); line to (x45, ym34); line to (x45, ym5); line to (x26, ym5); line to (x26, ym1 - 0.05); arrow to (x30, ym1 - 0.05)
-line from 1/2 of the way between FLAG_REG.nw and FLAG_REG.w to (x21, y16 + 0.05); line down to(x21, ym1 - 0.05); arrow to (x5, ym1 - 0.05)
+FLAG_REG: box "Flag Register"  ht h*0.6  wid w*1.4  at (c3, rm1)
+line from (c3 - 1.12, rm1 + 0.15) to (c2 - 1.7, rm1 + 0.15); line to (c2 - 1.7, r2 + 0.9); line to (c2, r2 + 0.9); arrow to EDGE_DETECTOR2.n
+dot(c2 - 1.7, r0 - h/4); arrow from (c2 - 1.7, r0 - h/4) to (c0 + w/2, r0 - h/4)
+line from (c3 - 1.12, rm1 - 0.15) to (c2 - 1.4, rm1 - 0.15); line to (c2 - 1.4, r3 + 0.9); line to (c2, r3 + 0.9); arrow to EDGE_DETECTOR3.n
+dot(c2 - 1.4, r1 - h/4); arrow from (c2 - 1.4, r1 - h/4) to (c0 + w/2, r1 - h/4)
 
-# IRQ1 line
-line -> from 1/2 of the way between IRQ1.ne and IRQ1.e to (x30, (ym13+ym14)/2)
-line from (x36, ym15) to (x50, ym15); arrow up 2.7
-arrow from (x50, ym15) to (x71+0.07, ym15)
-dot(x50, ym15)
-line from ENABLE_REG.n to (x50, ym36); line to (x43, ym36); line to (x43, ym20); line to (x26, ym20); line to (x26, ym16 - 0.05); arrow to (x30, ym16 - 0.05)
-line from 1/2 of the way between FLAG_REG.sw and FLAG_REG.w to (x23, y13 + 0.05); line down to(x23, ym16 - 0.05); arrow to (x5, ym16 - 0.05)
 
-# IRQ2 lines
-arrow from IRQ2.e to EDGE_DETECTOR0.w
-line from (x39, ym30) to (x57, ym30); arrow up 4.2
-line from (x43, ym42) to (x43, ym39); line left 1.2; arrow to EDGE_DETECTOR0.s
-dot(x57, ym18)
-arrow from (x57, ym18) right 1.4
+OR4: or4(c4, r0 + 0.25)
+dot(c3 - 0.9, r0 + 0.1); arrow from (c3 - 0.9, r0 + 0.1) to (c3 + 1.59, r0 + 0.1)
+dot(c3 - 0.3, r0 - 0.2); arrow from (c3 - 0.3, r0 - 0.2) to (c3 + 1.69, r0 - 0.2)
+dot(c3 + 0.3, r0 - 0.5); arrow from (c3 + 0.3, r0 - 0.5) to (c3 + 1.69, r0 - 0.5)
+dot(c3 + 0.9, r0 - 0.8); arrow from (c3 + 0.9, r0 - 0.8) to (c3 + 1.59, r0 - 0.8)
 
+
+arrow from (c4 + 1.2, r0 - 0.35) to (c4 + 3.2, r0 - 0.35)
 # Extra text
-"\f[CB]clear\fC = \f[CI]\"On Read\"\fR" at (xm25, y0)
-"\f[CB]clear\fC = \f[CI]\"Explicit\"\fR" at (xm25, ym15)
-"IRQ" at (x90, ym12)
-
-arrow from (x80, ym15) to (x90, ym15)
-"Generated IRQ Group Block" at (x61, y24)
-"Clear" "On Read" at (x29, y21)
-"Explicit" "Clear" at (x31, y9)
+"IRQ" at (x110, r0 - 0.7)
+LVLOUT: level(x107, r0 - 0.2)
+"Generated IRQ Group Block" at (x63, y26)
+"Clear On Read" at (c2, rm1 - 0.4)
+"Explicit Clear" at (c2, rm1 + 0.4)
 .PE

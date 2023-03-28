@@ -106,8 +106,13 @@ The \f[CI]"On Read"\fR clear requires the provider to clear the interrupt flag o
 The groups property specifies the group for irq.
 Each irq must belong at most to one group.
 Irq groups are described in irq grouping subsection.
-.IP "\f[CB]trigger\f[CW] string (\f[CI]""Level - Level""\fC)\f[]"
-The trigger property declares the interrupt producer and interrupt consumer type of trigger.
-Valid values are: \f[CI]"Edge - Edge"\fR, \f[CI]"Edge - Level"\fR, \f[CI]"Level - Edge"\fR, \f[CI]"Level - Level"\fR.
-It is up to the user to make sure declared triggers are coherent with the actual producer and consumer requirements.
-Some types of mismatches may lead to incorrect behavior.
+.IP "\f[CB]in-trigger\f[CW] string (\f[CI]""Level""\fC)\f[]"
+The in-trigger property declares the interrupt producer type of trigger.
+Valid values are \f[CI]"Edge"\fR and \f[CI]"Level"\fR.
+It is up to the user to make sure declared trigger is coherent with the actual producer behavior.
+A mismatch may lead to incorrect behavior.
+.IP "\f[CB]out-trigger\f[CW] string (\f[CI]""Level""\fC)\f[]"
+The out-trigger property declares the interrupt consumer type of trigger.
+Valid values are \f[CI]"Edge"\fR and \f[CI]"Level"\fR.
+It is up to the user to make sure declared trigger is coherent with the actual consumer requirement.
+A mismatch may lead to incorrect behavior.
