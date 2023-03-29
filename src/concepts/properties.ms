@@ -21,6 +21,8 @@ If the target language for the provider code does not have a concept of uninitia
 .LP
 \fCsemicolon_and_property_assignments ::= \f[CB];\fC property_assignments
 .LP
-\fCproperty_identifier ::= \f[CB]atomic\fC | \f[CB]delay\fC | \f[CB]groups\fC | \f[CB]masters\fC | \f[CB]range\fC |
+\fCproperty_identifier ::= \f[CB]atomic\fC | \f[CB]clear\fC | \f[CB]delay\fC | \f[CB]groups\fC | \f[CB]masters\fC |
 .br
-    \f[CB]width\fC | \f[CB]init-value\fC | \f[CB]read-value \fC | \f[CB]reset-value
+    \f[CB]range\fC | \f[CB]width\fC | \f[CB]init-value\fC | \f[CB]read-value\fC | \f[CB]reset-value\fC |
+.br
+    \f[CB]in-trigger\fC | \f[CB]out-trigger\fC 
