@@ -7,4 +7,6 @@ For dated references, only the edition cited applies. For undated references, th
 .BL
 IETF Best Practices Document 14, RFC 2119,
 .BL
+IETF UTF-8, a transformation format of ISO 10646, RFC 3629,
+.BL
 IEEE Std 754\(tm-2019, IEEE Standard for Floating-Point Arithmetic.

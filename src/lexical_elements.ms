@@ -207,6 +207,10 @@ Real numbers expressed with a decimal point shall have at least one digit on eac
 .NH 3
 .XN "String literals"
 .LP
+A string literal is a sequence of zero or more UTF-8 characters enclosed by double quotes ("").
+.br
+.sp 0.5
+\fCstring_literal ::= \f[CI]"\fC{UTF-8 character}\f[CI]"\fR
 .
 .NH 3
 .XN "Bit string literals"
