@@ -18,7 +18,7 @@ In case of multiple groups the value shall be a list of strings.
 Groups are thoroughly described in the grouping section.
 .IP "\f[CB]once\f[CW] bool (\f[CB]false\fC)\f[]"
 The once property determines whether the config can be written only once.
-.IP "\f[CB]init-value\f[CW] bit string | integer (undefined)\f[]"
+.IP "\f[CB]init-value\f[CW] bit string | integer (uninitialized)\f[]"
 The init-value property defines the initial value of the config.
 .IP "\f[CB]range\f[CW] integer | [integer] (None)\f[]"
 The range property specifies the range of valid values.

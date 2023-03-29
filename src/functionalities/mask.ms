@@ -14,7 +14,7 @@ The mask functionality has following properties:
 The atomic property defines whether an access to the mask must be atomic.
 If atomic is true, then the provider must guarantee that any change of the mask value, triggered by the requester write, is seen as an atomic change by the other modules of the provider.
 This is especially important when the mask spans more than single register, as in case of single register write the change is always atomic.
-.IP "\f[CB]init-value\f[CW] bit string | integer (undefined)\f[]"
+.IP "\f[CB]init-value\f[CW] bit string | integer (uninitialized)\f[]"
 The init-value property defines the initial value of the mask.
 .IP "\f[CB]read-value\f[CW] bit string | integer (None)\f[]"
 The read-value specifies the value returned by the provider on the mask read.

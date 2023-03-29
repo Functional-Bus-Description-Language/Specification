@@ -6,8 +6,8 @@ Properties allow configuration of functionalities.
 Each property must have concrete type.
 The default value of each property is specified in the round brackets () in the functionality subsections.
 If the default value is \fCbus width\fR, then it means that the default value equals the actual value of the bus \fCwidth\fR property.
-If the default value is \fCundefined\fR, then it shall be represented as the undefined meta value at the provider side.
-If the target language for the provider code does not have a concept of undefined value, then values such as 0, \fCNull\fR, \fCNone\fR, \fCnil\fR etc. shall be used.
+If the default value is \fCuninitialized\fR, then it shall be represented as the uninitialized meta value at the provider side.
+If the target language for the provider code does not have a concept of uninitialized value, then values such as 0, \fCNull\fR, \fCNone\fR, \fCnil\fR etc. shall be used.
 .LP
 \fCproperty_assignment ::= property_identifier \f[CB]=\fC expression
 .LP

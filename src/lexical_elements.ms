@@ -215,3 +215,20 @@ A string literal is a sequence of zero or more UTF-8 characters enclosed by doub
 .NH 3
 .XN "Bit string literals"
 .LP
+A bit string literal is a sequence of zero or more digit or meta value characters enclosed by double quotes ("") and preceded by a base specifier.
+The meta value characters are supported because of hardware description languages, that also have a concept of metalogical values.
+.LP
+.sp 0.5
+\fCmeta_character ::=  \f[CB]-\fC | \f[CB]U\fC | \f[CB]W\fC | \f[CB]X\fC | \f[CB]Z\fC\fR
+.LP
+The meta characters have following meaning:
+.BL
+\fR'-' - don't care,
+.BL
+\fR'U' - uninitialized, 
+.BL
+\fR'W' - weak unknown, 
+.BL
+\fR'X' - unkown,
+.BL
+\fR'Z' - high-impedance state.
