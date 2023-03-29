@@ -232,3 +232,40 @@ The meta characters have following meaning:
 \fR'X' - unkown,
 .BL
 \fR'Z' - high-impedance state.
+.LP
+.sp 0.5
+\fCbinary_or_meta ::= binary_digit | meta_character
+.sp 0.5
+\fCoctal_or_meta ::= octal_digit | meta_character
+.sp 0.5
+\fChex_or_meta ::= hex_digit | meta_character
+.LP
+There three types of bit string literals: binary bit string literal, octal bit string literal and hex bit stirng literal.
+.LP
+.sp 0.5
+\fCbit_string_literal ::=
+.br
+    binary_bit_string_literal |
+.br
+    octal_bit_string_literal |
+.br
+    hex_bit_string_literal\fR
+.sp 0.5
+\fCbinary_bit_string_base = \f[CB]B\fC | \f[CB]b\fC
+.sp 0.5
+\fCbinary_bit_string_literal = binary_bit_string_base \f[CB]"\fC{binary_or_meta}\f[CB]"\fC
+.sp 0.5
+\fCoctal_bit_string_base = \f[CB]O\fC | \f[CB]o\fC
+.sp 0.5
+\fCoctal_bit_string_literal = octal_bit_string_base \f[CB]"\fC{octal_or_meta}\f[CB]"\fC
+.sp 0.5
+\fChex_bit_string_base = \f[CB]X\fC | \f[CB]x\fC
+.sp 0.5
+\fChex_bit_string_literal = hex_bit_string_base \f[CB]"\fC{hex_or_meta}\f[CB]"\fC
+.LP
+If meta value is present in a bit string literal, then it is expanded to the proper width depending on the bit string base.
+For example, following equations are true:
+.QP
+\fCo"XW"\fC = \fCb"XXXWWW"
+.br
+\fCx"U-"\fC = \fCb"UUUU----"
