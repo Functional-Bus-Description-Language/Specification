@@ -10,7 +10,7 @@ The masters property specifies the number of bus masters.
 .IP "\f[CB]reset\f[CW] string (None)\f[]"
 The reset property specifies the bus reset type.
 By default the bus has no reset.
-Valid values of the reset are: \f[CI]"Positive"\fR, \f[CI]"Negative"\fR, \f[CI]"Async Positive"\fR, \f[CI]"Async Negative"\fR.
+Valid values of the reset property are \f[CI]"Sync"\fR for synchronous reset and \f[CI]"Async"\fR for asynchronous reset.
 .IP "\f[CB]width\f[CW] integer (32)\f[]"
 The width property defines the bus data width.
 .

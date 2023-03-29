@@ -12,6 +12,7 @@ SRCS = \
 	src/concepts/properties.ms \
 	src/concepts/instantiation.ms \
 	src/concepts/addressing.ms \
+	src/concepts/positive_logic.ms \
 	src/lexical_elements.ms \
 	src/data_types.ms \
 	src/expressions.ms \

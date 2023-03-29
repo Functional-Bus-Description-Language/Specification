@@ -11,7 +11,7 @@ The masters property specifies the number of block masters.
 .IP "\f[CB]reset\f[CW] string (None)\f[]"
 The reset property specifies the block reset type.
 By default the block has no reset.
-Valid values of the reset are: \f[CI]"Positive"\fR, \f[CI]"Negative"\fR, \f[CI]"Async Positive"\fR, \f[CI]"Async Negative"\fR.
+Valid values of the reset property are \f[CI]"Sync"\fR for synchronous reset and \f[CI]"Async"\fR for asynchronous reset.
 .LP
 The following example presents how to limit the scope of access for particular requester.
 .QP
