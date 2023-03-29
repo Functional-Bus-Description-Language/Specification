@@ -18,8 +18,8 @@ time.
 .LP
 Types are implicit and are not declared.
 The type of the value evaluated from an expression must be checked before any assignment or comparison.
-If there is a type mismatch that can be resolved with implicit rules, then it should be resolved.
-In case of type mismatch that cannot be resolved, an error must be reported.
+If there is a type mismatch that can be resolved with implicit rules, then it shall be resolved.
+In case of type mismatch that cannot be resolved, an error must be reported by the compiler.
 .LP
 Conversion from integer to real in expressions is implicit.
 Conversion from real to integer must be explicit, and must be done by calling any function returning integer type, for example \f[CW]ceil(), floor()\f[].
@@ -27,6 +27,10 @@ Conversion from integer to bool in expressions is implicit.
 Bool cannot be converted to any type.
 .NH 2
 .XN Bit string
+.LP
+The value of bit string type is used for all \f[CB]*-value\fR properties.
+It might be created explicitly using the bit string literal or it might be converted implicitly from the value of integer type.
+The only way to create bit string value containing meta values is to explicitly use the bit string literal.
 .NH 2
 .XN Bool
 .LP
@@ -73,6 +77,6 @@ All of below property assignments are valid.
 .QP
 \fC\f[CB]delay\f[] = 1 \f[CB]s\f[] + 1 \f[CB]ms\f[] + 1 \f[CB]us\f[] + 1 \f[CB]ns\f[]
 .br
-\fC\f[CB]delay\f[] = 5 * 60 \f[CB]s\f[] # Sleep for 5 minutes.
+\fC\f[CB]delay\f[] = 5 * 60 \f[CB]s\f[] \f[CI]# Sleep for 5 minutes.\fC
 .br
 \fC\f[CB]delay\f[] = 10 \f[CB]ms\f[] * 4 + 7 * 8 \f[CB]us\f[]
