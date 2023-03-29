@@ -25,6 +25,34 @@ Conversion from integer to real in expressions is implicit.
 Conversion from real to integer must be explicit, and must be done by calling any function returning integer type, for example \f[CW]ceil(), floor()\f[].
 Conversion from integer to bool in expressions is implicit.
 Bool cannot be converted to any type.
+.LP
+Below picture presents a graph of possible implicit conversions between different data types.
+.PS
+copy "pic/grid"
+
+scale = 2.54
+
+r = 0.7
+
+BOOL:  circle  "Bool"          rad r  at (xm65, y0)
+BS:    circle  "Bit" "string"  rad r  at (x0, y40)
+INT:   circle  "Integer"       rad r  at (x0, y0)
+REAL:  circle  "Real"          rad r  at (x60, y0)
+
+arrow from BOOL.e  to INT.w
+
+arc -> rad 5  from BS.sw    to INT.nw
+arc -> rad 5  from INT.ne   to BS.se
+
+arc -> rad 9  from REAL.nw  to INT.ne
+arc -> rad 9  from INT.se   to REAL.sw
+
+"Always (false -> 0, true -> 1)" at (xm34, y3)
+"Only if no" "meta values" at (xm18, y22)
+"Always" at (x30, ym12)
+"Always" at (x15, y25)
+"Only if no fractional part" at (x32, y11)
+.PE
 .NH 2
 .XN Bit string
 .LP
