@@ -31,6 +31,7 @@ SRCS = \
 	src/parametrization.ms \
 	src/scope_and_visibility.ms \
 	src/grouping/grouping.ms \
+	src/grouping/order.ms \
 	src/grouping/irq.ms \
 	src/toc.ms
 
