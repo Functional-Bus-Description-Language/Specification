@@ -56,6 +56,8 @@ However, a value of the integer type appearing in a place where a value of the b
 To convert a value of the integer type to a value of the bool type the built-in  \f[CB]bool\f[]\fC()\fR function must be called.
 .NH 2
 .XN Integer
+.LP
+The integer data type is always signed integer and must be at least 64 bits wide.
 .NH 2
 .XN Real
 .NH 2
