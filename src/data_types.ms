@@ -88,8 +88,13 @@ To convert a value of the integer type to a value of the bool type the built-in 
 The integer data type is always signed integer and must be at least 64 bits wide.
 .NH 2
 .XN Real
+.LP
+The real data type is 64 bits IEEE 754 double precision floating-point type.
 .NH 2
 .XN String
+.LP
+The string data type can only be created explicitly using a string literal.
+The string data type is only used for setting values of some properties, for example \fCgroups\fR.
 .NH 2
 .XN Time
 .LP
