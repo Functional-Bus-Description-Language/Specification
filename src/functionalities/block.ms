@@ -1,17 +1,17 @@
 .NH 2
 .XN Block
 .LP
-The block functionality is used to logically group or to encapsulate functionalities.
-The block is usually used to separate functionalities related with particular peripherals such as UART, I2C transceivers, timers, ADCs, DACs etc.
+The \fCblock\fR functionality is used to logically group or to encapsulate functionalities.
+The \fCblock\fR is usually used to separate functionalities related with particular peripherals such as UART, I2C transceivers, timers, ADCs, DACs etc.
 The block might also be used to limit the access for particular provider to only a subset of functionalities.
 .LP
-The block functionality has following properties:
+The \fCblock\fR functionality has following properties:
 .IP "\f[CB]masters\f[CW] integer (1)\f[]" 0.2i
-The masters property specifies the number of block masters.
+The \fCmasters\fR property specifies the number of \fCblock\fR masters.
 .IP "\f[CB]reset\f[CW] string (None)\f[]"
-The reset property specifies the block reset type.
-By default the block has no reset.
-Valid values of the reset property are \f[CI]"Sync"\fR for synchronous reset and \f[CI]"Async"\fR for asynchronous reset.
+The \fCreset\fR property specifies the \fCblock\fR reset type.
+By default the \fCblock\fR has no reset.
+Valid values of the \fCreset\fR property are \f[CI]"Sync"\fR for synchronous reset and \f[CI]"Async"\fR for asynchronous reset.
 .LP
 The following example presents how to limit the scope of access for particular requester.
 .QP

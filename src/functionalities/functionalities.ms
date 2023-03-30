@@ -7,26 +7,26 @@ They define the capabilities of the provider.
 Each functionality is distinct and in an unambiguous way defines the provider behavior and the interface that must be generated for the requester.
 There are 12 functionalities:
 .IP 1) 3
-block,
+\fCblock\fR,
 .IP 2)
-bus,
+\fCbus\fR,
 .IP 3)
-config,
+\fCconfig\fR,
 .IP 4)
-irq,
+\fCirq\fR,
 .IP 5)
-mask,
+\fCmask\fR,
 .IP 6)
-memory,
+\fCmemory\fR,
 .IP 7)
-param,
+\fCparam\fR,
 .IP 8)
-proc,
+\fCproc\fR,
 .IP 9)
-return,
+\fCreturn\fR,
 .IP 10) 4
-static,
+\fCstatic\fR,
 .IP 11)
-status,
+\fCstatus\fR,
 .IP 12)
-stream.
+\fCstream\fR.

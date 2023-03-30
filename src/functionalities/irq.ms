@@ -1,8 +1,8 @@
 .NH 2
 .XN Irq
 .LP
-The irq functionality represents an interrupt.
-The irq functionality allows for automatic connection of following interrupt producers and consumers:
+The \fCirq\fR functionality represents an interrupt.
+The \fCirq\fR functionality allows for automatic connection of following interrupt producers and consumers:
 .IP 1) 3
 edge producer and edge sensitive consumer,
 .PS
@@ -94,25 +94,25 @@ line from C.s to (x91, ym10); line to (x44, ym10); line -> to L.s
 .PE
 .
 .LP
-The irq functionality has following properties:
+The \fCirq\fR functionality has following properties:
 .IP "\f[CB]clear\f[CW] string (\f[CI]""Explicit""\fC)\f[]" 0.2i
-The clear property defines how particular interrupt flag is cleared.
-The clear property is valid only in case of level triggered interrupt consumer.
-If clear property is set for edge triggered interrupt consumer a compiler shall shall report an error.
+The \fCclear\fR property defines how particular interrupt flag is cleared.
+The \fCclear\fR property is valid only in case of level triggered interrupt consumer.
+If \fCclear\fR property is set for edge triggered interrupt consumer a compiler shall shall report an error.
 Valid values are \f[CI]"Explicit"\fR and \f[CI]"On Read"\fR.
 The \f[CI]"Explicit"\fR clear requires compiler to generate a method that must be explicitly called to clear the interrupt flag.
 The \f[CI]"On Read"\fR clear requires the provider to clear the interrupt flag on each interrupt flag read.
 .IP "\f[CB]groups\f[CW] string | [string] (None\fC)\f[]"
-The groups property specifies the group for irq.
-Each irq must belong at most to one group.
-Irq groups are described in irq grouping subsection.
+The \fCgroups\fR property specifies the group for irq.
+Each \fCirq\fR must belong at most to one group.
+Interrupt groups are described in irq grouping subsection.
 .IP "\f[CB]in-trigger\f[CW] string (\f[CI]""Level""\fC)\f[]"
-The in-trigger property declares the interrupt producer type of trigger.
+The \fCin-trigger\fR property declares the interrupt producer type of trigger.
 Valid values are \f[CI]"Edge"\fR and \f[CI]"Level"\fR.
 It is up to the user to make sure declared trigger is coherent with the actual producer behavior.
 A mismatch may lead to incorrect behavior.
 .IP "\f[CB]out-trigger\f[CW] string (\f[CI]""Level""\fC)\f[]"
-The out-trigger property declares the interrupt consumer type of trigger.
+The \fCout-trigger\fR property declares the interrupt consumer type of trigger.
 Valid values are \f[CI]"Edge"\fR and \f[CI]"Level"\fR.
 It is up to the user to make sure declared trigger is coherent with the actual consumer requirement.
 A mismatch may lead to incorrect behavior.

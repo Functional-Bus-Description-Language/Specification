@@ -25,8 +25,8 @@ The \fCstatic\fR functionality may be used for example for versioning, bus id, b
 .QP
 \fCSecret \f[CB]static
 .br
-	\f[CB]width = \fC8
+	\f[CB]width\fC = C8
 .br
-	\f[CB]init-value = \fC113
+	\f[CB]init-value\fC = C113
 .br
-	\f[CB]read-value \fC= 0xFF
+	\f[CB]read-value\fC = 0xFF
