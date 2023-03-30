@@ -269,3 +269,14 @@ For example, following equations are true:
 \fCo"XW"\fC = \fCb"XXXWWW"
 .br
 \fCx"U-"\fC = \fCb"UUUU----"
+.
+.NH 3
+.XN "Time literals"
+.LP
+A time literal is a sequence of integer literal and a time unit.
+.LP
+.br
+\f[CW]time_unit ::= \fBns\fR | \fBus\fR | \fBms\fR | \fBs\fR
+.br
+\f[CW]time_literal ::= integer_literal time_unit
+.LP

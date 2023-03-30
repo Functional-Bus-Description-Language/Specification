@@ -98,14 +98,8 @@ The string data type is only used for setting values of some properties, for exa
 .NH 2
 .XN Time
 .LP
+The time data type is only used for assigning value to the properties expressed in time.
 The value of time type can be created explicitly using the time literal.
-.LP
-.br
-\f[CW]time_unit ::= \fBns\fR | \fBus\fR | \fBms\fR | \fBs\fR
-.br
-\f[CW]time_literal ::= integer_literal time_unit
-.LP
-The time type is only used for assigning value to the properties expressed in time.
 Values of time type can be added regardless of their time units.
 Values of the time type can also be multiplied by values of the integer type.
 All of below property assignments are valid.
