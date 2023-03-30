@@ -25,7 +25,7 @@ Its main characteristic is the shift of paradigm from the register-centric appro
 In the register-centric approach user defines registers and then manually lays out the data into the registers.
 In the functionality-centric approach user defines the functionality of the data and the registers and bus hierarchy are later automatically inferred.
 By defining the functionality of the data placed in the registers it is possible to generate more code, increase code robustness, improve system design readability, and shorten the implementation process.
-.sp 10
+.sp 9
 .B keywords:
 bus interface,
 code maintenance, computer languages, control interface,
