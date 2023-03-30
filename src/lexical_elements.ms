@@ -151,7 +151,7 @@ The second type definition is incorrect, even though the indent within the defin
 .NH 2
 .XN Keywords
 .LP
-FBDL has following keywords: \fBatomic, block, bus, const, doc, false, import, init-value, irq, mask, memory, param, proc, range, read-value, reset-value, return, static, stream, true\fR.
+FBDL has following keywords: \fBatomic, block, bus, clear, const, doc, false, import, init-value, irq, mask, memory, param, proc, range, read-value, reset-value, return, static, stream, true, in-trigger, out-trigger\fR.
 .LP
 Keywords can be used as identifiers with one exception.
 Keywords denoting built-in types (functionalities) cannot be used as identifiers for custom types.
