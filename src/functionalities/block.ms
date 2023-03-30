@@ -27,6 +27,7 @@ The following example presents how to limit the scope of access for particular r
 .LP
 The logical connection of the system components may look as follows:
 .PS
+scale = 1
 c0 = 0
 c1 = 1.55
 c2 = 2.9
