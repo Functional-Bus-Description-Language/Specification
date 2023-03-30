@@ -5,23 +5,27 @@
 .B "Functional Bus Description Language"
 .
 .
-.sp 1
-.ps
+.sp 2
 .ps 11
 Revision 0.0
-.
-.
 .sp 1
 \*[DY]
-.
-.
+.DE
+
 .sp 10
-.ps
+.ce
 .ps 12
 .I Abstract
-.ps
-.DE
-.sp 20
+.ps 11
+.sp 1
+This document is the official specification of the Functional Bus Description Language.
+Its main purpose is to define the syntax and semantics of the language.
+Functional Bus Description Language is a domain-specific language for bus and registers management.
+Its main characteristic is the shift of paradigm from the register-centric approach to the functionality-centric approach.
+In the register-centric approach user defines registers and then manually lays out the data into the registers.
+In the functionality-centric approach user defines the functionality of the data and the registers and bus hierarchy are later automatically inferred.
+By defining the functionality of the data placed in the registers it is possible to generate more code, increase code robustness, improve system design readability, and shorten the implementation process.
+.sp 10
 .B keywords:
 bus interface,
 code maintenance, computer languages, control interface,
