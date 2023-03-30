@@ -19,6 +19,9 @@ The init-value property defines the initial value of the mask.
 .IP "\f[CB]read-value\f[CW] bit string | integer (None)\f[]"
 The read-value specifies the value returned by the provider on the mask read.
 If the read-value is not set, then the provider must return the actual value of the mask.
+.IP "\f[CB]reset-value\f[CW] bit string | integer (None)\f[]"
+The reset-value specifies the value of the mask after the reset.
+If the reset-value is set, but a bus or block containing the mask is not resettable (\fCreset = None\fR), then the compiler shall report an error.
 .IP "\f[CB]width\f[CW] integer (bus width)\f[]"
 The width property defines the bit width of the mask.
 .

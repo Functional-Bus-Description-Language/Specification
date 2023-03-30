@@ -16,8 +16,6 @@ The groups property defines the groups the config belongs to.
 In case of a single group, the value can be a string.
 In case of multiple groups the value shall be a list of strings.
 Groups are thoroughly described in the grouping section.
-.IP "\f[CB]once\f[CW] bool (\f[CB]false\fC)\f[]"
-The once property determines whether the config can be written only once.
 .IP "\f[CB]init-value\f[CW] bit string | integer (uninitialized)\f[]"
 The init-value property defines the initial value of the config.
 .IP "\f[CB]range\f[CW] integer | [integer] (None)\f[]"
@@ -37,6 +35,9 @@ The recommended way is to implement compiler parameter allowing enabling/disabli
 .IP "\f[CB]read-value\f[CW] bit string | integer (None)\f[]"
 The read-value specifies the value returned by the provider on the config read.
 If the read-value is not set, then the provider must return the actual value of the config.
+.IP "\f[CB]reset-value\f[CW] bit string | integer (None)\f[]"
+The reset-value specifies the value of the config after the reset.
+If the reset-value is set, but a bus or block containing the config is not resettable (\fCreset = None\fR), then the compiler shall report an error.
 .IP "\f[CB]width\f[CW] integer (bus width)\f[]"
 The width property defines the bit width of the config.
 The width property shall not be explicitly set if the range property is already set.
