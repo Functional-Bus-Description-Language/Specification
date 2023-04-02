@@ -36,13 +36,15 @@ An expression is a formula that defines the computation of a value by applying o
 	expression_list
 \fR
 .sp 0.5
-\fC
-parenthesized_expression ::= \f[CB](\fC expression \f[CB])\fC
-\fR
+\fC function_call ::=
+.br
+	declared_identifier\f[CB](\fC [ expression { \f[CB],\fC expression } ] \f[CB])\fR
 .sp 0.5
-\fC
-expression_list ::= \f[CB][\fC [ expression {\f[CB],\fC expression} ] \f[CB]]\fC
-\fR
+\fC subscript ::= declared_identifier\f[CB][\fC expression \f[CB]]\fR
+.sp 0.5
+\fC parenthesized_expression ::= \f[CB](\fC expression \f[CB])\fR
+.sp 0.5
+\fC expression_list ::= \f[CB][\fC [ expression { \f[CB],\fC expression } ] \f[CB]]\fR
 .NH 2
 .XN Operators
 .LP
@@ -68,7 +70,7 @@ c s s
 c | c | c .
 FBDL binary arithmetic operators
 _
-Token;Name;Name
+Token;Operation;Name
 _
 \fC+\fR;Addition;bar
 \fC-\fR;Subtraction;bar
