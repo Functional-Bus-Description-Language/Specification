@@ -114,6 +114,46 @@ _
 tab(;) center;
 c s s s s
 c | c | c | c | c .
+FBDL binary comparison operators
+_
+\fBToken;Operator;Left Operand Type; Right Operand Type;Result\fR
+_
+;;Bool;Bool;Bool
+;;Integer;Integer;Bool
+\fC==\fR;Equality;Integer;Real;Bool
+;;Real;Integer;Bool
+;;Real;Real;Bool
+_
+;;Bool;Bool;Bool
+;;Integer;Integer;Bool
+\fC!=\fR;Nonequality;Integer;Real;Bool
+;;Real;Integer;Bool
+;;Real;Real;Bool
+_
+;;Integer;Integer;Bool
+\fC<\fR;Less Than;Integer;Real;Bool
+;;Real;Integer;Bool
+;;Real;Real;Bool
+_
+;;Integer;Integer;Bool
+\fC<=\fR;Less Than or Equal;Integer;Real;Bool
+;;Real;Integer;Bool
+;;Real;Real;Bool
+_
+;;Integer;Integer;Bool
+\fC>\fR;Greater Than;Integer;Real;Bool
+;;Real;Integer;Bool
+;;Real;Real;Bool
+_
+;;Integer;Integer;Bool
+\fC>=\fR;Greater Than or Equal;Integer;Real;Bool
+;;Real;Integer;Bool
+;;Real;Real;Bool
+.TE
+.TS
+tab(;) center;
+c s s s s
+c | c | c | c | c .
 FBDL binary logical operators
 _
 \fBToken;Operator;Left Operand Type; Right Operand Type;Result\fR
