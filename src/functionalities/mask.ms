@@ -17,10 +17,10 @@ This is especially important when the mask spans more than single register, as i
 .IP "\f[CB]init-value\f[CW] bit string | integer (uninitialized)\f[]"
 The \fCinit-value\fR property defines the initial value of the \fCmask\fR.
 .IP "\f[CB]read-value\f[CW] bit string | integer (None)\f[]"
-The \fCread-value\fR specifies the value returned by the provider on the \fCmask\fR read.
+The \fCread-value\fR property defines the value returned by the provider on the \fCmask\fR read.
 If the \fCread-value\fR is not set, then the provider must return the actual value of the mask.
 .IP "\f[CB]reset-value\f[CW] bit string | integer (None)\f[]"
-The \fCreset-value\fR specifies the value of the \fCmask\fR after the reset.
+The \fCreset-value\fR property defines the value of the \fCmask\fR after the reset.
 If the \fCreset-value\fR is set, but a \fCbus\fR or \fCblock\fR containing the \fCmask\fR is not resettable (\fCreset = None\fR), then the compiler shall report an error.
 .IP "\f[CB]width\f[CW] integer (bus width)\f[]"
 The \fCwidth\fR property defines the bit width of the \fCmask\fR.

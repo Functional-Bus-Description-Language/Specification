@@ -14,7 +14,7 @@ In case of a single group, the value can be a string.
 In case of multiple groups the value shall be a list of strings.
 Groups are thoroughly described in the grouping section.
 .IP "\f[CB]read-value\f[CW] bit string | integer (None)\f[]"
-The \fCread-value\fR property specifies the value that must be returned by the provider on the \fCstatus\fR read after the first read.
+The \fCread-value\fR property defines the value that must be returned by the provider on the \fCstatus\fR read after the first read.
 If the \fCread-value\fR property is set, then the actual value of the \fCstatus\fR can be read only once.
 .IP "\f[CB]width\f[CW] integer (bus width)\f[]"
 The \fCwidth\fR property defines the bit width of the \fCstatus\fR.

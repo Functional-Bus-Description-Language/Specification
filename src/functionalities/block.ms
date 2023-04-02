@@ -7,9 +7,9 @@ The block might also be used to limit the access for particular provider to only
 .LP
 The \fCblock\fR functionality has following properties:
 .IP "\f[CB]masters\f[CW] integer (1)\f[]" 0.2i
-The \fCmasters\fR property specifies the number of \fCblock\fR masters.
+The \fCmasters\fR property defines the number of \fCblock\fR masters.
 .IP "\f[CB]reset\f[CW] string (None)\f[]"
-The \fCreset\fR property specifies the \fCblock\fR reset type.
+The \fCreset\fR property defines the \fCblock\fR reset type.
 By default the \fCblock\fR has no reset.
 Valid values of the \fCreset\fR property are \f[CI]"Sync"\fR for synchronous reset and \f[CI]"Async"\fR for asynchronous reset.
 .LP

@@ -6,9 +6,9 @@ Every valid description must have at least one bus instantiated, as the the bus 
 .LP
 The \fCbus\fR functionality has following properties:
 .IP "\f[CB]masters\f[CW] integer (1)\f[]" 0.2i
-The \fCmasters\fR property specifies the number of \fCbus\fR masters.
+The \fCmasters\fR property defines the number of \fCbus\fR masters.
 .IP "\f[CB]reset\f[CW] string (None)\f[]"
-The \fCreset\fR property specifies the \fCbus\fR reset type.
+The \fCreset\fR property defines the \fCbus\fR reset type.
 By default the bus has no reset.
 Valid values of the \fCreset\fR property are \f[CI]"Sync"\fR for synchronous reset and \f[CI]"Async"\fR for asynchronous reset.
 .IP "\f[CB]width\f[CW] integer (32)\f[]"

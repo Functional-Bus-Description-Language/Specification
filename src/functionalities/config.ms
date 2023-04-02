@@ -19,7 +19,7 @@ Groups are thoroughly described in the grouping section.
 .IP "\f[CB]init-value\f[CW] bit string | integer (uninitialized)\f[]"
 The \fCinit-value\fR property defines the initial value of the \fCconfig\fR.
 .IP "\f[CB]range\f[CW] integer | [integer] (None)\f[]"
-The \fCrange\fR property specifies the range of valid values.
+The \fCrange\fR property defines the range of valid values.
 If the \fCrange\fR value is of integer type then, the valid range is from 0 to the value, including the value.
 If the \fCrange\fR value is an integer list, then it must have even number of elements.
 Odd elements specify lower bounds of the subranges and even elements specify upper bounds of the subranges.
@@ -33,10 +33,10 @@ If the \fCrange\fR property is not set, then the actual range implies from the \
 The code generated for the provider is not required to check or report if the value provided for the config write is within the valid range.
 The recommended way is to implement compiler parameter allowing enabling/disabling range check generation.
 .IP "\f[CB]read-value\f[CW] bit string | integer (None)\f[]"
-The \fCread-value\fR specifies the value returned by the provider on the config read.
+The \fCread-value\fR property defines the value returned by the provider on the config read.
 If the \fCread-value\fR is not set, then the provider must return the actual value of the \fCconfig\fR.
 .IP "\f[CB]reset-value\f[CW] bit string | integer (None)\f[]"
-The \fCreset-value\fR specifies the value of the config after the reset.
+The \fCreset-value\fR property definess the value of the config after the reset.
 If the \fCreset-value\fR is set, but a \fCbus\fR or \fCblock\fR containing the \fCconfig\fR is not resettable (\fCreset = None\fR), then the compiler shall report an error.
 .IP "\f[CB]width\f[CW] integer (bus width)\f[]"
 The \fCwidth\fR property defines the bit width of the config.

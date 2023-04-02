@@ -10,13 +10,13 @@ The \fCmemory\fR functionality has following properties:
 The \fCaccess\fR property declares the valid access permissions to the memory for the requester.
 Valid values of the \fCaccess\fR property are: \f[CI]"Read Write"\fR, \f[CI]"Read Only"\fR, \f[CI]"Write Only"\fR.
 .IP "\f[CB]byte-write-enable\fC bool (false)\f[]"
-The \fCbyte-write-enable\fR property enables byte-writes, that update the memory on contents on a byte-to-byte basis.
+The \fCbyte-write-enable\fR property declares byte-enable writes, that update the memory on contents on a byte-to-byte basis.
 If the \fCbyte-write-enable\fR property is explicitly set by a user, and a \fCmemory\fR access is \f[CI]"Read Only"\fR, then a compiler shall report an error.
 .IP "\f[CB]read-latency\fC integer (obligatory if access supports read)\f[]"
 The \fCread-latency\fR property declares the read latency in the number of clock cycles.
 It is required, if a \fCmemory\fR supports read access, to correcly implement read logic.
 .IP "\f[CB]size\fC integer (obligatory)\f[]"
-The \fCsize\fR property determines the \fCmemory\fR size.
+The \fCsize\fR property declares the \fCmemory\fR size.
 The \fCsize\fR is in the number of memory words with width equal to the \fCmemory\fR \fCwidth\fR property value.
 .IP "\f[CB]width\f[CW] integer (bus width)\f[]"
-The \fCwidth\fR property determines the memory data width.
+The \fCwidth\fR property declares the memory data width.

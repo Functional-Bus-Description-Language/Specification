@@ -9,6 +9,14 @@ If the default value is \fCbus width\fR, then it means that the default value eq
 If the default value is \fCuninitialized\fR, then it shall be represented as the uninitialized meta value at the provider side.
 If the target language for the provider code does not have a concept of uninitialized value, then values such as 0, \fCNull\fR, \fCNone\fR, \fCnil\fR etc. shall be used.
 .LP
+Each property either defines or declares functionality feature or behavior.
+Definitive properties specify the desired behavior of the automatically generated code.
+They specify elements directly managed by the FBDL.
+Examples of definitive properties include \fCatomic\fR or \fCwidth\fR properties.
+Declarative properties describe behavior of external elements that automatically generated code only interacts with.
+Declarative properties are required to generate valid logic, and its user responsibility to make sure theirs value match the behavior of external components.
+Examples of declarative properties include \fCaccess\fR or \fCin-trigger\fR properties.
+.LP
 \fCproperty_assignment ::= property_identifier \f[CB]=\fC expression
 .LP
 \fCproperty_assignments ::=

@@ -103,7 +103,7 @@ Valid values are \f[CI]"Explicit"\fR and \f[CI]"On Read"\fR.
 The \f[CI]"Explicit"\fR clear requires compiler to generate a method that must be explicitly called to clear the interrupt flag.
 The \f[CI]"On Read"\fR clear requires the provider to clear the interrupt flag on each interrupt flag read.
 .IP "\f[CB]groups\f[CW] string | [string] (None\fC)\f[]"
-The \fCgroups\fR property specifies the group for irq.
+The \fCgroups\fR property defines the group for irq.
 Each \fCirq\fR must belong at most to one group.
 Interrupt groups are described in irq grouping subsection.
 .IP "\f[CB]in-trigger\f[CW] string (\f[CI]""Level""\fC)\f[]"
