@@ -2,21 +2,102 @@
 .NH 1
 .XN Expressions
 .LP
-An expression is a formula that defines the computation of a value.
+An expression is a formula that defines the computation of a value by applying operators and functions to operands.
 .
+.LP
+\fCexpression ::=
+.br
+	bool_literal |
+.br
+	integer_literal |
+.br
+	real_literal |
+.br
+	string_literal |
+.br
+	bit_string_literal |
+.br
+	time_literal |
+.br
+	declared_identifier |
+.br
+	qualified_identifier |
+.br
+	unary_operation |
+.br
+	binary_operation |
+.br
+	function_call |
+.br
+	subscript |
+.br
+	parenthesized_expression |
+.br
+	expression_list
+\fR
+.sp 0.5
+\fC
+parenthesized_expression ::= \f[CB](\fC expression \f[CB])\fC
+\fR
+.sp 0.5
+\fC
+expression_list ::= \f[CB][\fC [ expression {\f[CB],\fC expression} ] \f[CB]]\fC
+\fR
 .NH 2
 .XN Operators
 .LP
+\fCbinary_operation ::= expression binary_operator expression\fR
+.sp
+\fCbinary_operator ::=
+.br
+	binary_arithmetic_operator |
+.br
+	binary_logical_operator |
+.br
+	binary_shift_operator
+.sp
+\fCbinary_arithmetic_operator ::= \f[CB]+\fC | \f[CB]-\fC | \f[CB]*\fC | \f[CB]/\fC | \f[CB]%\fC | \f[CB]**\fC
+.sp
+\fCbinary_logical_operator ::= \f[CB]&&\fC | \f[CB]||\fC
+.sp
+\fCbinary_shift_operator ::= \f[CB]<<\fC | \f[CB]>>\fR
+.
 .TS
 tab(;) center;
 c s s
 c | c | c .
-FBDL operators
+FBDL binary arithmetic operators
 _
-Operator token;Name;Name
+Token;Name;Name
 _
-+;foo;bar
-*;foo;bar
+\fC+\fR;Addition;bar
+\fC-\fR;Subtraction;bar
+\fC*\fR;Multiplication;bar
+\fC/\fR;Division;bar
+\fC%\fR;Remainder;bar
+\fC**\fR;Exponentiation;bar
+.TE
+.TS
+tab(;) center;
+c s s
+c | c | c .
+FBDL binary logical operators
+_
+Token;Name;Name
+_
+\fC&&\fR;Short-circuiting logical AND;bar
+\fC||\fR;Short-circuiting logical OR;bar
+.TE
+.TS
+tab(;) center;
+c s s
+c | c | c .
+FBDL binary shift operators
+_
+Token;Name;Name
+_
+\fC<<\fR;Left shift;bar
+\fC>>\fR;Right shift;bar
 .TE
 .
 .NH 2

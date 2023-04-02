@@ -160,6 +160,11 @@ Keywords denoting built-in types (functionalities) cannot be used as identifiers
 .XN Literals
 .
 .NH 3
+.XN "Bool literals"
+.LP
+\fCbool_literal ::= \f[CB]false\fC | \f[CB]true\fR
+.
+.NH 3
 .XN "Number literals"
 .LP
 .sp 0.5
@@ -188,11 +193,21 @@ Keywords denoting built-in types (functionalities) cannot be used as identifiers
 .XN "Integer literals"
 .LP
 .sp 0.5
-\f[CW]decimal_literal ::= non_zero_decimal_digit {[underscore] decimal_digit}\f[]
+\fCinteger_literal ::=
+.br
+	binary_literal |
+.br
+	octal_literal |
+.br
+	decimal_literal |
+.br
+	hex_literal
 .sp 0.5
 \f[CW]binary_literal ::= binary_base binary_digit {[underscore] binary_digit}\f[]
 .sp 0.5
 \f[CW]octal_literal ::= octal_base octal_digit {[underscore] octal_digit}\f[]
+.sp 0.5
+\f[CW]decimal_literal ::= non_zero_decimal_digit {[underscore] decimal_digit}\f[]
 .sp 0.5
 \f[CW]hex_literal ::= hex_base hex_digit {[underscore] hex_digit}\f[]
 .
