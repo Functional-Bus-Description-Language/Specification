@@ -47,6 +47,11 @@ An expression is a formula that defines the computation of a value by applying o
 \fC expression_list ::= \f[CB][\fC [ expression { \f[CB],\fC expression } ] \f[CB]]\fR
 .NH 2
 .XN Operators
+.NH 3
+.XN Unary Operators
+.LP
+.NH 3
+.XN Binary Operators
 .LP
 \fCbinary_operation ::= expression binary_operator expression\fR
 .sp
@@ -54,11 +59,15 @@ An expression is a formula that defines the computation of a value by applying o
 .br
 	binary_arithmetic_operator |
 .br
+	binary_comparison_operator |
+.br
 	binary_logical_operator |
 .br
 	binary_shift_operator
 .sp
 \fCbinary_arithmetic_operator ::= \f[CB]+\fC | \f[CB]-\fC | \f[CB]*\fC | \f[CB]/\fC | \f[CB]%\fC | \f[CB]**\fC
+.sp
+\fCbinary_comparison_operator ::= \f[CB]==\fC | \f[CB]!=\fC | \f[CB]<\fC | \f[CB]<=\fC | \f[CB]>\fC | \f[CB]>=\fC
 .sp
 \fCbinary_logical_operator ::= \f[CB]&&\fC | \f[CB]||\fC
 .sp
@@ -66,40 +75,64 @@ An expression is a formula that defines the computation of a value by applying o
 .
 .TS
 tab(;) center;
-c s s
-c | c | c .
+c s s s s
+c | c | c | c | c .
 FBDL binary arithmetic operators
 _
-Token;Operation;Name
+\fBToken;Operation;Left Operand Type;Right Operand Type; Result Type\fR
 _
-\fC+\fR;Addition;bar
-\fC-\fR;Subtraction;bar
-\fC*\fR;Multiplication;bar
-\fC/\fR;Division;bar
-\fC%\fR;Remainder;bar
-\fC**\fR;Exponentiation;bar
+;;Integer;Integer;Integer
+;;Integer;Real;Real
+\fC+\fR;Addition;Real;Integer;Real
+;;Real;Real;Real
+;;Time;Time;Time
+_
+;;Integer;Integer;Integer
+\fC-\fR;Subtraction;Integer;Real;Real
+;;Real;Integer;Real
+;;Real;Real;Real
+_
+;;Integer;Integer;Integer
+;;Integer;Real;Real
+\fC*\fR;Multiplication;Real;Integer;Real
+;;Real;Real;Real
+;;Integer;Time;Time
+;;Time;Integer;Time
+_
+;;Integer;Integer;Real
+\fC\\\fR;Division;Integer;Real;Real
+;;Integer;Real;Real
+;;Real;Real;Real
+_
+\fC%\fR;Remainder;Integer;Integer;Integer
+_
+;;Integer;Integer;Real
+\fC**\fR;Exponentiation;Integer;Real;Real
+;;Real;Integer;Real
 .TE
 .TS
 tab(;) center;
-c s s
-c | c | c .
+c s s s s
+c | c | c | c | c .
 FBDL binary logical operators
 _
-Token;Name;Name
+\fBToken;Operator;Left Operand Type; Right Operand Type;Result\fR
 _
-\fC&&\fR;Short-circuiting logical AND;bar
-\fC||\fR;Short-circuiting logical OR;bar
+\fC&&\fR;Short-circuiting logical AND;Bool;Bool;Bool
+_
+\fC||\fR;Short-circuiting logical OR;Bool;Bool;Bool
 .TE
 .TS
 tab(;) center;
-c s s
-c | c | c .
+c s s s s
+c | c | c | c | c .
 FBDL binary shift operators
 _
-Token;Name;Name
+\fBToken;Operator;Left Operand Type;Right Operand Type;Result Type\fR
 _
-\fC<<\fR;Left shift;bar
-\fC>>\fR;Right shift;bar
+\fC<<\fR;Left shift;Integer;Integer;Integer
+_
+\fC>>\fR;Right shift;Integer;Integer;Integer
 .TE
 .
 .NH 2
