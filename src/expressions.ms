@@ -78,7 +78,7 @@ _
 ;;Real;Real
 _
 ;;Bool;Bool
-\fC!\fR;Negation;Bit string;Bit string
+\fC!\fR;Negation;Bit String;Bit String
 ;;Integer;Integer
 .TE
 .
@@ -95,7 +95,7 @@ _
 .br
 	binary_logical_operator |
 .br
-	binary_shift_operator
+	binary_bitwise_operator
 .sp
 \fCbinary_arithmetic_operator ::= \f[CB]+\fC | \f[CB]-\fC | \f[CB]*\fC | \f[CB]/\fC | \f[CB]%\fC | \f[CB]**\fC
 .sp
@@ -103,7 +103,7 @@ _
 .sp
 \fCbinary_logical_operator ::= \f[CB]&&\fC | \f[CB]||\fC
 .sp
-\fCbinary_shift_operator ::= \f[CB]<<\fC | \f[CB]>>\fR
+\fCbinary_bitwise_operator ::= \f[CB]<<\fC | \f[CB]>>\fR
 .
 .TS
 tab(;) center;
@@ -196,17 +196,26 @@ _
 tab(;) center;
 c s s s s
 c | c | c | c | c .
-FBDL binary shift operators
+FBDL binary bitwise operators
 _
 \fBToken;Operator;Left Operand Type;Right Operand Type;Result Type\fR
 _
-\fC<<\fR;Left shift;Integer;Integer;Integer
+\fC<<\fR;Left Shift;Integer;Integer;Integer
 _
-\fC>>\fR;Right shift;Integer;Integer;Integer
+\fC>>\fR;Right Shift;Integer;Integer;Integer
+_
+\fC&\fR;And;Bit String;Bit String;Bit String
+;;Integer;Integer;Integer
+_
+\fC|\fR;Or;Bit String;Bit String;Bit String
+;;Integer;Integer;Integer
+_
+\fC^\fR;Xor;Bit String;Bit String;Bit String
+;;Integer;Integer;Integer
 .TE
 .
 .LP
-The bool data type is not valid operand type for most of the binary operations.
+The bool data type is not valid operand type for the most of the binary operations.
 However, as there is the rule for implicit conversion from the bool data type to the integer data type, all operations accepting the integer operands work also for the bool operands.
 .
 .NH 2
