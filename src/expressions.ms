@@ -35,21 +35,45 @@ An expression is a formula that defines the computation of a value by applying o
 .br
 	expression_list
 \fR
-.sp 0.5
+.sp
 \fC function_call ::=
 .br
 	declared_identifier\f[CB](\fC [ expression { \f[CB],\fC expression } ] \f[CB])\fR
-.sp 0.5
+.sp
 \fC subscript ::= declared_identifier\f[CB][\fC expression \f[CB]]\fR
-.sp 0.5
+.sp
 \fC parenthesized_expression ::= \f[CB](\fC expression \f[CB])\fR
-.sp 0.5
+.sp
 \fC expression_list ::= \f[CB][\fC [ expression { \f[CB],\fC expression } ] \f[CB]]\fR
 .NH 2
 .XN Operators
 .NH 3
 .XN Unary Operators
 .LP
+\fCunary_operation ::= unary_operator expression\fR
+.sp
+\fCunary_operator ::= unary_arithmetic_operator | unary_bitwise_operator\fR
+.sp
+\fCunary_arithmetic_operator ::= \f[CB]-\fR
+.sp
+\fCunary_bitwise_operator ::= \f[CB]!\fR
+.
+.TS
+tab(;) center;
+c s s s
+c | c | c | c .
+FBDL unary operators
+_
+\fBToken;Operation;Operand Type; Result Type\fR
+_
+\fC-\fR;Opposite;Integer;Integer
+;;Real;Real
+_
+;;Bool;Bool
+\fC!\fR;Negation;Bit string;Bit string
+;;Integer;Integer
+.TE
+.
 .NH 3
 .XN Binary Operators
 .LP
@@ -118,13 +142,11 @@ FBDL binary comparison operators
 _
 \fBToken;Operator;Left Operand Type; Right Operand Type;Result\fR
 _
-;;Bool;Bool;Bool
 ;;Integer;Integer;Bool
 \fC==\fR;Equality;Integer;Real;Bool
 ;;Real;Integer;Bool
 ;;Real;Real;Bool
 _
-;;Bool;Bool;Bool
 ;;Integer;Integer;Bool
 \fC!=\fR;Nonequality;Integer;Real;Bool
 ;;Real;Integer;Bool
@@ -181,19 +203,21 @@ _
 The FBDL does not allow defining custom functions for value computations.
 However, FBDL has following built-in functions:
 .IP "\f[CB]abs\f[CW](x integer|real) integer|real\f[]" 0.2i
-Abs returns the absolute value of x.
+The \fCabs\fR function returns the absolute value of \fCx\fR.
 .IP "\f[CB]bool\f[CW](x integer) bool\f[]"
-Bool returns a value of the bool type converted from a value x of the integer type.
-If x equals 0, then the \fCfalse\fR is returned.
+The \fCbool\fR function returns a value of the bool type converted from a value \fCx\fR of the integer type.
+If \fCx\fR equals 0, then the \fCfalse\fR is returned.
 In all other cases the \fCtrue\fR is returned.
 .IP "\f[CB]ceil\f[CW](x float) integer\f[]"
-Ceil returns the least integer value greater than or equal to x.
+The \fCceil\fR function returns the least integer value greater than or equal to \fCx\fR.
 .IP "\f[CB]floor\f[CW](x float) integer\f[]"
-Floor returns the greatest integer value less than or equal to x.
+The \fCfloor\fR function returns the greatest integer value less than or equal to \fC\fR.
 .IP "\f[CB]log2\f[CW](x float) integer|float\f[]"
-Log2 returns the binary logarithm of x.
+The \fClog2\fR returns the binary logarithm of \fCx\fR.
 .IP "\f[CB]log10\f[CW](x float) integer|float\f[]"
-Log10 returns the decimal logarithm of x.
+The \fClog10\fR returns the decimal logarithm of \fCx\fR.
+.IP "\f[CB]log\f[CW](x, b float) integer|float\f[]"
+The \fClog\fR function returns the logarithm of \fCx\fR to the base \fCb\fR.
 .IP "\f[CB]u2\f[CW](x, w integer) integer\f[]"
-U2 returns two's complement representation of x as an integer assuming width w.
+The \fCu2\fR function returns two's complement representation of \fCx\fR as an integer assuming width \fCw\fR.
 For example \fCu2(-1, 8)\fR returns 255.

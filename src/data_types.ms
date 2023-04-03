@@ -59,6 +59,25 @@ arc -> rad 9  from INT.se   to REAL.sw
 The value of bit string type is used for all \f[CB]*-value\fR properties.
 It might be created explicitly using the bit string literal or it might be converted implicitly from the value of integer type.
 The only way to create bit string value containing meta values is to explicitly use the bit string literal.
+.LP
+Below table presents negation operation results applied to possible bit string data type values.
+.TS
+tab(;) center;
+c s
+c | c .
+Bit string values bitwise negation
+_
+\fBIn Value; Out Value\fR
+_
+\fC0;1
+1;0
+-;-
+U;U
+W;W
+X;X
+Z;Z
+\fR
+.TE
 .NH 2
 .XN Bool
 .LP
