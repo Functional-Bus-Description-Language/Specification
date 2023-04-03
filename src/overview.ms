@@ -73,16 +73,10 @@ In the first instance, an occurrence of decimal digit can be replaced by either 
 In the second case, "choices" can be replaced by a list of "choice", separated by vertical bars, see item f) for the meaning of braces.
 .IP e)
 Square brackets [ ] enclose optional items on the right-hand side of a production.
-For example, the following two productions are equivalent:
-.sp 0.5
-	\fCparameters_list ::= \f[CB](\fC [ parameters ] \f[CB])\fC
-.br
-	\fCparameters_list ::= \f[CB]()\fC | \f[CB](\fC parameters \f[CB])\fR
-.sp 0.5
 Note, however, sometimes square brackets in the right-hand side of the production are part of the syntax.
 In such cases bold font is used.
 .IP f)
 Braces { } enclose a repeated item or items on the right-hand side of a production.
 The items may appear zero or more times.
 .IP g)
-The term \fIdeclared identifier\fR is used for any occurrence of an identifier that already denotes some declared item.
+The term \fIdeclared identifier\fR is used for any occurrence of an identifier that already denotes some declared item (declared by a user or by specification, for example built-in function name).
