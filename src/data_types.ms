@@ -58,12 +58,12 @@ The value of bit string type is used for all \f[CB]*-value\fR properties.
 It might be created explicitly using the bit string literal or it might be converted implicitly from the value of integer type.
 The only way to create bit string value containing meta values is to explicitly use the bit string literal.
 .LP
-Below table presents negation operation results applied to possible bit string data type values.
+Below table presents unary negation operation results applied to possible bit string data type values.
 .TS
 tab(;) center;
 c s
 c | c .
-Bit string values bitwise negation
+Bit string unary bitwise negation
 _
 \fBIn Value; Out Value\fR
 _
@@ -75,6 +75,78 @@ W;W
 X;X
 Z;Z
 \fR
+.TE
+.
+.TS
+tab(;) center;
+c s s s s s s s
+c || c | c | c | c | c | c | c.
+Bit string binary bitwise and (\fC&\fR) resolution
+_
+\fBLeft Operand \\ Right Operand\fR;\fC0;1;-;U;W;X;Z
+_
+_
+0;0;0;0;U;0;X;0
+_
+1;0;1;1;U;1;X;1
+_
+-;0;1;-;U;W;X;Z
+_
+U;U;U;U;U;U;U;U
+_
+W;0;1;X;U;W;X;W
+_
+X;X;X;X;U;X;X;X
+_
+Z;0;1;X;U;W;X;Z
+.TE
+.
+.TS
+tab(;) center;
+c s s s s s s s
+c || c | c | c | c | c | c | c.
+Bit string binary bitwise or (\fC|\fR) resolution
+_
+\fBLeft Operand \\ Right Operand\fR;\fC0;1;-;U;W;X;Z
+_
+_
+0;0;1;0;U;0;X;0
+_
+1;1;1;1;U;1;X;1
+_
+-;0;1;-;U;W;X;Z
+_
+U;U;U;U;U;U;U;U
+_
+W;0;1;X;U;W;X;W
+_
+X;X;X;X;U;X;X;X
+_
+Z;0;1;X;U;W;X;Z
+.TE
+.
+.TS
+tab(;) center;
+c s s s s s s s
+c || c | c | c | c | c | c | c.
+Bit string binary bitwise xor (\fC^\fR) resolution
+_
+\fBLeft Operand \\ Right Operand\fR;\fC0;1;-;U;W;X;Z
+_
+_
+0;0;1;0;U;0;X;0
+_
+1;1;0;1;U;1;X;1
+_
+-;0;1;-;U;W;X;Z
+_
+U;U;U;U;U;U;U;U
+_
+W;0;1;X;U;W;X;W
+_
+X;X;X;X;U;X;X;X
+_
+Z;0;1;X;U;W;X;Z
 .TE
 .NH 2
 .XN Bool
