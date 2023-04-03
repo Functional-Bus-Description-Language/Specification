@@ -3,9 +3,13 @@
 .LP
 .LP
 A functionality can be instantiated in a single line or in multiple lines.
-.LP
+.
+.
+.sp
 \fCinstantiation ::= single_line_instantiation | multi_line_instantiation
-.LP
+.
+.
+.sp
 \fCsingle_line_instantiation ::=
 .br
 	identifier
@@ -17,8 +21,48 @@ A functionality can be instantiated in a single line or in multiple lines.
 	[ argument_list ]
 .br
 	newline | semicolon_and_property_assignments\fR
+.
+.
+.sp
+\fCmulti_line_instantiation ::=
+.br
+	identifier
+.br
+	[ array_marker ]
+.br
+	declared_identifier | qualified_identifier
+.br
+	[ argument_list ]
+.br
+	functionality_body\fR
+.
+.
+.sp
+\fCfunctionality_body ::=
+.br
+	newline
+.br
+	indent
+.br
+	{
+.br
+		constant_definition |
+.br
+		type_definition |
+.br
+		property_assignments |
+.br
+		instantiation
+.br
+	}
+.br
+	dedent
+.
+.
 .LP
 Following code shows examples of single line instantiations:
+.
+.
 .QP
 \fCC \f[CB]config
 .br

@@ -29,7 +29,10 @@ SRCS = \
 	src/functionalities/static.ms \
 	src/functionalities/status.ms \
 	src/functionalities/stream.ms \
-	src/parametrization.ms \
+	src/parametrization/parametrization.ms \
+	src/parametrization/constant.ms \
+	src/parametrization/type_definition.ms \
+	src/parametrization/type_extending.ms \
 	src/scope_and_visibility.ms \
 	src/grouping/grouping.ms \
 	src/grouping/order.ms \
