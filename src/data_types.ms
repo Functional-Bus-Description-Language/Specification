@@ -83,7 +83,7 @@ c s s s s s s s
 c || c | c | c | c | c | c | c.
 Bit string binary bitwise and (\fC&\fR) resolution
 _
-\fBLeft Operand \\ Right Operand\fR;\fC0;1;-;U;W;X;Z
+\fBOperands\fR;\fC0;1;-;U;W;X;Z
 _
 _
 0;0;0;0;U;0;X;0
@@ -107,7 +107,7 @@ c s s s s s s s
 c || c | c | c | c | c | c | c.
 Bit string binary bitwise or (\fC|\fR) resolution
 _
-\fBLeft Operand \\ Right Operand\fR;\fC0;1;-;U;W;X;Z
+\fBOperands\fR;\fC0;1;-;U;W;X;Z
 _
 _
 0;0;1;0;U;0;X;0
@@ -131,7 +131,7 @@ c s s s s s s s
 c || c | c | c | c | c | c | c.
 Bit string binary bitwise xor (\fC^\fR) resolution
 _
-\fBLeft Operand \\ Right Operand\fR;\fC0;1;-;U;W;X;Z
+\fBOperands\fR;\fC0;1;-;U;W;X;Z
 _
 _
 0;0;1;0;U;0;X;0
