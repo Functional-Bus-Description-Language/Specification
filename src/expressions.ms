@@ -37,21 +37,21 @@ An expression is a formula that defines the computation of a value by applying o
 \fR
 .LP
 The function call is used to call one of built-in functions.
-.LP
-\fC function_call ::=
+.sp
+\fCfunction_call ::=
 .br
 	declared_identifier\f[CB](\fC [ expression { \f[CB],\fC expression } ] \f[CB])\fR
-.LP
+.sp
 The subscript is used to refer to a particular element from the expression list.
-.LP
+.sp
 \fCsubscript ::= declared_identifier\f[CB][\fC expression \f[CB]]\fR
-.LP
+.sp
 The parenthesized expression may be used to explicitly set order of operations.
-.LP
+.sp
 \fCparenthesized_expression ::= \f[CB](\fC expression \f[CB])\fR
-.LP
+.sp
 The expression list may be used to create a list of expressions.
-.LP
+.sp
 \fCexpression_list ::= \f[CB][\fC [ expression { \f[CB],\fC expression } ] \f[CB]]\fR
 .NH 2
 .XN Operators

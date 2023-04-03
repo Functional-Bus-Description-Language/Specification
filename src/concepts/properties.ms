@@ -16,9 +16,13 @@ Examples of definitive properties include \fCatomic\fR or \fCwidth\fR properties
 Declarative properties describe behavior of external elements that automatically generated code only interacts with.
 Declarative properties are required to generate valid logic, and its user responsibility to make sure theirs value match the behavior of external components.
 Examples of declarative properties include \fCaccess\fR or \fCin-trigger\fR properties.
-.LP
+.
+.
+.sp
 \fCproperty_assignment ::= property_identifier \f[CB]=\fC expression
-.LP
+.
+.
+.sp
 \fCproperty_assignments ::=
 .br
 	property_assignment
@@ -26,11 +30,31 @@ Examples of declarative properties include \fCaccess\fR or \fCin-trigger\fR prop
 	{ \f[CB];\fC property_assignment }
 .br
 	newline
-.LP
+.
+.
+.sp
 \fCsemicolon_and_property_assignments ::= \f[CB];\fC property_assignments
-.LP
-\fCproperty_identifier ::= \f[CB]atomic\fC | \f[CB]clear\fC | \f[CB]delay\fC | \f[CB]groups\fC | \f[CB]masters\fC |
+.
+.
+.sp
+\fCproperty_identifier ::=
+\f[CB]access\fC |
+\f[CB]atomic\fC |
+\f[CB]byte-write-enable\fC |
+\f[CB]clear\fC |
 .br
-    \f[CB]range\fC | \f[CB]width\fC | \f[CB]init-value\fC | \f[CB]read-value\fC | \f[CB]reset-value\fC |
+	
+\f[CB]delay\fC |
+\f[CB]groups\fC |
+\f[CB]init-value\fC |
+\f[CB]in-trigger\fC |
+\f[CB]masters\fC |
+\f[CB]out-trigger\fC |
 .br
-    \f[CB]in-trigger\fC | \f[CB]out-trigger\fC 
+	
+\f[CB]range\fC |
+\f[CB]read-latency\fC |
+\f[CB]read-value\fC |
+\f[CB]reset-value\fC |
+\f[CB]size\fC |
+\f[CB]width\fC

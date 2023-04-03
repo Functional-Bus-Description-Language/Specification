@@ -62,17 +62,21 @@ Main \f[CB]bus\fC
 .LP
 Identifiers are used as names.
 An identifier shall start with a letter.
-.LP
-\fCuppercase_letter ::= \f[CB]A\fC | \f[CB]B\fC | \f[CB]C\fC | \f[CB]D\fC | \f[CB]E\fC | \f[CB]F\fC | \f[CB]G\fC | \f[CB]H\fC | \f[CB]I\fC | \f[CB]J\fC | \f[CB]K\fC | \f[CB]L\fC | \f[CB]M\fC | \f[CB]N\fC | \f[CB]O\fC | \f[CB]P\fC | \f[CB]R\fC | \f[CB]S\fC | \f[CB]T\fC | \f[CB]U\fC | \f[CB]V\fC | \f[CB]W\fC | \f[CB]X\fC | \f[CB]Y\fC | \f[CB]Z\fR
-.LP
-\fClowercase_letter ::= \f[CB]a\fC | \f[CB]b\fC | \f[CB]c\fC | \f[CB]d\fC | \f[CB]e\fC | \f[CB]f\fC | \f[CB]g\fC | \f[CB]h\fC | \f[CB]i\fC | \f[CB]j\fC | \f[CB]k\fC | \f[CB]l\fC | \f[CB]m\fC | \f[CB]n\fC | \f[CB]o\fC | \f[CB]p\fC | \f[CB]r\fC | \f[CB]s\fC | \f[CB]t\fC | \f[CB]u\fC | \f[CB]v\fC | \f[CB]w\fC | \f[CB]x\fC | \f[CB]y\fC | \f[CB]z\fR
-.LP
+.sp
+\fCuppercase_letter ::= \f[CB]A\fC | \f[CB]B\fC | \f[CB]C\fC | \f[CB]D\fC | \f[CB]E\fC | \f[CB]F\fC | \f[CB]G\fC | \f[CB]H\fC | \f[CB]I\fC | \f[CB]J\fC | \f[CB]K\fC | \f[CB]L\fC | \f[CB]M\fC |
+.br
+	\f[CB]N\fC | \f[CB]O\fC | \f[CB]P\fC | \f[CB]R\fC | \f[CB]S\fC | \f[CB]T\fC | \f[CB]U\fC | \f[CB]V\fC | \f[CB]W\fC | \f[CB]X\fC | \f[CB]Y\fC | \f[CB]Z\fR
+.sp
+\fClowercase_letter ::= \f[CB]a\fC | \f[CB]b\fC | \f[CB]c\fC | \f[CB]d\fC | \f[CB]e\fC | \f[CB]f\fC | \f[CB]g\fC | \f[CB]h\fC | \f[CB]i\fC | \f[CB]j\fC | \f[CB]k\fC | \f[CB]l\fC | \f[CB]m\fC |
+.br
+	\f[CB]n\fC | \f[CB]o\fC | \f[CB]p\fC | \f[CB]r\fC | \f[CB]s\fC | \f[CB]t\fC | \f[CB]u\fC | \f[CB]v\fC | \f[CB]w\fC | \f[CB]x\fC | \f[CB]y\fC | \f[CB]z\fR
+.sp
 \fCletter ::= uppercase_letter | lowercase_letter\fR
-.LP
+.sp
 \fCletter_or_digit ::= letter | decimal_digit\fR
-.LP
+.sp
 \fCidentifier ::= letter { underscore | letter_or_digit }\fR
-.LP
+.sp
 Following code contains some valid and invalid identifiers.
 .QP
 \f[CB]const\fC C_20 = 20 \f[CI]# Valid\fC
@@ -89,15 +93,15 @@ Main \f[CB]bus\fC
 .XN Declared identifier
 .LP
 Declared identifier is used for any occurrence of an identifier that already denotes some declared item.
-.LP
+.sp
 \fCdeclared_identifier ::= letter { underscore | letter_or_digit }\fR
 .NH 3
 .XN Qualified identifier
 .LP
 The qualified identifier is used to reference a symbol from foreign package.
-.LP
-\fCqualified_identifier ::= declared_identifier\f[CB].\fCdeclared_identifier
-.LP
+.sp
+\fCqualified_identifier ::= declared_identifier\f[CB].\fCdeclared_identifier\fR
+.sp
 The first declared identifier denotes the package, and the second one denotes the symbol from this package.
 .
 .NH 2
@@ -167,32 +171,32 @@ Keywords denoting built-in types (functionalities) cannot be used as identifiers
 .NH 3
 .XN "Number literals"
 .LP
-.sp 0.5
-\f[CW]underscore ::= \f[B]_\f[]\f[]
-.sp 0.5
-\f[CW]zero_digit ::= \f[B]0\f[]\f[]
-.sp 0.5
-\f[CW]non_zero_decimal_digit ::= \f[B]1 \f[]| \f[B]2 \f[]| \f[B]3 \f[]| \f[B]4 \f[]| \f[B]5 \f[]| \f[B]6 \f[]| \f[B]7 \f[]| \f[B]8 \f[]| \f[B]9\f[]
-.sp 0.5
+\fCunderscore ::= \f[CB]_\fC
+.sp
+\fCzero_digit ::= \f[CB]0\fC
+.sp
+\fCnon_zero_decimal_digit ::= \f[CB]1\fC | \f[CB]2\fC | \f[CB]3\fC | \f[CB]4\fC | \f[CB]5\fC | \f[CB]6\fC | \f[CB]7\fC | \f[CB]8\fC | \f[CB]9\fC
+.sp
 \f[CW]decimal_digit ::= zero_digit | non_zero_decimal_digit\f[]
-.sp 0.5
-\f[CW]binary_base ::= \f[B]0B \f[]| \f[B]0b\f[]
-.sp 0.5
-\f[CW]binary_digit ::= \f[B]0 \f[]| \f[B]1\f[]
-.sp 0.5
-\f[CW]octal_base ::= \f[B]0O \f[]| \f[B]0o\f[]
-.sp 0.5
-\f[CW]octal_digit ::= \f[B]0 \f[]| \f[B]1 \f[]| \f[B]2 \f[]| \f[B]3 \f[]| \f[B]4 \f[]| \f[B]5 \f[]| \f[B]6 \f[]| \f[B]7
-.sp 0.5
-\f[CW]hex_base ::= \f[B]0X \f[]| \f[B]0x\f[]
-.sp 0.5
-\f[CW]hex_digit ::= \f[B]0 \f[]| \f[B]1 \f[]| \f[B]2 \f[]| \f[B]3 \f[]| \f[B]4 \f[]| \f[B]5 \f[]| \f[B]6 \f[]| \f[B]7 \f[]| \f[B]8 \f[]| \f[B]9 \f[]| \f[B]A \f[]| \f[B]a \f[]| \f[B]B \f[]| \f[B]b \f[]| \f[B]C \f[]| \f[B]c \f[]| \f[B]D \f[]| \f[B]d \f[]| \f[B]E \f[]| \f[B]e \f[]| \f[B]F \f[]| \f[B]f
+.sp
+\fCbinary_base ::= \f[CB]0B\fC | \f[CB]0b\fC
+.sp
+\fCbinary_digit ::= \f[CB]0\fC | \f[CB]1\fC
+.sp
+\fCoctal_base ::= \f[CB]0O\fC | \f[CB]0o\fC
+.sp
+\fCoctal_digit ::= \f[CB]0 \fC| \f[CB]1 \fC| \f[CB]2 \fC| \f[CB]3 \fC| \f[CB]4 \fC| \f[CB]5 \fC| \f[CB]6 \fC| \f[CB]7
+.sp
+\fChex_base ::= \f[CB]0X\fC | \f[CB]0x\fR
+.sp
+\fChex_digit ::= \f[CB]0\fC | \f[CB]1\fC | \f[CB]2\fC | \f[CB]3\fC | \f[CB]4\fC | \f[CB]5\fC | \f[CB]6\fC | \f[CB]7\fC | \f[CB]8\fC | \f[CB]9\fC |
+.br
+	\f[CB]A\fC | \f[CB]a\fC | \fBB\fC | \fBb\fC | \fBC\fC | \fBc\fC | \fBD\fC | \fBd\fC | \fBE\fC | \fBe\fC | \fBF\fC | \fBf\fR
 .
 .
 .NH 3
 .XN "Integer literals"
 .LP
-.sp 0.5
 \fCinteger_literal ::=
 .br
 	binary_literal |
@@ -202,13 +206,13 @@ Keywords denoting built-in types (functionalities) cannot be used as identifiers
 	decimal_literal |
 .br
 	hex_literal
-.sp 0.5
+.sp
 \f[CW]binary_literal ::= binary_base binary_digit {[underscore] binary_digit}\f[]
-.sp 0.5
+.sp
 \f[CW]octal_literal ::= octal_base octal_digit {[underscore] octal_digit}\f[]
-.sp 0.5
+.sp
 \f[CW]decimal_literal ::= non_zero_decimal_digit {[underscore] decimal_digit}\f[]
-.sp 0.5
+.sp
 \f[CW]hex_literal ::= hex_base hex_digit {[underscore] hex_digit}\f[]
 .
 .NH 3
@@ -224,7 +228,7 @@ Real numbers expressed with a decimal point shall have at least one digit on eac
 .LP
 A string literal is a sequence of zero or more UTF-8 characters enclosed by double quotes ("").
 .br
-.sp 0.5
+.sp
 \fCstring_literal ::= \f[CI]"\fC{UTF-8 character}\f[CI]"\fR
 .
 .NH 3
@@ -233,8 +237,8 @@ A string literal is a sequence of zero or more UTF-8 characters enclosed by doub
 A bit string literal is a sequence of zero or more digit or meta value characters enclosed by double quotes ("") and preceded by a base specifier.
 The meta value characters are supported because of hardware description languages, that also have a concept of metalogical values.
 .LP
-.sp 0.5
-\fCmeta_character ::=  \f[CB]-\fC | \f[CB]U\fC | \f[CB]W\fC | \f[CB]X\fC | \f[CB]Z\fC\fR
+.sp
+\fCmeta_character ::=  \f[CB]-\fC | \f[CB]U\fC | \f[CB]W\fC | \f[CB]X\fC | \f[CB]Z\fR
 .LP
 The meta characters have following meaning:
 .BL
@@ -248,16 +252,16 @@ The meta characters have following meaning:
 .BL
 \fR'Z' - high-impedance state.
 .LP
-.sp 0.5
+.sp
 \fCbinary_or_meta ::= binary_digit | meta_character
-.sp 0.5
+.sp
 \fCoctal_or_meta ::= octal_digit | meta_character
-.sp 0.5
+.sp
 \fChex_or_meta ::= hex_digit | meta_character
 .LP
 There three types of bit string literals: binary bit string literal, octal bit string literal and hex bit stirng literal.
 .LP
-.sp 0.5
+.sp
 \fCbit_string_literal ::=
 .br
     binary_bit_string_literal |
@@ -265,17 +269,17 @@ There three types of bit string literals: binary bit string literal, octal bit s
     octal_bit_string_literal |
 .br
     hex_bit_string_literal\fR
-.sp 0.5
+.sp
 \fCbinary_bit_string_base = \f[CB]B\fC | \f[CB]b\fC
-.sp 0.5
+.sp
 \fCbinary_bit_string_literal = binary_bit_string_base \f[CB]"\fC{binary_or_meta}\f[CB]"\fC
-.sp 0.5
+.sp
 \fCoctal_bit_string_base = \f[CB]O\fC | \f[CB]o\fC
-.sp 0.5
+.sp
 \fCoctal_bit_string_literal = octal_bit_string_base \f[CB]"\fC{octal_or_meta}\f[CB]"\fC
-.sp 0.5
+.sp
 \fChex_bit_string_base = \f[CB]X\fC | \f[CB]x\fC
-.sp 0.5
+.sp
 \fChex_bit_string_literal = hex_bit_string_base \f[CB]"\fC{hex_or_meta}\f[CB]"\fC
 .LP
 If meta value is present in a bit string literal, then it is expanded to the proper width depending on the bit string base.
@@ -289,9 +293,7 @@ For example, following equations are true:
 .XN "Time literals"
 .LP
 A time literal is a sequence of integer literal and a time unit.
-.LP
-.br
-\f[CW]time_unit ::= \fBns\fR | \fBus\fR | \fBms\fR | \fBs\fR
-.br
-\f[CW]time_literal ::= integer_literal time_unit
-.LP
+.sp
+\fCtime_unit ::= \f[CB]ns\fC | \f[CB]us\fC | \f[CB]ms\fC | \f[CB]s\fC
+.sp
+\fCtime_literal ::= integer_literal time_unit
