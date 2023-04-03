@@ -35,16 +35,24 @@ An expression is a formula that defines the computation of a value by applying o
 .br
 	expression_list
 \fR
-.sp
+.LP
+The function call is used to call one of built-in functions.
+.LP
 \fC function_call ::=
 .br
 	declared_identifier\f[CB](\fC [ expression { \f[CB],\fC expression } ] \f[CB])\fR
-.sp
-\fC subscript ::= declared_identifier\f[CB][\fC expression \f[CB]]\fR
-.sp
-\fC parenthesized_expression ::= \f[CB](\fC expression \f[CB])\fR
-.sp
-\fC expression_list ::= \f[CB][\fC [ expression { \f[CB],\fC expression } ] \f[CB]]\fR
+.LP
+The subscript is used to refer to a particular element from the expression list.
+.LP
+\fCsubscript ::= declared_identifier\f[CB][\fC expression \f[CB]]\fR
+.LP
+The parenthesized expression may be used to explicitly set order of operations.
+.LP
+\fCparenthesized_expression ::= \f[CB](\fC expression \f[CB])\fR
+.LP
+The expression list may be used to create a list of expressions.
+.LP
+\fCexpression_list ::= \f[CB][\fC [ expression { \f[CB],\fC expression } ] \f[CB]]\fR
 .NH 2
 .XN Operators
 .NH 3
@@ -196,6 +204,10 @@ _
 _
 \fC>>\fR;Right shift;Integer;Integer;Integer
 .TE
+.
+.LP
+The bool data type is not valid operand type for most of the binary operations.
+However, as there is the rule for implicit conversion from the bool data type to the integer data type, all operations accepting the integer operands work also for the bool operands.
 .
 .NH 2
 .XN Functions

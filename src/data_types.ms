@@ -35,22 +35,20 @@ scale = 2.54
 r = 0.7
 
 BOOL:  circle  "Bool"          rad r  at (xm65, y0)
-BS:    circle  "Bit" "string"  rad r  at (x0, y40)
+BS:    circle  "Bit" "string"  rad r  at (x0, y35)
 INT:   circle  "Integer"       rad r  at (x0, y0)
 REAL:  circle  "Real"          rad r  at (x60, y0)
 
 arrow from BOOL.e  to INT.w
 
-arc -> rad 5  from BS.sw    to INT.nw
-arc -> rad 5  from INT.ne   to BS.se
+arrow from INT.n to BS.s
 
 arc -> rad 9  from REAL.nw  to INT.ne
 arc -> rad 9  from INT.se   to REAL.sw
 
 "Always (false -> 0, true -> 1)" at (xm34, y3)
-"Only if no" "meta values" at (xm18, y22)
 "Always" at (x30, ym12)
-"Always" at (x15, y25)
+"Always" at (x7, y20)
 "Only if no fractional part" at (x32, y11)
 .PE
 .NH 2
