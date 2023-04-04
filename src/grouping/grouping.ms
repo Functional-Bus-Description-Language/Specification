@@ -231,6 +231,21 @@ Below snippet presents possible arrangement of elements for the example bus.
 .LP
 The mixed groups are groups with both single functionalities and array functionalities.
 The below listing presents an example bus description with a mixed group.
+.QP
+\fCMain \f[CB]bus\fC
+.br
+	C \f[CB]config\fC; \f[CB]width\fC = 10; \f[CB]groups\fC = \f[CI]"group"\fC
+.br
+	M \f[CB]mask\fC;   \f[CB]width\fC = 7;  \f[CB]groups\fC = \f[CI]"group"\fC
+.br
+	S \f[CB]status\fC; \f[CB]width\fC = 8;  \f[CB]groups\fC = \f[CI]"group"\fC
+.br
+
+.br
+	CA [3]\f[CB]config\fC; \f[CB]width\fC = 10; \f[CB]groups\fC = \f[CI]"group"\fC
+.br
+	SA [3]\f[CB]config\fC; \f[CB]width\fC = 12; \f[CB]groups\fC = \f[CI]"group"\fC
+.LP
 .
 .
 .NH 2
