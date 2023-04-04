@@ -217,7 +217,7 @@ Below snippet presents possible arrangement of elements for the example bus.
 .br
 ------------------------------   ------------------------
 .br
-\fC       Nth + 2 register                 Nth + 3 register
+       Nth + 2 register                 Nth + 3 register
 .br
 ------------------------------   ------------------------------
 .br
@@ -246,6 +246,27 @@ The below listing presents an example bus description with a mixed group.
 .br
 	SA [3]\f[CB]config\fC; \f[CB]width\fC = 12; \f[CB]groups\fC = \f[CI]"group"\fC
 .LP
+In case of mixed groups array functionalities shall be registerified as the first ones assuming a pure array group.
+Single functionalities shall be later placed in the gaps created during array registerification.
+If there are no gaps, or gaps are not wide enough, then all reamining single functionalities shall be registerified as single register group or multi register group.
+If the gaps are wide enough to place single functionalities there, but for some reason it is not desired, then subgroup can be defined to group single functionalities of the mixed group as the first ones.
+Below snippet presents possible arrangement of elements for the example bus.
+.QP
+\fC      Nth register                  Nth + 1 register
+.br
+-----------------------   ------------------------------------
+.br
+|| CA[0] | SA[0] | C ||   || CA[1] | SA[1] | M | 3 bits gap ||
+.br
+-----------------------   ------------------------------------
+          Nth + 2 register
+.br
+------------------------------------
+.br
+|| CA[2] | SA[2] | S | 2 bits gap ||
+.br
+------------------------------------
+\fR
 .
 .
 .NH 2
