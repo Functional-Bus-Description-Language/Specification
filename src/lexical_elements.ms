@@ -257,10 +257,9 @@ The meta characters have following meaning:
 .sp
 \fCoctal_or_meta ::= octal_digit | meta_character
 .sp
-\fChex_or_meta ::= hex_digit | meta_character
+\fChex_or_meta ::= hex_digit | meta_character\fR
 .sp
-There three types of bit string literals: binary bit string literal, octal bit string literal and hex bit stirng literal.
-.LP
+There are three types of bit string literals: binary bit string literal, octal bit string literal and hex bit stirng literal.
 .sp
 \fCbit_string_literal ::=
 .br
