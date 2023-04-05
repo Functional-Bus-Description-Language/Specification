@@ -22,7 +22,7 @@ Any FBDL compliant compiler must place all three configs (\fCA\fR, \fCB\fR, \fCC
 .
 .
 .NH 2
-.XN "Single register groups"
+.XN Single register groups
 .LP
 The single register groups are groups of elements that fit single register.
 The overall width of all functionalities is not greater than the single register width.
@@ -66,7 +66,7 @@ It must also generate methods for reading particular functionalities.
 .
 .
 .NH 2
-.XN "Multi register groups"
+.XN Multi register groups
 .LP
 The multi register groups are groups with functionalities that overall width is greater than the width of a single register.
 The specification does not impose any order of functionalities or registers in such case, and it is left to the compiler implementation.
@@ -128,7 +128,7 @@ This time reading both \fCSC\fR and \fCSS\fR requires reading only one register,
 .
 .
 .NH 2
-.XN "Array groups"
+.XN Array groups
 .LP
 The array groups are groups with all functionalities being arrays.
 The groups do not necessarily have the same number of elements.
@@ -141,7 +141,7 @@ This is because some of the target languages support special data types indicati
 .
 .
 .NH 3
-.XN "Single register array groups"
+.XN Single register array groups
 .LP
 The single register array groups are array groups with overall single elements width not greater than the width of a single register.
 Below listing presents an example bus description with a single register array group.
@@ -188,7 +188,7 @@ Below snippet presents possible arrangement of elements for the example bus.
 .
 .
 .NH 3
-.XN "Multi register array groups"
+.XN Multi register array groups
 .LP
 The single register array groups are array groups with overall single elements width greater than the width of a single register.
 Below listing presents an example bus description with a multi register array group.
@@ -227,7 +227,7 @@ Below snippet presents possible arrangement of elements for the example bus.
 .
 .
 .NH 2
-.XN "Mixed groups"
+.XN Mixed groups
 .LP
 The mixed groups are groups with both single functionalities and array functionalities.
 The below listing presents an example bus description with a mixed group.
@@ -270,7 +270,7 @@ Below snippet presents possible arrangement of elements for the example bus.
 .
 .
 .NH 2
-.XN "Virtual groups"
+.XN Virtual groups
 .LP
 Virtual groups are groups that name starts with the underscore ('_'), for example "\f[CI]_group\fR".
 Virtual groups are used to group functionalities without generating the group interface for the requester code.

@@ -36,12 +36,12 @@ Not only the register masks, addresses, and single read, write functions can be 
 This in turn leads to shorter design iterations and fewer bugs.
 .
 .NH 2
-.XN "Word usage"
+.XN Word usage
 .LP
 The terms "must", "must not", "required", "shall", "shall not", "should", "should not", "recommended", "may", and "optional" in this document are to be interpreted as described in the IETF Best Practices Document 14, RFC 2119.1.
 .
 .NH 2
-.XN "Syntactic description"
+.XN Syntactic description
 .LP
 The formal syntax of the FBDL is described by means of context-free syntax using a simple variant of the Backus-Naur Form (BNF).
 In particular:

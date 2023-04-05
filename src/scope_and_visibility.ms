@@ -1,9 +1,9 @@
 .bp
 .NH
-.XN "Scope and visibility"
+.XN Scope and visibility
 .
 .NH 2
-.XN "Import and package system"
+.XN Import and package system
 .LP
 The FBDL has a concept of packages and allows importing packages into the file scope using the import statements.
 A package consists of files with \fC.fbd\fR extension placed in the same directory.
@@ -53,7 +53,7 @@ The optional identifier is an identifier that shall denote the imported package 
 If the identifier is omitted, then the implicit identifier for the package is the last part of its path..
 .
 .NH 3
-.XN "Package discovery"
+.XN Package discovery
 .LP
 Each FBDL compiler is required to carry out the package auto discovery procedure.
 The procedure must obey following rules.
@@ -128,7 +128,7 @@ In this case each FBDL compilant compiler must automatically discover following 
 \fCpkg2\fR - path \fC"./fbd/pkg2"\fR.
 .
 .NH 2
-.XN "Scope rules"
+.XN Scope rules
 .LP
 The following elements define a new scope in the FBDL:
 .BL

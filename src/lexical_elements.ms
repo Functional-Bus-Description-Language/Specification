@@ -1,6 +1,6 @@
 .bp
 .NH
-.XN "Lexical elements"
+.XN Lexical elements
 .LP
 FBDL has following types of lexical tokens:
 .BL
@@ -164,12 +164,12 @@ Keywords denoting built-in types (functionalities) cannot be used as identifiers
 .XN Literals
 .
 .NH 3
-.XN "Bool literals"
+.XN Bool literals
 .LP
 \fCbool_literal ::= \f[CB]false\fC | \f[CB]true\fR
 .
 .NH 3
-.XN "Number literals"
+.XN Number literals
 .LP
 \fCunderscore ::= \f[CB]_\fC
 .sp
@@ -195,7 +195,7 @@ Keywords denoting built-in types (functionalities) cannot be used as identifiers
 .
 .
 .NH 3
-.XN "Integer literals"
+.XN Integer literals
 .LP
 \fCinteger_literal ::=
 .br
@@ -216,7 +216,7 @@ Keywords denoting built-in types (functionalities) cannot be used as identifiers
 \f[CW]hex_literal ::= hex_base hex_digit {[underscore] hex_digit}\f[]
 .
 .NH 3
-.XN "Real literals"
+.XN Real literals
 .LP
 The real literals shall be represented as described by IEEE Std 754, an IEEE standard for double-precision floating-point numbers.
 .LP
@@ -224,7 +224,7 @@ Real numbers can be specified in either decimal notation (for example, 17.83) or
 Real numbers expressed with a decimal point shall have at least one digit on each side of the decimal point.
 .
 .NH 3
-.XN "String literals"
+.XN String literals
 .LP
 A string literal is a sequence of zero or more UTF-8 characters enclosed by double quotes ("").
 .br
@@ -232,7 +232,7 @@ A string literal is a sequence of zero or more UTF-8 characters enclosed by doub
 \fCstring_literal ::= \f[CI]"\fC{UTF-8 character}\f[CI]"\fR
 .
 .NH 3
-.XN "Bit string literals"
+.XN Bit string literals
 .LP
 A bit string literal is a sequence of zero or more digit or meta value characters enclosed by double quotes ("") and preceded by a base specifier.
 The meta value characters are supported because of hardware description languages, that also have a concept of metalogical values.
@@ -258,7 +258,7 @@ The meta characters have following meaning:
 \fCoctal_or_meta ::= octal_digit | meta_character
 .sp
 \fChex_or_meta ::= hex_digit | meta_character
-.LP
+.sp
 There three types of bit string literals: binary bit string literal, octal bit string literal and hex bit stirng literal.
 .LP
 .sp
@@ -281,7 +281,7 @@ There three types of bit string literals: binary bit string literal, octal bit s
 \fChex_bit_string_base = \f[CB]X\fC | \f[CB]x\fC
 .sp
 \fChex_bit_string_literal = hex_bit_string_base \f[CB]"\fC{hex_or_meta}\f[CB]"\fC
-.LP
+.sp
 If meta value is present in a bit string literal, then it is expanded to the proper width depending on the bit string base.
 For example, following equations are true:
 .QP
@@ -290,7 +290,7 @@ For example, following equations are true:
 \fCx"U-"\fC = \fCb"UUUU----"
 .
 .NH 3
-.XN "Time literals"
+.XN Time literals
 .LP
 A time literal is a sequence of integer literal and a time unit.
 .sp

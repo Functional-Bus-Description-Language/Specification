@@ -1,5 +1,5 @@
 .NH 2
-.XN "Registerification order"
+.XN Registerification order
 .LP
 Groups must be registerified in the order they appear in the groups lists.
 A compiler must issue an error if the order of any groups is not the same in all groups lists.
