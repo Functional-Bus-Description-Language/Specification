@@ -19,4 +19,4 @@ If the \fCread-value\fR property is set, then the actual value of the \fCstatus\
 .IP "\f[CB]width\f[CW] integer (bus width)\f[]"
 The \fCwidth\fR property defines the bit width of the \fCstatus\fR.
 .LP
-The code generated for the requester must provide method for reading the \fCstatus\fR.
+The code generated for the requester must provide a mean for reading the \fCstatus\fR.

@@ -24,7 +24,7 @@ Below snippet shows an example of irq group for level sensitive interrupt consum
 .LP
 Below picture presents possible logical block diagram of the irq group with level trigger for the interrupt consumer and enable register.
 The "Clear On Read" signal is driven on every Flag Register read.
-The "Explicit Clear" signal must be driven when requester calls a method for clearing given interrupt flags.
+The "Explicit Clear" signal must be driven when requester calls a mean for clearing given interrupt flags.
 Probably the easiest form of the "Explicit Clear" implementation is clear on Flag Register write, where the clear bit-mask is the value of the data bus.
 The Flag Register is to some extent a virtual register, as it has an address, but it does not have any storage elements.
 The flag is stored in the interrupt producer in case of a level triggered producer, or in the Edge Detector in case of an edge triggered producer.

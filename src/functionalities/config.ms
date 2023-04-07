@@ -43,4 +43,4 @@ The \fCwidth\fR property defines the bit width of the config.
 The \fCwidth\fR property shall not be explicitly set if the \fCrange\fR property is already set.
 .
 .LP
-The code generated for the requester must provide methods for writing and reading the config.
+The code generated for the requester must provide means for writing and reading the config.

@@ -100,7 +100,7 @@ The \fCclear\fR property defines how particular interrupt flag is cleared.
 The \fCclear\fR property is valid only in case of level triggered interrupt consumer.
 If \fCclear\fR property is set for edge triggered interrupt consumer a compiler shall shall report an error.
 Valid values are \f[CI]"Explicit"\fR and \f[CI]"On Read"\fR.
-The \f[CI]"Explicit"\fR clear requires compiler to generate a method that must be explicitly called to clear the interrupt flag.
+The \f[CI]"Explicit"\fR clear requires compiler to generate a mean that must be explicitly used to clear the interrupt flag.
 The \f[CI]"On Read"\fR clear requires the provider to clear the interrupt flag on each interrupt flag read.
 .IP "\f[CB]groups\f[CW] string | [string] (None\fC)\f[]"
 The \fCgroups\fR property defines the group for irq.

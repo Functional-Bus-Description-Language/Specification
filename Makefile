@@ -6,6 +6,7 @@ SRCS = \
 	src/defs.ms \
 	src/config.ms \
 	src/participants.ms \
+	src/glossary.ms \
 	src/overview.ms \
 	src/references.ms \
 	src/concepts/concepts.ms \

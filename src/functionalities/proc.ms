@@ -31,4 +31,4 @@ The \fCproc\fR functionality has following properties:
 .IP "\f[CB]delay\f[CW] time (None)\f[]" 0.2i
 The \fCdelay\fR property defines the time delay between parameters write end and returns read start.
 .LP
-The code generated for the requester must provide method for calling the procedure.
+The code generated for the requester must provide a mean for calling the procedure.
