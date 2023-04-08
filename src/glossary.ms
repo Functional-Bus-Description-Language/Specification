@@ -12,8 +12,13 @@ The downstream is a stream from the requester to the provider.
 The functionality is the functionality of given data.
 It can be seen as a type of the data.
 In case of functionalities encapsulating other functionalities, such as \fCbus\fR, \fCblock\fR, \fCproc\fR or \fCstream\fR, the functionality is used to denote a broader context of encapsulated data.
+.IP \fBgateware\fR
+The gateware term is used to refer to the overall configuration of the logic placed in the FPGA to make it behave according to the desired description.
+The term is not formally defined anywhere, however it is used to unburden the firmware term.
+IEEE Std 610.12-1990 also mentions that the firmware term is too overloaded and confusing.
 .IP \fBinformation\fR
-The information
+The information term is used to refer to the metadata on the functionality data.
+The metadata describes where the data is located, for example bit masks and register addresses, and how to access the data.
 .IP \fBmean\fR
 The mean term is used to refer to the automatically generated method or data that shall be used by the requester to request particular functionality.
 A mean in particular programming language is usually a function, method or procedure that shall be called or class, dictionary, map or structure containing information on how to access particular functionality.
