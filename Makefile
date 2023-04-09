@@ -38,6 +38,7 @@ SRCS = \
 	src/grouping/grouping.ms \
 	src/grouping/order.ms \
 	src/grouping/irq.ms \
+	src/grouping/param_and_return.ms \
 	src/toc.ms
 
 # Build targets
