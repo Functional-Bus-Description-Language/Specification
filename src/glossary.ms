@@ -29,5 +29,13 @@ The registerification is the process of placing data of functionalities into the
 The process includes assigning data bit masks, register addresses as well as block addresses and masks.
 .IP \fBrequester\fR
 The requester is the system component accessing the generated registers and requesting described functionalities.
+.IP \fBtarget\fR 
+The target term is used to refer to the transpilation target.
+For example, a target can be a requester Python code allowing to access functionalities of the provider in an asynchronous fashion.
+A VHDL code providing description of the functionality registers and exposing AXI compilant interface is a valid provider target.
+A JSON file describing registerification results is for example a valid documentation target.
+The target depends on several factors, but the most important ones are programming/description language, synchronous or asynchronous access interface, bus type, dynamic or static address map reloading.
+Each target has its recipient.
+It is either provider, requester or documentation.
 .IP \fBupstream\fR 
 The upstream is a stream from the provider to the requester.
