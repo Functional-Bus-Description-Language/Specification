@@ -15,4 +15,4 @@ Valid values of the \fCreset\fR property are \f[CI]"Sync"\fR for synchronous res
 The \fCwidth\fR property defines the bus data width.
 .
 .LP
-The bus address width is not explicitly set, as it implied from the address space size needed to pack all functionalities included in the  \fCMain\fR  bus description.
+The bus address width is not explicitly set, as it implies from the address space size needed to pack all functionalities included in the  \fCMain\fR  bus description.
