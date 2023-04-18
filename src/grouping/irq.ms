@@ -11,7 +11,7 @@ Below snippet shows an example of irq group for level sensitive interrupt consum
 .QP
 \fCMain \f[CB]bus\fC
 .br
-	\f[CB]type\fC irq_t \f[CB]irq\fC; \f[CB]groups\fC = \f[CI]"IRQ"\fC
+	\f[CB]type\fC irq_t \f[CB]irq\fC; \f[CB]add-enable\fC = \f[CB]true\fC; \f[CB]groups\fC = \f[CI]"IRQ"\fC
 .br
 	IRQ0 irq_t
 .br

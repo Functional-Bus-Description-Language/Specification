@@ -95,13 +95,25 @@ line from C.s to (x91, ym10); line to (x44, ym10); line -> to L.s
 .
 .LP
 The \fCirq\fR functionality has following properties:
-.IP "\f[CB]clear\f[CW] string (\f[CI]""Explicit""\fC)\f[]" 0.2i
+.IP "\f[CB]add-enable\f[CW] bool (\f[CB]false\fC)\f[]" 0.2i
+The \fCadd-enable\fR property defines whether an interrupt has associated enable bit in the interrupt enable register.
+The enable can be used to mask the interrupt.
+.IP "\f[CB]clear\f[CW] string (\f[CI]""Explicit""\fC)\f[]"
 The \fCclear\fR property defines how particular interrupt flag is cleared.
 The \fCclear\fR property is valid only in case of level triggered interrupt consumer.
 If \fCclear\fR property is set for edge triggered interrupt consumer a compiler shall shall report an error.
 Valid values are \f[CI]"Explicit"\fR and \f[CI]"On Read"\fR.
 The \f[CI]"Explicit"\fR clear requires compiler to generate a mean that must be explicitly used to clear the interrupt flag.
 The \f[CI]"On Read"\fR clear requires the provider to clear the interrupt flag on each interrupt flag read.
+.IP "\f[CB]enable-init-value\f[CW] bit string | integer (\fCuninitializd)\fR"
+The \fCenable-init-value\fR property defines the initial value of the enable bit in the interrupt enable register.
+The value must not exceed one bit.
+If \fCadd-enable\fR is \fCfalse\fR and \fCenable-init-value\fR is set, then a compiler must report an error.
+.IP "\f[CB]enable-reset-value\f[CW] bit string | integer (\fCuninitializd)\fR"
+The \fCenable-reset-value\fR property defines the value of the enable bit in the interrupt enable register after the reset.
+The value must not exceed one bit.
+If \fCadd-enable\fR is \fCfalse\fR and \fCenable-reset-value\fR is set, then a compiler must report an error.
+If the \fCenable-reset-value\fR is set, but a \fCbus\fR or \fCblock\fR containing the \fCirq\fR is not resettable (\fCreset = None\fR), then the compiler shall report an error.
 .IP "\f[CB]groups\f[CW] string | [string] (None\fC)\f[]"
 The \fCgroups\fR property defines the group for irq.
 Each \fCirq\fR must belong at most to one group.
