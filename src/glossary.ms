@@ -19,7 +19,7 @@ The gateware term is used to refer to the overall configuration of the logic pla
 The term is not formally defined anywhere, however it is used to unburden the firmware term.
 IEEE Std 610.12-1990 also mentions that the firmware term is too overloaded and confusing.
 .IP \fBgenerator\fR
-The generator term ...
+The generator term is used to refer to the part of a compiler directly responsible for the target code generation based on registerification results.
 .IP \fBinformation\fR
 The information term is used to refer to the metadata on the functionality data.
 The metadata describes where the data is located, for example bit masks and register addresses, and how to access the data.
