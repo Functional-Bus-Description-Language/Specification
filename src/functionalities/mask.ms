@@ -26,4 +26,10 @@ If the \fCreset-value\fR is set, but a \fCbus\fR or \fCblock\fR containing the \
 The \fCwidth\fR property defines the bit width of the \fCmask\fR.
 .
 .LP
-The code generated for the requester must provide means for setting and clearing particular bits of the \fCmask\fR.
+The code generated for the requester must provide means for setting, clearing and updating particular bits of the \fCmask\fR.
+The updating includes setting, clearing and toggling.
+The set differs from the update set.
+The set sets particular bits and simultaneously clears all remaining bits.
+The update set sets particular bits and keeps the value of remaining bits.
+The clear differs from the update clear in analogous way.
+The toggle always works on provided bits leaving remaining bits untouched.
