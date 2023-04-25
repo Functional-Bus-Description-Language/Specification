@@ -38,22 +38,29 @@ Examples of declarative properties include \fCaccess\fR or \fCin-trigger\fR prop
 .
 .sp
 \fCproperty_identifier ::=
+.br
+	
 \f[CB]access\fC |
+\f[CB]add-enable\fC |
 \f[CB]atomic\fC |
 \f[CB]byte-write-enable\fC |
 \f[CB]clear\fC |
+\f[CB]delay\fC |
 .br
 	
-\f[CB]delay\fC |
+\f[CB]enable-init-value\fC |
+\f[CB]enable-reset-value\fC |
 \f[CB]groups\fC |
 \f[CB]init-value\fC |
+.br
+	
 \f[CB]in-trigger\fC |
 \f[CB]masters\fC |
 \f[CB]out-trigger\fC |
-.br
-	
 \f[CB]range\fC |
 \f[CB]read-latency\fC |
+.br
+	
 \f[CB]read-value\fC |
 \f[CB]reset-value\fC |
 \f[CB]size\fC |
