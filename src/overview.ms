@@ -19,7 +19,7 @@ The focus is on defining the valid language constructs, their meanings and impli
 Describing and managing registers can be a tedious and error-prone task.
 The information about registers is utilized by software, hardware, and verification engineers.
 Typically a specification of the registers is designed by the hardware designer or system architect.
-During the design and implementation phases, it changes multiple times due to different reasons such as bugs, requirement changes, technical limitations, etc.
+During the design and implementation phases, it changes multiple times due to different reasons such as bugs, requirement changes, technical limitations, or user feedback.
 A simple change in a single register may imply adjustments in both hardware and software.
 These adjustments cost money and time.
 .LP
@@ -31,9 +31,9 @@ For example, in the case of a register containing multiple statuses, its the use
 The FBDL is different in this term.
 The user specifies the functionalities that must be provided by the data stored in the registers.
 The register layout is automatically generated based on the functional requirements.
-Such an approach allows generating much more hardware description and software code than the register-centric approach.
+Such an approach allows for generating much more hardware description and software code than the register-centric approach.
 Not only the register masks, addresses, and single read and write functions can be generated, but complete custom functions with optimized access methods.
-This in turn leads to shorter design iterations and fewer bugs.
+This, in turn, leads to shorter design iterations and fewer bugs.
 .
 .NH 2
 .XN Word usage
