@@ -21,15 +21,17 @@ newline.
 .XN Comments
 .LP
 There is only a single type of comment, a \fIsingle-line comment\fR.
-A single line comment starts with the '#' character and extends up to the end of the line.
-A single-line comment can appear on any line of a FBDL file and may contain any character, including glyphs and special characters.
+A single-line comment starts with the '#' character and extends up to the end of the line.
+A single-line comment can appear on any line of an FBDL file and may contain any character, including glyphs and special characters.
 The presence or absence of comments has no influence on whether a description is legal or illegal.
 Their sole purpose is to enlighten the human reader.
+.
+.
 .NH 3
 .XN Documentation comments
 .LP
-Documentation comments are comments that appear immediately before package scope constant definitions and before functionality instantiations with no intervening newlines.
-Following code shows examples of documentation comments:
+Documentation comments are comments that appear immediately before constant definitions, type definitions, and functionality instantiations with no intervening newlines.
+The following code shows examples of documentation comments:
 .QP
 \f[CI]# Number of receivers\fC
 .br
@@ -56,6 +58,7 @@ Main \f[CB]bus\fC
 			data [4]\f[CB]return\fC; \f[CB]width\fC = 8
 .br
 .LP
+.
 .
 .NH 2
 .XN Identifiers
@@ -108,11 +111,11 @@ The first declared identifier denotes the package, and the second one denotes th
 .XN Indent
 .LP
 The indentation has semantics meaning in the FBDL.
-There is only single indent character, the horizontal tab (U+0009).
+There is only a single indent character, the horizontal tab (U+0009).
 It is hard to express the indent and dedent using BNF.
-Ident is the increase of the indentation level and dedent is the decrease of the indentation level.
-In the following code the indent happens in the lines number 2, 5 and 7 and the dedent happens in the line number 4.
-What is more 2 dedents happens at the EOF.
+Ident is the increase of the indentation level, and dedent is the decrease of the indentation level.
+In the following code the indent happens in the lines number 2, 5 and 7, and the dedent happens in the line number 4.
+What is more, double dedent happens at the EOF.
 The number of indents always equals the number of dedents in the syntactically and semantically correct file.
 .QP
 \fC1: \f[CB]type\fC cfg_t \f[CB]config\fC
