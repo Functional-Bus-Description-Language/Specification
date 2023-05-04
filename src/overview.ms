@@ -17,22 +17,22 @@ The focus is on defining the valid language constructs, their meanings and impli
 .XN Motivation
 .LP
 Describing and managing registers can be a tedious and error-prone task.
-The information about registers is utilized by software, hardware and verification engineers.
+The information about registers is utilized by software, hardware, and verification engineers.
 Typically a specification of the registers is designed by the hardware designer or system architect.
-During the design and implementation phases it changes multiple times due to different reasons such as bugs, requirement changes, technical limitations, etc.
+During the design and implementation phases, it changes multiple times due to different reasons such as bugs, requirement changes, technical limitations, etc.
 A simple change in a single register may imply adjustments in both hardware and software.
 These adjustments cost money and time.
 .LP
-Several formal and informal tools exist to address issues related with registers management.
-However, they all share the same concept of describing registers at very low level.
-That is, the user has to implicitly define the registers layout.
-For example, in case of register containing multiple statuses, its user responsibility to specify the bit position for every status.
+Several formal and informal tools exist to address issues related to register management.
+However, they all share the same concept of describing registers at a very low level.
+That is, the user has to implicitly define the layout of the registers.
+For example, in the case of a register containing multiple statuses, its the user responsibility to specify the bit position for every status.
 .LP
-The FBDL is different in this terms.
+The FBDL is different in this term.
 The user specifies the functionalities that must be provided by the data stored in the registers.
 The register layout is automatically generated based on the functional requirements.
-Such an approach allows to generate much more hardware description and software code than classical approach.
-Not only the register masks, addresses, and single read, write functions can be generated, but complete custom functions with optimized access methods.
+Such an approach allows generating much more hardware description and software code than the register-centric approach.
+Not only the register masks, addresses, and single read and write functions can be generated, but complete custom functions with optimized access methods.
 This in turn leads to shorter design iterations and fewer bugs.
 .
 .NH 2
