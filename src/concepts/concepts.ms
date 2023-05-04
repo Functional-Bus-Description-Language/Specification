@@ -2,11 +2,11 @@
 .NH
 .XN Concepts
 .LP
-The core concept behind the FBDL is based on the fact, that if there is a system part with the registers that can be accessed, then there is at least one more system part accessing these registers.
-The part acessing the registers is called the
+The core concept behind the FBDL is based on the fact that if there is a system part with the registers that can be accessed, then there is at least one more system part accessing these registers.
+The part accessing the registers is called the
 .I requester .
 The part containing the registers is called the
-.I provider
+.I provider ,
 as it provides functions via particular functionalities.
 .LP
 The code generated from the FBDL description can be conceptually divided into two parts, the requester part and the provider part.
