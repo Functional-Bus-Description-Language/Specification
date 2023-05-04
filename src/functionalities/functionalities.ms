@@ -4,8 +4,8 @@
 .LP
 Functionalities are the core part of the FBDL.
 They define the capabilities of the provider.
-Each functionality is distinct and in an unambiguous way defines the provider behavior and the interface that must be generated for the requester.
-There are 12 functionalities:
+Each functionality is distinct and unambiguously defines the provider behavior and the interface that must be generated for the requester.
+There are following 12 functionalities:
 .IP 1) 3
 \fCblock\fR,
 .IP 2)

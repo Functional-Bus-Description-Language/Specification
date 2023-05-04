@@ -1,8 +1,8 @@
 .NH 2
 .XN Block
 .LP
-The \fCblock\fR functionality is used to logically group or to encapsulate functionalities.
-The \fCblock\fR is usually used to separate functionalities related with particular peripherals such as UART, I2C transceivers, timers, ADCs, DACs etc.
+The \fCblock\fR functionality is used to logically group or encapsulate functionalities.
+The \fCblock\fR is usually used to separate functionalities related to particular peripherals such as UART, I2C transceivers, timers, ADCs, DACs etc.
 The block might also be used to limit the access for particular provider to only a subset of functionalities.
 .LP
 The \fCblock\fR functionality has following properties:

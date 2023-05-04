@@ -2,10 +2,10 @@
 .XN Mask
 .LP
 The \fCmask\fR functionality represents a bit mask.
-The mask is a data that is automatically read by the provider from its registers.
+The mask is data that is automatically read by the provider from its registers.
 By default, a \fCmask\fR can be written and read by the requester.
 The \fCmask\fR is very similar to the \fCconfig\fR.
-The difference is that the \fCconfig\fR is value oriented, whereas the \fCmask\fR is bit oriented.
+The difference is that the \fCconfig\fR is value-oriented, whereas the \fCmask\fR is bit-oriented.
 From the provider's perspective the mask and the config are the same.
 From the requester's perspective the code generated for interacting with the \fCmask\fR and the \fCconfig\fR is different.
 .LP
@@ -30,6 +30,6 @@ The code generated for the requester must provide means for setting, clearing an
 The updating includes setting, clearing and toggling.
 The set differs from the update set.
 The set sets particular bits and simultaneously clears all remaining bits.
-The update set sets particular bits and keeps the value of remaining bits.
-The clear differs from the update clear in analogous way.
-The toggle always works on provided bits leaving remaining bits untouched.
+The update set sets particular bits and keeps the value of the remaining bits.
+The clear differs from the update clear in an analogous way.
+The toggle always works on provided bits leaving the remaining bits untouched.

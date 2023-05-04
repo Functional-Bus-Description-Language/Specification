@@ -1,9 +1,9 @@
 .NH 2
 .XN Config
 .LP
-The \fCconfig\fR functionality represents a configuration data.
-A configuration data is a data that is automatically read by the provider from its registers.
-As the \fCconfig\fR is automatically read by the provider, there is no need for additional signal, associated with the config, indicating config write by the requester.
+The \fCconfig\fR functionality represents configuration data.
+The configuration data is data that is automatically read by the provider from its registers.
+As the \fCconfig\fR is automatically read by the provider, there is no need for an additional signal associated with the config, indicating the config write by the requester.
 By default, a \fCconfig\fR can be written and read by the requester.
 .LP
 The \fCconfig\fR functionality has following properties:

@@ -1,7 +1,7 @@
 .NH 2
 .XN Status
 .LP
-The \fCstatus\fR represents a data that is produced by the provider and is only read by the requester.
+The \fCstatus\fR represents data that is produced by the provider and is only read by the requester.
 .LP
 The \fCstatus\fR functionality has following properties:
 .IP "\f[CB]atomic\f[CW] bool (\f[CB]true\fC)\f[]" 0.2i

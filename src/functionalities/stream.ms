@@ -10,8 +10,8 @@ An upstream shall not have any \fCparam\fR, and must have at least one \fCreturn
 The \fCstream\fR functionality is very similar to the \fCproc\fR functionality, but they are not the same.
 There are two main differences.
 The first one is that the \fCstream\fR must not contain both \fCparam\fR and \fCreturn\fR.
-The second one is that the code for the stream, generated for the requester, shall take into account the fact that an access to the \fCstream\fR is multiple and an access to the \fCproc\fR is single.
-For example lets consider the following bus description:
+The second one is that the code for the stream, generated for the requester, shall take into account the fact that access to the \fCstream\fR is multiple and access to the \fCproc\fR is single.
+For example, lets consider the following bus description:
 .QP
 \fCMain \f[CB]bus\fC
 .br

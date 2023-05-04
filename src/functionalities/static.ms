@@ -1,7 +1,7 @@
 .NH 2
 .XN Static
 .LP
-The \fCstatic\fR functionality represents a data, placed at the provider side, that shall never change.
+The \fCstatic\fR functionality represents data, placed at the provider side, that shall never change.
 .LP
 The \fCstatic\fR functionality has following properties:
 .IP "\f[CB]groups\f[CW] string | [string] (None)\f[]" 0.2i

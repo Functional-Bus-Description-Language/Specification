@@ -9,12 +9,12 @@ The \fCproc\fR has associated signals at the provider side, the \fCcall\fR signa
 The call signal must be driven active for one clock cycle after all registers storing the parameters have been written.
 The exit signal must be driven active for one clock cycle after all registers storing the returns have been read.
 An empty \fCproc\fR (proc without params and returns) by default has only the call signal.
-However, if an empty \fCproc\fR has the delay property set, then it has both, the call signal and the exit signal.
+However, if an empty \fCproc\fR has the delay property set, then it has both the call signal and the exit signal.
 A \fCproc\fR having only parameters has by default only the call signal.
 However, if a proc having only parameters has the delay property set, then it also has the exit signal.
 A \fCproc\fR having only returns has by default only the exit signal.
 However, if a \fCproc\fR having only returns has the delay property set, then it also has the call signal.
-Existence or absence of call and exit signals is summarized in below table.
+The existence or absence of call and exit signals is summarized in the below table.
 .TS
 tab(;) center;
 c s s s s

@@ -2,7 +2,7 @@
 .XN Bus
 .LP
 The \fCbus\fR functionality represents the bus structure.
-Every valid description must have at least one bus instantiated, as the the bus named  \fCMain\fR  is the entry point for the description used for the code generation.
+Every valid description must have at least one bus instantiated, as the bus named  \fCMain\fR  is the entry point for the description used for the code generation.
 .LP
 The \fCbus\fR functionality has following properties:
 .IP "\f[CB]masters\f[CW] integer (1)\f[]" 0.2i
