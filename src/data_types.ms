@@ -19,14 +19,14 @@ time.
 Types are implicit and are not declared.
 The type of the value evaluated from an expression must be checked before any assignment or comparison.
 If there is a type mismatch that can be resolved with implicit rules, then it shall be resolved.
-In case of type mismatch that cannot be resolved, an error must be reported by the compiler.
+In case of a type mismatch that cannot be resolved, an error must be reported by the compiler.
 .LP
 Conversion from integer to real in expressions is implicit.
-Conversion from real to integer must be explicit, and must be done by calling any function returning integer type, for example \f[CW]ceil(), floor()\f[].
+Conversion from real to integer must be explicit and must be done by calling any function returning integer type, for example \f[CW]ceil(), floor()\f[].
 Conversion from integer to bool in expressions is implicit.
 Bool cannot be converted to any type.
 .LP
-Below picture presents a graph of possible implicit conversions between different data types.
+The below picture presents a graph of possible implicit conversions between different data types.
 .PS
 copy "pic/grid"
 
@@ -54,11 +54,11 @@ arc -> rad 9  from INT.se   to REAL.sw
 .NH 2
 .XN Bit string
 .LP
-The value of bit string type is used for all \f[CB]*-value\fR properties.
+The value of the bit string type is used for all \f[CB]*-value\fR properties.
 It might be created explicitly using the bit string literal or it might be converted implicitly from the value of integer type.
-The only way to create bit string value containing meta values is to explicitly use the bit string literal.
+The only way to create a bit string value containing meta values is to explicitly use the bit string literal.
 .LP
-Below table presents unary negation operation results applied to possible bit string data type values.
+The below table presents unary negation operation results applied to possible bit string data type values.
 .TS
 tab(;) center;
 c s
@@ -151,10 +151,10 @@ Z;0;1;X;U;W;X;Z
 .NH 2
 .XN Bool
 .LP
-The value of bool type can be created explicitly using \fCtrue\fR or \fCfalse\fR literals.
-The value of bool type shall be implicitly converted to the value of integer type in places where the value of integer type is required.
-The boolean \fCfalse\fR value shall be converted to integer value 0.
-The boolean \fCtrue\fR value shall be converted to integer value 1.
+The value of the bool type can be created explicitly using \fCtrue\fR or \fCfalse\fR literals.
+The value of the bool type shall be implicitly converted to the value of the integer type in places where the value of the integer type is required.
+The boolean \fCfalse\fR value shall be converted to the integer value 0.
+The boolean \fCtrue\fR value shall be converted to the integer value 1.
 In the following example, the value of \fCI1\fR evaluates to 1, and the value of I2 evaluates to 2.
 .QP
 \fC\f[CB]const\f[] B0 = \f[CB]false\f[]
@@ -191,7 +191,7 @@ The time data type is only used for assigning value to the properties expressed 
 The value of time type can be created explicitly using the time literal.
 Values of time type can be added regardless of their time units.
 Values of the time type can also be multiplied by values of the integer type.
-All of below property assignments are valid.
+All of the below property assignments are valid.
 .QP
 \fC\f[CB]delay\f[] = 1 \f[CB]s\f[] + 1 \f[CB]ms\f[] + 1 \f[CB]us\f[] + 1 \f[CB]ns\f[]
 .br
