@@ -2,7 +2,7 @@
 .XN Irq
 .LP
 The \fCirq\fR functionality represents an interrupt.
-The \fCirq\fR functionality allows for automatic connection of the following interrupt producers and consumers:
+The \fCirq\fR functionality allows for automatic connection of the following interrupt producers (\fCin-trigger\fR) and consumers (\fCout-trigger\fR):
 .IP 1) 3
 edge producer and edge sensitive consumer,
 .PS
