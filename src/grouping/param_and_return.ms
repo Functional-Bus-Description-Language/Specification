@@ -2,10 +2,10 @@
 .XN Param and return groups
 .LP
 Param and return groups are used to group \fCproc\fR or \fCstream\fR parameters or returns.
-Such a kind of grouping may be necessary for performance optimizations, as the requester may store parameters or returns in a single list, or in multiple distinct lists.
+Such a kind of grouping may be necessary for performance optimizations, as the requester may store parameters or returns in a single list or in multiple distinct lists.
 Param and return groups help to avoid data reshuffling before or after the access.
 Param and return groups are independent.
-Below snippet presents valid description with single \fCproc\fR with one param and one return group.
+The below snippet presents a valid description with a single \fCproc\fR with one param and one return group.
 .QP
 \fCMain \f[CB]bus\fC
 .br
@@ -21,7 +21,7 @@ Below snippet presents valid description with single \fCproc\fR with one param a
 .LP
 Param and return groups may contain subgroups.
 Single param or return can belong to groups which sum is empty or is equal to one of the groups.
-Below snippet presents examples of two invalid and two valid parameters grouping.
+The below snippet presents examples of two invalid and two valid parameters grouping.
 .QP
 \fCMain \f[CB]bus\fC
 .br

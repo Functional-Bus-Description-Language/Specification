@@ -4,19 +4,19 @@
 Groups must be registerified in the order they appear in the groups lists.
 A compiler must issue an error if the order of any groups is not the same in all groups lists.
 If the order is not unequivocal, then the compiler is free to choose the order.
-However, as the registerification results have to be deterministic and reproducible for particular compiler, the order criteria has to be fixed in case of ambiguous order of groups.
-The most natural criterias are probably:
+However, as the registerification results have to be deterministic and reproducible for a particular compiler, the order criterion has to be fixed in case of ambiguous order of groups.
+The most natural criteria are probably:
 .BL
 Alphabetical order.
 Groups with ambiguous order are sorted alphabetically before registerification.
 .BL
 Occurrence order.
 Groups with ambiguous order are registerified in parsing order.
-For exmaple, if the order of groups \f[CI]"b"\fR and \f[CI]"a"\fR is ambiguous, and group \f[CI]"b"\fR first occurrence is in line number 80, and group \f[CI]"a"\fR first occurrence is in line number 120, then group \f[CI]"b"\fR is registerified as the first one.
+For example, if the order of groups \f[CI]"b"\fR and \f[CI]"a"\fR is ambiguous, and group \f[CI]"b"\fR first occurrence is in line number 80, and group \f[CI]"a"\fR first occurrence is in line number 120, then group \f[CI]"b"\fR is registerified as the first one.
 
 .LP
-The order of groups might be used to prioritize the groups, so that an access to some groups is more efficient than to the other groups.
-Below listing serves as an example of groups order used for optimizing access to particular group.
+The order of groups might be used to prioritize the groups, so that access to some groups is more efficient than to the other groups.
+The below listing serves as an example of groups order used for optimizing access to a particular group.
 .QP
 \fCMain \f[CB]bus\fC
 .br
@@ -27,7 +27,7 @@ Below listing serves as an example of groups order used for optimizing access to
 	C3 \f[CB]config\fC; \f[CB]width\fC = 20; \f[CB]groups\fC = ["\f[CI]b\fC"]
 .LP
 As group \f[CI]"a"\fR has higher priority than group \f[CI]"b"\fR (its index is lower in the groups list for functionality \fCC2\fR), access to the group \f[CI]"a"\fR will be more efficient, as functionalities \fCC1\fR and \fCC2\fR will be placed in the same register.
-Possible arrangement is presented in the below snippet.
+A possible arrangement is presented in the below snippet.
 .QP
 \fCNth register     Nth + 1 register
 .br
@@ -39,7 +39,7 @@ Possible arrangement is presented in the below snippet.
 \fR
 .LP
 If the order of the groups in the groups list for functionality \fCC2\fR was reverse, then the access to the group \f[CI]"b"\fR would be more efficient.
-Possible arrangement of functionalities in such case could look as follows.
+A possible arrangement of functionalities in such a case could look as follows.
 .QP
 \fCNth register     Nth + 1 register
 .br
@@ -50,7 +50,7 @@ Possible arrangement of functionalities in such case could look as follows.
 -------------  ----------------------
 \fR
 .LP
-Below listing presents a description of groups with ambiguous order.
+The below listing presents a description of groups with ambiguous order.
 .QP
 \fCMain \f[CB]bus\fC
 .br
