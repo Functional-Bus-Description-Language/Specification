@@ -299,3 +299,5 @@ A time literal is a sequence of integer literal and a time unit.
 \fCtime_unit ::= \f[CB]ns\fC | \f[CB]us\fC | \f[CB]ms\fC | \f[CB]s\fC
 .sp
 \fCtime_literal ::= integer_literal time_unit
+.LP
+Time literals are used to create values of time data type, required for example by the \fCdelay\fR property.
