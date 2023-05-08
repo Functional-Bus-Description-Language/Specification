@@ -1,10 +1,10 @@
 .NH 2
 .XN Type definition
 .LP
-The type definition allows defining custom functionalities.
+The type definition allows for defining custom functionalities.
 Any custom functionality resolves to one of the built-in functionalities.
 However, by defining custom functionality types it is possible to preset property values or to create easily parametrizable functionalities.
-The former leads to shorter description and helps avoiding duplication.
+The former leads to shorter descriptions and helps to avoid duplication.
 .
 .
 .sp
@@ -79,7 +79,7 @@ Parameters in the parameter list might have default values, but parameters with 
 Arguments in the argument list may be prepended with the parameter name.
 However, arguments with parameter names must prepend arguments without parameter names in the argument list.
 .LP
-Below snippet presents examples of type definitions.
+The below snippet presents examples of type definitions.
 .
 .
 .QP

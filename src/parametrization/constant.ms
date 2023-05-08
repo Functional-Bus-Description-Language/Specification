@@ -3,7 +3,7 @@
 .LP
 The constant represents a constant value.
 The value might be used in expression evaluations.
-The following code presents bus with three functionalities, all having the same array dimensions and width.
+The following code presents a bus description with three functionalities, all having the same array dimensions and width.
 .QP
 \fCMain \f[CB]width\fC
 .br
@@ -20,7 +20,7 @@ The following code presents bus with three functionalities, all having the same 
 Constants must be included in the generated code, both for the provider and for the requester.
 This allows for having a single source of the constant value.
 .LP
-A constant can be defined in a single line in the single line constant definition or as a part of the multi constant definition.
+A constant can be defined in a single line in the single-line constant definition or as a part of the multi-constant definition.
 .LP
 \fCsingle_constant_definition ::= \f[CB]const\fC identifier \f[CB]=\fC expression newline
 .LP
@@ -44,7 +44,7 @@ Examples of single constant definition:
 .br
 	dedent
 .LP
-Examples of multi constant definition:
+Examples of multi-constant definition:
 .QP
 \f[CB]const\fC
 .br

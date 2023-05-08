@@ -1,8 +1,8 @@
 .NH 2
 .XN Type extending
 .LP
-The type extending allows extending any custom defined type, either by instantiation or by defining new type.
-This is especially, but not only, useful when there are similar blocks with only slightly different set of functionalities.
+The type extending allows extending any custom defined type, either by instantiation or by defining a new type.
+This is mainly, but not only, useful when there are similar blocks with only slightly different set of functionalities.
 .LP
 Example:
 .QP
