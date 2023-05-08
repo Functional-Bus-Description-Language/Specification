@@ -36,7 +36,7 @@ The recommended way is to implement compiler parameter allowing enabling/disabli
 The \fCread-value\fR property defines the value returned by the provider on the config read.
 If the \fCread-value\fR is not set, then the provider must return the actual value of the \fCconfig\fR.
 .IP "\f[CB]reset-value\f[CW] bit string | integer (None)\f[]"
-The \fCreset-value\fR property definess the value of the config after the reset.
+The \fCreset-value\fR property defines the value of the config after the reset.
 If the \fCreset-value\fR is set, but a \fCbus\fR or \fCblock\fR containing the \fCconfig\fR is not resettable (\fCreset = None\fR), then the compiler shall report an error.
 .IP "\f[CB]width\f[CW] integer (bus width)\f[]"
 The \fCwidth\fR property defines the bit width of the config.
