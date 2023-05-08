@@ -5,7 +5,7 @@ The irq groups are used for interrupt grouping.
 Grouped irqs have a common interrupt consumer signal.
 Each irq must belong at most to one group and each irq group must have at least two irqs.
 Irqs belonging to the same group might have different values of the producer trigger (\fCin-trigger\fR), but all of them must have the same value for the consumer trigger (\fCout-trigger\fR).
-In the case of level triggered interrupt consumer the information on the interrupt source can be read from the interrupt group flag register.
+In the case of level-triggered interrupt consumer the information on the interrupt source can be read from the interrupt group flag register.
 
 The below snippet shows an example of an irq group for level-sensitive interrupt consumer.
 .QP

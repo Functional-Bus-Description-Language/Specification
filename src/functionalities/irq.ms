@@ -100,8 +100,8 @@ The \fCadd-enable\fR property defines whether an interrupt has associated enable
 The enable can be used to mask the interrupt.
 .IP "\f[CB]clear\f[CW] string (\f[CI]""Explicit""\fC)\f[]"
 The \fCclear\fR property defines how particular interrupt flag is cleared.
-The \fCclear\fR property is valid only in case of level triggered interrupt consumer.
-If \fCclear\fR property is set for edge triggered interrupt consumer a compiler shall shall report an error.
+The \fCclear\fR property is valid only in case of level-triggered interrupt consumer.
+If \fCclear\fR property is set for edge-triggered interrupt consumer a compiler shall shall report an error.
 Valid values are \f[CI]"Explicit"\fR and \f[CI]"On Read"\fR.
 The \f[CI]"Explicit"\fR clear requires compiler to generate a mean that must be explicitly used to clear the interrupt flag.
 The \f[CI]"On Read"\fR clear requires the provider to clear the interrupt flag on each interrupt flag read.
