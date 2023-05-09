@@ -20,3 +20,8 @@ The \fCsize\fR property declares the \fCmemory\fR size.
 The \fCsize\fR is in the number of memory words with width equal to the \fCmemory\fR \fCwidth\fR property value.
 .IP "\f[CB]width\f[CW] integer (bus width)\f[]"
 The \fCwidth\fR property declares the memory data width.
+.
+.LP
+The code generated for the requester must provide means for single read/write and block read/write transactions.
+Whether access means for vectored (scatter-gather) transactions are automatically generated is up to the compiler.
+If memory is read-only or write-only, then an unsupported write or read access code is recommended not to be generated.
