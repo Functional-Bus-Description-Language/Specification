@@ -62,6 +62,7 @@ Examples of declarative properties include \fCaccess\fR or \fCin-trigger\fR prop
 .br
 	
 \f[CB]read-value\fC |
+\f[CB]reset\fC |
 \f[CB]reset-value\fC |
 \f[CB]size\fC |
 \f[CB]width\fC
