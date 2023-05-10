@@ -31,7 +31,7 @@ For example, in the case of a register containing multiple statuses, its the use
 The FBDL is different in this term.
 The user specifies the functionalities that must be provided by the data stored in the registers.
 The register layout is automatically generated based on the functional requirements.
-Such an approach allows for generating much more hardware description and software code than the register-centric approach.
+Such an approach increases the amount of automatically generated hardware description and software code and decreases the amount of code requiring manual implementation compared to the register-centric approach.
 Not only the register masks, addresses, and single read and write functions can be generated, but complete custom functions with optimized access methods.
 This, in turn, leads to shorter design iterations and fewer bugs.
 .
