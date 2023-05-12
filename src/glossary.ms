@@ -23,9 +23,9 @@ The generator term is used to refer to the part of a compiler directly responsib
 .IP \fBinformation\fR
 The information term is used to refer to the metadata on the functionality data.
 The metadata describes where the data is located, for example bit masks and register addresses, and how to access the data.
-.IP \fBmean\fR
-The mean term is used to refer to the automatically generated method or data that shall be used by the requester to request particular functionality.
-A mean in particular programming language is usually a function, method or procedure that shall be called or class, dictionary, map or structure containing information on how to access particular functionality.
+.IP \fBmeans\fR
+The means term is used to refer to the automatically generated method or data that shall be used by the requester to request particular functionality.
+A means in particular programming language is usually a function, method or procedure that shall be called or class, dictionary, map or structure containing information on how to access particular functionality.
 .IP \fBprovider\fR
 The provider is the system component containing the generated registers and providing described functionalities.
 .IP \fBregisterification\fR
