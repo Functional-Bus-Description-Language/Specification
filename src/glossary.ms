@@ -3,11 +3,21 @@
 \f[B]Glossary\f[]
 .ps
 
-.IP \fBdata\fR 0.2i
+.LP
+Not all terms defined in the glossary list are used in the specification.
+Some of them are formally defined because they are helpful when discussing, for example, compiler implementation.
+
+.IP "\fBcall register\fR" 0.2i
+The call register term is used to refer to the \fCproc\fR register with the associated call pulse signal.
+When the call register is written, the call pulse is generated.
+.IP \fBdata\fR
 The data term is used to refer to the content of the registers.
 Unless it is used in the context of internal data types of the language.
 .IP \fBdownstream\fR 
 The downstream is a stream from the requester to the provider.
+.IP "\fBexit register\fR" 0.2i
+The exit register term is used to refer to the \fCproc\fR register with the associated exit pulse signal.
+When the exit register is read, the exit pulse is generated.
 .IP \fBfunctionality\fR
 The functionality is the functionality of given data.
 It can be seen as a type of the data.
@@ -28,11 +38,19 @@ The means term is used to refer to the automatically generated method or data th
 A means in particular programming language is usually a function, method or procedure that shall be called or class, dictionary, map or structure containing information on how to access particular functionality.
 .IP \fBprovider\fR
 The provider is the system component containing the generated registers and providing described functionalities.
+.IP "\fBpure call register\fR"
+The term pure call register is used to refer to the call register containing no \fCproc\fR returns.
+.IP "\fBpure exit register\fR"
+The term pure exit register is used to refer to the exit register containing no \fCproc\fR params.
 .IP \fBregisterification\fR
 The registerification is the process of placing data of functionalities into the registers.
 The process includes assigning data bit masks, register addresses as well as block addresses and masks.
+The term is new in the field and is coined in the specification.
 .IP \fBrequester\fR
 The requester is the system component accessing the generated registers and requesting described functionalities.
+.IP "\fBstrobe register\fR"
+The strobe register term is used to refer to the \fCstream\fR register with the associated strobe pulse signal.
+When the strobe register is written (downstream), or read (upstream) the strobe pulse is generated.
 .IP \fBtarget\fR 
 The target term is used to refer to the transpilation target.
 For example, a target can be a requester Python code allowing to access functionalities of the provider in an asynchronous fashion.
