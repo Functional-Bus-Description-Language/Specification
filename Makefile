@@ -5,6 +5,7 @@ BUILD_DIR = build/
 SRCS = \
 	src/defs.ms \
 	src/config.ms \
+	src/cover.ms\
 	src/participants.ms \
 	src/glossary.ms \
 	src/overview.ms \
@@ -43,8 +44,8 @@ SRCS = \
 	src/toc.ms
 
 # Build targets
-$(TITLE).pdf: $(BUILD_DIR)$(TITLE).ms src/cover.ms | .build-dir
-	@pdfroff -mspdf --stylesheet=src/cover.ms -p -t $< > $@
+$(TITLE).pdf: $(BUILD_DIR)$(TITLE).ms | .build-dir
+	@groff -ms -T pdf -p -t $< > $@
 
 $(BUILD_DIR)$(TITLE).ms: $(SRCS) | .build-dir
 	@cat $(SRCS) > $@

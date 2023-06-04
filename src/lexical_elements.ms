@@ -283,7 +283,7 @@ There are three types of bit string literals: binary bit string literal, octal b
 \fChex_bit_string_base = \f[CB]X\fC | \f[CB]x\fC
 .sp
 \fChex_bit_string_literal = hex_bit_string_base \f[CB]"\fC{hex_or_meta}\f[CB]"\fC
-.sp
+.LP
 If meta value is present in a bit string literal, then it is expanded to the proper width depending on the bit string base.
 For example, following equations are true:
 .QP

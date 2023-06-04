@@ -1,3 +1,4 @@
+.pdfpagename cover
 \c
 .sp 10
 .DS C
@@ -10,9 +11,9 @@
 Revision 0.0
 .sp 1
 \*[DY]
+.sp 8
 .DE
 
-.sp 10
 .ce
 .ps 12
 .I Abstract
