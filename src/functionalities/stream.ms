@@ -29,7 +29,7 @@ The code generated for the requester, implemented in the C language, might inclu
 .br
 \f[CB]int\fC Main_S(\f[CB]const uint32_t\fC * p, \f[CB]size_t\fC count);
 .LP
-The \fCstream\fR has associated strobe signal at the provider side
+The \fCstream\fR has associated strobe signal at the provider side.
 The strobe signal must be driven active for one clock cycle after all registers storing the parameters of a downstream have been written.
 It also must be driven active for one clock cycle after all registers storing the returns of an upstream have been read.
 .LP
