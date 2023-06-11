@@ -77,6 +77,11 @@ Z;Z
 \fR
 .TE
 .
+.
+.LP
+Below tables present binary operation results applied to possible bit string data type values.
+.
+.
 .TS
 tab(;) center;
 c s s s s s s s
