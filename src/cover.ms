@@ -8,7 +8,7 @@
 .
 .sp 2
 .ps 11
-Revision 0.0
+Revision \*[rev]
 .sp 1
 \*[DY]
 .sp 8

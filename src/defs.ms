@@ -5,7 +5,7 @@
 .IP \(bu 3
 ..
 .\"
-.ds rev 0.0
+.ds rev 1.0
 
 .\" For numbers in headings in TOC.
 .de XN-REPLACEMENT
