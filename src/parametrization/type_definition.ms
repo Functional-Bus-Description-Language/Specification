@@ -24,6 +24,8 @@ The former leads to shorter descriptions and helps to avoid duplication.
 .br
 	[ parameter_list ]
 .br
+	[ array_marker ]
+.br
 	declared_identifier | qualified identifier
 .br
 	[ argument_list ]
@@ -39,6 +41,8 @@ The former leads to shorter descriptions and helps to avoid duplication.
 	identifier
 .br
 	[ parameter_list ]
+.br
+	[ array_marker ]
 .br
 	declared_identifier | qualified identifier
 .br
