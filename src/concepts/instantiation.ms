@@ -38,6 +38,10 @@ A functionality can be instantiated in a single line or in multiple lines.
 .
 .
 .sp
+\fCarray_marker ::= \f[CB][\fC expression \f[CB]]\fC
+.
+.
+.sp
 \fCfunctionality_body ::=
 .br
 	newline
