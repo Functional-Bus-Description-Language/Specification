@@ -20,6 +20,7 @@ SRCS = \
 	src/data_types.ms \
 	src/expressions.ms \
 	src/functionalities/functionalities.ms \
+	src/functionalities/blackbox.ms \
 	src/functionalities/block.ms \
 	src/functionalities/bus.ms \
 	src/functionalities/config.ms \
