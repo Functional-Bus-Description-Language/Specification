@@ -27,3 +27,4 @@
 #include "participants.typ"
 #include "glossary.typ"
 #include "overview.typ"
+#include "references.typ"
