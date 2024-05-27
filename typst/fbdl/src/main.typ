@@ -1,0 +1,29 @@
+#set document(
+  title: [Functional Bus Description Language - Specification],
+  author: "Michał Kruszewski"
+)
+
+#import "vars.typ"
+
+#include "cover.typ"
+
+#set page(
+  numbering: "1",
+  header: [
+    Rev. #vars.rev
+    #h(1fr)
+    FBDL Specification
+  ]
+)
+
+#set heading(
+  numbering: "1.1.1"
+)
+
+#set par(justify: true)
+
+#outline(indent: 1em)
+
+#include "participants.typ"
+#include "glossary.typ"
+#include "overview.typ"

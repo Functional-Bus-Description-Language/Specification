@@ -1,0 +1,10 @@
+%FBDL
+---
+name: fbdl
+file_extensions: [fbd]
+scope: source.fbd
+
+contexts:
+  main:
+    - match: \b(blackbox|block|bus|config|irq|mask|memory|param|proc|return|static|status|stream)\b
+      scope: markup.bold
