@@ -24,7 +24,11 @@
 
 #outline(indent: 1em)
 
+
+#set raw(syntaxes: "fbdl.sublime-syntax")
+
 #include "participants.typ"
 #include "glossary.typ"
 #include "overview.typ"
 #include "references.typ"
+#include "concepts.typ"
