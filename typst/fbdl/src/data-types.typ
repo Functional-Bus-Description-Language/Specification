@@ -18,8 +18,12 @@ In case of a type mismatch that cannot be resolved, an error must be reported by
 
 Conversion from bool to integer in expressions is implicit.
 Conversion from integer to real in expressions is implicit.
-Conversion from integer to range in expressions is implicit.
+Conversion from integer to range can be implicit if the interger value is natural.
 Conversion from real to integer can be implicit if there is no fractional part.
 If fractional part is present, then conversion from real to integer must be explicit and must be done by calling any function returning integer type, for example `ceil()`, `floor()`.
 
 The below picture presents a graph of possible implicit conversions between different data types.
+
+#set align(center)
+#image("images/data-types-conversion.svg", width: 80%)
+#set align(left)
