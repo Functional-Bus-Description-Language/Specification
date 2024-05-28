@@ -10,9 +10,9 @@
 #set page(
   numbering: "1",
   header: [
-    Rev. #vars.rev
+    #text(9pt)[Rev. #vars.rev]
     #h(1fr)
-    FBDL Specification
+    #text(9pt)[FBDL Specification]
   ]
 )
 
