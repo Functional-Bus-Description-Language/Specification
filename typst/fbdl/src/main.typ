@@ -33,3 +33,4 @@
 #include "references.typ"
 #include "concepts.typ"
 #include "lexical-elements.typ"
+#include "data-types.typ"
