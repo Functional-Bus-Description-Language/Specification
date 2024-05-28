@@ -21,6 +21,7 @@ Their sole purpose is to enlighten the human reader.
 Documentation comments are comments that appear immediately before constant definitions, type definitions, and functionality instantiations with no intervening newlines.
 The following code shows examples of documentation comments:
 
+#line(length: 100%)
 ```fbd
 # Number of receivers
 const RECEIVERS_COUNT = 7
@@ -36,6 +37,7 @@ Main bus
     Read_Frame proc
       data [4]return; width = 8
 ```
+#line(length: 100%)
 
 == Identifiers
 
@@ -57,6 +59,8 @@ An identifier shall start with a letter.
 `identifier ::= letter { underscore | letter_or_digit }`
 
 The following code contains some valid and invalid identifiers:
+
+#line(length: 100%)
 ```fbd
 const C_20 = 20 # Valid
 const _C20 = 20 # Invalid
@@ -64,6 +68,7 @@ Main bus
   cfg1 config # Valid
   1cfg config # Invalid
 ```
+#line(length: 100%)
 
 === Declared identifier
 

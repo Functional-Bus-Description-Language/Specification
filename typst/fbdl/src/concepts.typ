@@ -119,15 +119,18 @@ functionality_body ::=
 
 The following code shows examples of single line instantiations:
 
+#line(length: 100%)
 ```fbd
 C config
 C config; width = 8
 M [8]mask; atomic = false; width = 128; init-value = 0
 err error_t(48); atomic = false
 ```
+#line(length: 100%)
 
 The following code shows examples of multi line instantiations:
 
+#line(length: 100%)
 ```fbd
 My_Config config
   width = 96
@@ -136,6 +139,7 @@ My_Irq irq
   add-enable = true
   in-trigger = "Edge"
 ```
+#line(length: 100%)
 
 == Addressing
 
