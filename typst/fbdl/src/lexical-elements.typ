@@ -86,6 +86,46 @@ The qualified identifier is used to reference a symbol from foreign package.
 
 The first declared identifier denotes the package, and the second one denotes the symbol from this package.
 
+== Indent
+
+The indentation has semantics meaning in the FBDL.
+The indent sequence consists of two space characters (U+0020).
+It is hard to express the indent and dedent using BNF.
+Ident is the increase of the indentation level, and dedent is the decrease of the indentation level.
+In the following code the indent happens in the lines number 2, 5 and 7, and the dedent happens in the line number 4.
+What is more, double dedent happens at the EOF.
+The number of indents always equals the number of dedents in the syntactically and semantically correct file.
+
+#line(length: 100%)
+```fbd
+1: type cfg_t config
+2:   atomic = false
+3:   width = 64
+4: Main bus
+5:   C cfg_t
+6:   Blk block
+7:     C cfg_t
+8:     S status
+```
+#line(length: 100%)
+
+Not only the indent alignment is important, but also its level.
+In the following code the first type definition is correct, as the indent level for the definition body is increased by one.
+The second type definition is incorrect, even though the indent within the definition body is aligned, as the indent level is increased by two.
+
+#line(length: 100%)
+```fbd
+# Valid indent
+type cfg1_t config
+  atomic = false
+  width = 8
+# Invalid indent, indent increased by two
+type cfg2_t config
+    atomic = false
+    width = 8
+```
+#line(length: 100%)
+
 == Keywords
 
 FBDL has following keywords: *`atomic`*, *`block`*, *`bus`*, *`clear`*, *`config`*, *`const`*, *`false`*, *`import`*, *`init-value`*, *`irq`*, *`mask`*, *`memory`*, *`param`*, *`proc`*, *`range`*, *`reset`*, *`read-value`*, *`reset-value`*, *`return`*, *`static`*, *`stream`*, *`true`*, *`type`*, *`in-trigger`*, *`out-trigger`*.
