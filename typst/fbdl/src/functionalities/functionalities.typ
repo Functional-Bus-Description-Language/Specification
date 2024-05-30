@@ -24,4 +24,6 @@ There are following 13 functionalities:
 
 #include "bus.typ"
 
+#include "return.typ"
+#include "static.typ"
 #include "status.typ"

@@ -8,7 +8,7 @@ contexts:
   main:
     - match: \b(blackbox|block|bus|config|irq|mask|memory|param|proc|return|static|status|stream)\b
       scope: markup.bold
-    - match: \b(access|add-enable|atomic|delay|init-value|in-trigger|masters|range|size|width)\b
+    - match: \b(access|add-enable|atomic|delay|init-value|in-trigger|masters|range|read-value|reset-value|size|width)\b
       scope: markup.bold
     - match: \#.*$
       scope: comment
