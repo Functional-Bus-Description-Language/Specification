@@ -8,7 +8,6 @@ An expression is a formula that defines the computation of a value by applying o
 expression ::=
     bool_literal |
     integer_literal |
-    range_literal |
     real_literal |
     string_literal |
     bit_string_literal |
@@ -20,6 +19,7 @@ expression ::=
     function_call |
     subscript |
     parenthesized_expression |
+    range_expression |
     expression_list
 ```
 

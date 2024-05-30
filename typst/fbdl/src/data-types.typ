@@ -179,6 +179,15 @@ To convert a value of the integer type to a value of the bool type the built-in 
 
 The integer data type is always signed integer and must be at least 64 bits wide.
 
+== Range
+
+The range data type is used to assign value to the `range` property.
+It consists of left and right bounds, both expressed as expressions, separated by the colon character.
+The range data type can be created solely using the range expression.
+There is no range literal.
+
+`range_expression ::= expression `*`:`*` expression`
+
 == Real
 
 The real data type is 64 bits IEEE 754 double precision floating-point type.
