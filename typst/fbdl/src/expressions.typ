@@ -223,26 +223,42 @@ The FBDL does not allow defining custom functions for value computations. Howeve
 functions:
 
 *`abs`*`(x integer|real) integer|real` \
+#pad(left: 1em)[
 The `abs` function returns the absolute value of `x`.
+]
 
 *`bool`*`(x integer) bool` \
+#pad(left: 1em)[
 The `bool` function returns a value of the bool type converted from a value `x` of the integer type. If `x` equals 0, then the `false` is returned. In all other cases the `true` is returned.
+]
 
 *`ceil`*`(x real) integer` \
+#pad(left: 1em)[
 The `ceil` function returns the least integer value greater than or equal to `x`.
+]
 
 *`floor`*`(x real) integer` \
+#pad(left: 1em)[
 The `floor` function returns the greatest integer value less than or equal to `x`.
+]
 
 *`log2`*`(x real) integer|real` \
+#pad(left: 1em)[
 The `log2` function returns the binary logarithm of `x`.
+]
 
 *`log10`*`(x real) integer|real` \
+#pad(left: 1em)[
 The `log10` function returns the decimal logarithm of `x`.
+]
 
 *`log`*`(x, b real) integer|real` \
+#pad(left: 1em)[
 The `log` function returns the logarithm of `x` to the base `b`.
+]
 
 *`u2`*`(x, w integer) integer` \
+#pad(left: 1em)[
 The `u2` function returns two’s complement representation of `x` as an integer assuming width `w`.
 For example, `u2(-1, 8)` returns `255`.
+]
