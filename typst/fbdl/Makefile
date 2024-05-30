@@ -1,4 +1,4 @@
-fbdl.pdf: src/* src/images/*
+fbdl.pdf: src/* src/functionalities/* src/images/*
 	typst compile src/main.typ fbdl.pdf
 
 .PHONY: show

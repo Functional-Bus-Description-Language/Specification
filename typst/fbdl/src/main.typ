@@ -35,3 +35,4 @@
 #include "lexical-elements.typ"
 #include "data-types.typ"
 #include "expressions.typ"
+#include "functionalities/functionalities.typ"
