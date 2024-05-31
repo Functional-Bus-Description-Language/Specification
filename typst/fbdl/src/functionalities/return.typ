@@ -5,7 +5,7 @@ It represents data returned by a procedure or streamed by an upstream.
 
 The `return` functionality has following properties:
 
-*`width`*` integer (bus width) [definitive]`
+*`width`*` integer (bus width) {definitive}`
 #pad(left: 1em)[
 The `width` property defines the bit width of the return.
 ]

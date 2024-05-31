@@ -6,12 +6,12 @@ The `block` might also be used to limit the access for particular provider to on
 
 The `block` functionality has following properties:
 
-*`masters`*` integer (1) [definitive]`
+*`masters`*` integer (1) {definitive}`
 #pad(left: 1em)[
 The `masters` property defines the number of `block` masters.
 ]
 
-*`reset`*` string (None) [definitive]`
+*`reset`*` string (None) {definitive}`
 #pad(left: 1em)[
 The `reset` property defines the `block` reset type.
 By default the block has no reset.

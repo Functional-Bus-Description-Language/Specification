@@ -5,19 +5,19 @@ Every valid description must have at least one bus instantiated, as the bus is t
 
 The `bus` functionality has following properties:
 
-*`masters`*` integer (1) [definitive]`
+*`masters`*` integer (1) {definitive}`
 #pad(left: 1em)[
 The `masters` property defines the number of `bus` masters.
 ]
 
-*`reset`*` string (None) [definitive]`
+*`reset`*` string (None) {definitive}`
 #pad(left: 1em)[
 The `reset` property defines the `bus` reset type.
 By default the bus has no reset.
 Valid values of the `reset` property are _`"Sync"`_ for synchronous reset and _`"Async"`_ for asynchronous reset.
 ]
 
-*`width`*` integer (32) [definitive]`
+*`width`*` integer (32) {definitive}`
 #pad(left: 1em)[
 The `width` property defines the bus data width.
 ]
