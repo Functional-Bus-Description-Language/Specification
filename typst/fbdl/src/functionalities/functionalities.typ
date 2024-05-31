@@ -24,6 +24,8 @@ There are following 13 functionalities:
 #include "block.typ"
 #include "bus.typ"
 
+#include "irq.typ"
+
 #include "param.typ"
 
 #include "return.typ"
