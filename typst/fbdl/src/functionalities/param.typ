@@ -1,19 +1,19 @@
 == Param
 
-The `param` functionality is an inner functionality of the `proc` and `stream` functionalities.
+The param functionality is an inner functionality of the proc and stream functionalities.
 It represents a data fed to a procedure or streamed by a downstream.
 
-The `param` functionality has following properties:
+The param functionality has following properties:
 
 *`range`*` range | [range] (None) {definitive}`
 #pad(left: 1em)[
-The `range` property defines the range of valid values.
-The `range` property on `param` behaves exactly the same as the `range` property on `config`.
+The range property defines the range of valid values.
+The range property on param behaves exactly the same as the range property on config.
 ]
 
 *`width`*` integer (bus width) {definitive}`
 #pad(left: 1em)[
-The `width` property defines the bit width of the `param`.
+The width property defines the bit width of the param.
 ]
 
 The following example presents the definition of a downstream with three parameters.
