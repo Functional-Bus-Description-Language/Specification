@@ -22,4 +22,4 @@ Valid values of the `reset` property are _`"Sync"`_ for synchronous reset and _`
 The `width` property defines the bus data width.
 ]
 
-The bus address width is not explicitly set, as it implies from the address space size required to pack all functionalities included in the main  bus description.
+The bus address width is not explicitly set, as it implies from the address space size required to pack all functionalities included in the bus description.

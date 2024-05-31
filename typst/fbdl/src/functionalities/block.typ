@@ -35,5 +35,5 @@ The logical connection of the system components may look as follows:
 #image("../images/requester-access-limit.svg", width: 70%)
 #set align(left)
 
-The requester number 1 can acces both config `C` and status `S`.
-However, the requester number 2 can access only the status `S`.
+The requester number 1 can acces both `onfig C` and `status S`.
+However, the requester number 2 can access only the `status S`.
