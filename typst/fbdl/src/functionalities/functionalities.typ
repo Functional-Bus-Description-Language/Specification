@@ -21,7 +21,7 @@ There are following 13 functionalities:
 + `stream`.
 
 #include "blackbox.typ"
-
+#include "block.typ"
 #include "bus.typ"
 
 #include "return.typ"

@@ -78,11 +78,11 @@ The expression list may be used to create a list of expressions.
 
 ```
 binary_operator ::=
-    binary_arithmetic_operator |
-    binary_bitwise_operator |
-    binary_comparison_operator |
-    binary_logical_operator |
-    binary_range_operator
+  binary_arithmetic_operator |
+  binary_bitwise_operator |
+  binary_comparison_operator |
+  binary_logical_operator |
+  binary_range_operator
 ```
 
 `binary_arithmetic_operator ::= `*`+`*` | `*`-`*` | `*`*`*` | `*`/`*` | `*`%`*` | `*`**`*
