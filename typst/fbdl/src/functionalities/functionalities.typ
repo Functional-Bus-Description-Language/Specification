@@ -26,6 +26,7 @@ There are following 13 functionalities:
 
 #include "irq.typ"
 
+#include "memory.typ"
 #include "param.typ"
 
 #include "return.typ"

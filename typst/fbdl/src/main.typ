@@ -1,3 +1,8 @@
+#set text(
+  //font: "Open Sans",
+  size: 11pt
+)
+
 #set document(
   title: [Functional Bus Description Language - Specification],
   author: "Michał Kruszewski"
