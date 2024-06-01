@@ -28,7 +28,7 @@ There are following 13 functionalities:
 #include "mask.typ"
 #include "memory.typ"
 #include "param.typ"
-
+#include "proc.typ"
 #include "return.typ"
 #include "static.typ"
 #include "status.typ"
