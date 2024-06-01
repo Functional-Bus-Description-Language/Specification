@@ -23,7 +23,7 @@ description ::=
     instantiation
 ```
 
-== Properties
+== Properties <concepts-properties>
 
 Each data in the FBDL description has associated functionality and each functionality has associated properties.
 Properties allow the configuration of functionalities.
