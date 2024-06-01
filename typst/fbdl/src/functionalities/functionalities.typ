@@ -34,7 +34,7 @@ The property kind indicates whether the property is a definitive or a declarativ
 #include "blackbox.typ"
 #include "block.typ"
 #include "bus.typ"
-
+#include "config.typ"
 #include "irq.typ"
 #include "mask.typ"
 #include "memory.typ"
