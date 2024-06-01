@@ -17,10 +17,10 @@ A compiler is free to support a parameter for changing the name of the main bus.
 
 ```
 description ::=
-    import_statement |
-    constant_definition |
-    type_definition |
-    instantiation
+  import_statement |
+  constant_definition |
+  type_definition |
+  instantiation
 ```
 
 == Properties <concepts-properties>
@@ -44,14 +44,15 @@ Examples of declarative properties include `access` or `in-trigger` properties.
 `property_assignment ::= property_identifier `*`=`*` expression`
 
 `property_assignments ::=` \
-#h(2em) `property_assignments` \
-#h(2em) `{ `*`;`*` property_assignment }` \
-#h(2em) `newline`
+`  property_assignments` \
+`  { `*`;`*` property_assignment }` \
+`  newline`
 
 `semicolon_and_property_assignments ::= `*`;`*` property_assignments`
 
+#block(breakable: false)[
 `property_identifier ::=` \
-#h(2em)
+#h(1em)
 *`access`*` | `
 *`add-enable`*` | `
 *`atomic`*` | `
@@ -59,26 +60,26 @@ Examples of declarative properties include `access` or `in-trigger` properties.
 *`clear`*` | `
 *`delay`*` | `
 #linebreak()
-#h(2em)
+#h(1em)
 *`enable-init-value`*` | `
 *`enable-reset-value`*` | `
 *`groups`*` | `
 *`init-value`*` | `
 #linebreak()
-#h(2em)
+#h(1em)
 *`in-trigger`*` | `
 *`masters`*` | `
 *`out-trigger`*` | `
 *`range`*` | `
 *`read-latency`*` | `
 #linebreak()
-#h(2em)
+#h(1em)
 *`read-value`*` | `
 *`reset`*` | `
 *`reset-value`*` | `
 *`size`*` | `
 *`width`*
-
+]
 
 == Instantiation
 
@@ -88,35 +89,30 @@ A functionality can be instantiated in a single line or in multiple lines.
 
 ```
 single_line_instantiation ::=
-    identifier
-    [ array_marker ]
-    declared_identifier | qualified_identifier
-    [ argument_list ]
-    newline | semicolon_and_property_assignments
+  identifier
+  [ array_marker ]
+  declared_identifier | qualified_identifier
+  [ argument_list ]
+  newline | semicolon_and_property_assignments
 ```
 
 ```
 multi_line_instantiation ::=
-    identifier
-    [ array_marker ]
-    declared_identifier | qualified_identifier
-    [ argument_list ]
-    functionality_body
+  identifier
+  [ array_marker ]
+  declared_identifier | qualified_identifier
+  [ argument_list ]
+  functionality_body
 ```
 
 `array_marker ::= `*`[`*` expression ` *`]`*
 
 ```
 functionality_body ::=
-    newline
-    indent
-    {
-        constant_definition |
-        type_definition |
-        property_assignments |
-        instantiation
-    }
-    dedent
+  newline
+  indent
+  { constant_definition | type_definition | property_assignments | instantiation }
+  dedent
 ```
 
 The following code shows examples of single line instantiations:

@@ -48,13 +48,13 @@ Main bus
 Identifiers are used as names.
 An identifier shall start with a letter.
 
-`uppercase_letter ::= `*`A`*` | `*`B`*` | `*`C`*` | `*`D`*` | `*`E`*` | `*`F`*` | `*`G`*` | `*`H`*` | `*`I`*` | `*`J`*` | `*`K`*` | `*`L`*` | `*`M`*` |`
-#linebreak()
-`    `*`N`*` | `*`O`*` | `*`P`*` | `*`R`*` | `*`S`*` | `*`T`*` | `*`U`*` | `*`V`*` | `*`W`*` | `*`X`*` | `*`Y`*` | `*`Z`*
+`uppercase_letter ::= `\
+#h(1em)*`A`*` | `*`B`*` | `*`C`*` | `*`D`*` | `*`E`*` | `*`F`*` | `*`G`*` | `*`H`*` | `*`I`*` | `*`J`*` | `*`K`*` | `*`L`*` | `*`M`*` |` \
+#h(1em)*`N`*` | `*`O`*` | `*`P`*` | `*`R`*` | `*`S`*` | `*`T`*` | `*`U`*` | `*`V`*` | `*`W`*` | `*`X`*` | `*`Y`*` | `*`Z`*
 
-`lowercase_letter ::= `*`a`*` | `*`b`*` | `*`c`*` | `*`d`*` | `*`e`*` | `*`f`*` | `*`g`*` | `*`h`*` | `*`i`*` | `*`j`*` | `*`k`*` | `*`l`*` | `*`m`*` |`
-#linebreak()
-`    `*`n`*` | `*`o`*` | `*`p`*` | `*`r`*` | `*`s`*` | `*`t`*` | `*`u`*` | `*`v`*` | `*`w`*` | `*`x`*` | `*`y`*` | `*`z`*
+`lowercase_letter ::=` \
+#h(1em)*`a`*` | `*`b`*` | `*`c`*` | `*`d`*` | `*`e`*` | `*`f`*` | `*`g`*` | `*`h`*` | `*`i`*` | `*`j`*` | `*`k`*` | `*`l`*` | `*`m`*` |` \
+#h(1em)*`n`*` | `*`o`*` | `*`p`*` | `*`r`*` | `*`s`*` | `*`t`*` | `*`u`*` | `*`v`*` | `*`w`*` | `*`x`*` | `*`y`*` | `*`z`*
 
 `letter ::= uppercase_letter | lowercase_letter`
 
@@ -62,9 +62,10 @@ An identifier shall start with a letter.
 
 `identifier ::= letter { underscore | letter_or_digit }`
 
+#block(breakable:false)[
+
 The following code contains some valid and invalid identifiers:
 
-#block(breakable:false)[
 #pad(left: 1em)[
 ```fbd
 const C_20 = 20 # Valid
@@ -168,19 +169,12 @@ Keywords denoting built-in types (functionalities) cannot be used as identifiers
 
 `hex_base ::= `*`0X`*` | `*`0x`*
 
-`hex_digit ::= `*`0`*` | `*`1`*` | `*`2`*` | `*`3`*` | `*`4`*` | `*`5`*` | `*`6`*` | `*`7`*` | `*`8`*` | `*`9`*
-#linebreak()
-`    | `*`A`*` | `*`a`*` | `*`B`*` | `*`b`*` | `*`C`*` | `*`c`*` | `*`D`*` | `*`d`*` | `*`E`*` | `*`e`*` | `*`F`*` | `*`f`*
+`hex_digit ::= `*`0`*` | `*`1`*` | `*`2`*` | `*`3`*` | `*`4`*` | `*`5`*` | `*`6`*` | `*`7`*` | `*`8`*` | `*`9`* \
+`  | `*`A`*` | `*`a`*` | `*`B`*` | `*`b`*` | `*`C`*` | `*`c`*` | `*`D`*` | `*`d`*` | `*`E`*` | `*`e`*` | `*`F`*` | `*`f`*
 
 === Integer literals
 
-```
-integer_literal
-    binary_literal |
-    octal_literal |
-    decimal_literal |
-    hex_literal
-```
+`integer_literal ::= binary_literal | octal_literal | decimal_literal | hex_literal`
 
 `binary_literal ::= binary_base binary_digit { [ underscore ] binary_digit }`
 
@@ -226,9 +220,9 @@ There are three types of bit string literals: binary bit string literal, octal b
 
 ```
 bit_string_literal ::=
-    binary_bit_string_literal |
-    octal_bit_string_literal |
-    hex_bit_string_literal
+  binary_bit_string_literal |
+  octal_bit_string_literal |
+  hex_bit_string_literal
 ```
 
 `binary_bit_string_base = `*`B`*` | `*`b`*

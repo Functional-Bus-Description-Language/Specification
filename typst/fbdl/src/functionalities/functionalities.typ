@@ -5,11 +5,12 @@
 Functionalities are the core part of the FBDL.
 They define the capabilities of the provider.
 Each functionality is distinct and unambiguously defines the provider behavior and the interface that must be generated for the requester.
-There are following 13 functionalities:
+There are following 14 functionalities:
 + blackbox,
 + block,
 + bus,
 + config,
++ group,
 + irq,
 + mask,
 + memory,
@@ -20,7 +21,7 @@ There are following 13 functionalities:
 + status,
 + stream.
 
-Sections of this chapter describe available functionalities.
+Sections of this chapter describe all available functionalities.
 Functionality properties are defined in the following notation.
 
 *`property-name`*` expected value type (default value) {kind}`

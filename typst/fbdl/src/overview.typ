@@ -42,11 +42,11 @@ In particular:
 #set enum(numbering: "a)")
 
 + Lowercase words in `constant-width` font, some containing embedded underscores, are used to denote syntactic categories, for example: \
-  #h(2em) `single_import_statement` \
+  #h(1em) `single_import_statement` \
   Whenever the name of a syntactic category is used, apart from the syntax rules themselves, underscores are replaced with spaces thus, "single import statement" would appear in the narrative description when referring to the syntactic category.
   
 + Boldface words are used to denote keywords, for example: \
-  #h(2em) *mask* \
+  #h(1em) *mask* \
   Keywords shall be used only in those places indicated by the syntax.
 
 + A production consists of a left-hand side, the symbol #quote[::=] (which is read as can be replaced by), and a right-hand side.
@@ -55,8 +55,8 @@ In particular:
   Any occurrence of the left-hand side may be replaced by an instance of the right-hand side.
 
 + A vertical bar ( | ) separates alternative items on the right-hand side of a production unless it occurs immediately after an opening brace, in which case it stands for itself, for example: \
-  #h(2em) `decimal_digit ::= zero_digit | non_zero_decimal_digit` \
-  #h(2em) `choices ::= choice { | choice }` \
+  #h(1em) `decimal_digit ::= zero_digit | non_zero_decimal_digit` \
+  #h(1em) `choices ::= choice { | choice }` \
   In the first instance, an occurrence of decimal digit can be replaced by either zero digit or non zero decimal digit.
   In the second case, "choices" can be replaced by a list of "choice", separated by vertical bars, see item f) for the meaning of braces.
 

@@ -34,10 +34,12 @@ The value of the bit string type is used for all *`*-value`* properties.
 It might be created explicitly using the bit string literal or it might be converted implicitly from the value of integer type.
 The only way to create a bit string value containing meta values is to explicitly use the bit string literal.
 
+
+#block(breakable:false)[
+
 The below table presents unary negation operation results applied to possible bit string data type values.
 
 #set align(center)
-#block(breakable:false)[
 #table(
   stroke: none,
   align: center,

@@ -27,9 +27,9 @@ If both read-value and reset-value properties are set, then the static can be re
 The width property defines the bit width of the static.
 ]
 
+#block(breakable: false)[
 The static functionality may be used for example for versioning, bus id, bus generation timestamp or for storing secrets, that shall be read only once. Example:
 
-#block(breakable: false)[
 #pad(left: 1em)[
 ```fbd
 Secret static

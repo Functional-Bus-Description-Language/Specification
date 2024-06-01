@@ -6,27 +6,26 @@ An expression is a formula that defines the computation of a value by applying o
 
 ```
 expression ::=
-    bool_literal |
-    integer_literal |
-    real_literal |
-    string_literal |
-    bit_string_literal |
-    time_literal |
-    declared_identifier |
-    qualified_identifier |
-    unary_operation |
-    binary_operation |
-    function_call |
-    subscript |
-    parenthesized_expression |
-    range_expression |
-    expression_list
+  bool_literal |
+  integer_literal |
+  real_literal |
+  string_literal |
+  bit_string_literal |
+  time_literal |
+  declared_identifier |
+  qualified_identifier |
+  unary_operation |
+  binary_operation |
+  function_call |
+  subscript |
+  parenthesized_expression |
+  range_expression |
+  expression_list
 ```
 
 The function call is used to call one of built-in functions.
 
-`function_call ::=` \
-`    declared_identifier`*`(`*` [ expression { `*`,`*` expression } ] `*`)`*
+`function_call ::= declared_identifier`*`(`*` [ expression { `*`,`*` expression } ] `*`)`*
 
 The subscript is used to refer to a particular element from the expression list.
 

@@ -16,7 +16,7 @@ However, if a proc having only returns has the delay property set, then it also 
 The existence or absence of call and exit signals is summarized in the below table.
 
 #set align(center)
-#block(breakable: false)
+#block(breakable: false)[
 #table(
   stroke: none,
   align: center,
