@@ -29,11 +29,13 @@ The width property defines the bit width of the static.
 
 The static functionality may be used for example for versioning, bus id, bus generation timestamp or for storing secrets, that shall be read only once. Example:
 
-#line(length: 100%)
+#block(breakable: false)[
+#pad(left: 1em)[
 ```fbd
 Secret static
   width = 8
   init-value = 0x13
   read-value = 0xFF
 ```
-#line(length: 100%)
+]
+]

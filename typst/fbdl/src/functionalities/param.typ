@@ -18,7 +18,8 @@ The width property defines the bit width of the param.
 
 The following example presents the definition of a downstream with three parameters.
 
-#line(length: 100%)
+#block(breakable: false)[
+#pad(left: 1em)[
 ```fbd
 Sum_Reduce stream
   type param_t param; width = 16
@@ -26,4 +27,5 @@ Sum_Reduce stream
   b param_t
   c param_t
 ```
-#line(length: 100%)
+]
+]

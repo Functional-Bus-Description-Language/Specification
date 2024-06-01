@@ -12,7 +12,8 @@ The first one is that the stream must not contain both param and return.
 The second one is that the code for the stream, generated for the requester, shall take into account the fact that access to the stream is multiple and access to the proc is single.
 For example, lets consider the following bus description:
 
-#line(length: 100%)
+#block(breakable:false)[
+#pad(left: 1em)[
 ```fbd
 Main bus
   P proc
@@ -20,16 +21,19 @@ Main bus
   S stream
     p param
 ```
-#line(length: 100%)
+]
+]
 
 The code generated for the requester, implemented in the C language, might include following function prototypes:
 
-#line(length: 100%)
+#block(breakable:false)[
+#pad(left: 1em)[
 ```
 int Main_P(const uint32_t p);
 int Main_S(const uint32_t * p, size_t count);
 ```
-#line(length: 100%)
+]
+]
 
 The stream has associated strobe signal at the provider side.
 The strobe signal must be driven active for one clock cycle after all registers storing the parameters of a downstream have been written.

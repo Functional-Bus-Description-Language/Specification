@@ -23,7 +23,8 @@ Their sole purpose is to enlighten the human reader.
 Documentation comments are comments that appear immediately before constant definitions, type definitions, and functionality instantiations with no intervening newlines.
 The following code shows examples of documentation comments:
 
-#line(length: 100%)
+#block(breakable:false)[
+#pad(left: 1em)[
 ```fbd
 # Number of receivers
 const RECEIVERS_COUNT = 7
@@ -39,7 +40,8 @@ Main bus
     Read_Frame proc
       data [4]return; width = 8
 ```
-#line(length: 100%)
+]
+]
 
 == Identifiers
 
@@ -62,7 +64,8 @@ An identifier shall start with a letter.
 
 The following code contains some valid and invalid identifiers:
 
-#line(length: 100%)
+#block(breakable:false)[
+#pad(left: 1em)[
 ```fbd
 const C_20 = 20 # Valid
 const _C20 = 20 # Invalid
@@ -70,7 +73,8 @@ Main bus
   cfg1 config # Valid
   1cfg config # Invalid
 ```
-#line(length: 100%)
+]
+]
 
 === Declared identifier
 
@@ -96,7 +100,9 @@ In the following code the indent happens in the lines number 2, 5 and 7, and the
 What is more, double dedent happens at the EOF.
 The number of indents always equals the number of dedents in the syntactically and semantically correct file.
 
-#line(length: 100%)
+
+#block(breakable:false)[
+#pad(left: 1em)[
 ```fbd
 1: type cfg_t config
 2:   atomic = false
@@ -107,13 +113,15 @@ The number of indents always equals the number of dedents in the syntactically a
 7:     C cfg_t
 8:     S status
 ```
-#line(length: 100%)
+]
+]
 
 Not only the indent alignment is important, but also its level.
 In the following code the first type definition is correct, as the indent level for the definition body is increased by one.
 The second type definition is incorrect, even though the indent within the definition body is aligned, as the indent level is increased by two.
 
-#line(length: 100%)
+#block(breakable:false)[
+#pad(left: 1em)[
 ```fbd
 # Valid indent
 type cfg1_t config
@@ -124,7 +132,8 @@ type cfg2_t config
     atomic = false
     width = 8
 ```
-#line(length: 100%)
+]
+]
 
 == Keywords
 
@@ -237,10 +246,14 @@ bit_string_literal ::=
 If meta value is present in a bit string literal, then it is expanded to the proper width depending on the bit string base.
 For example, following equations are true:
 
+#block(breakable:false)[
+#pad(left: 1em)[
 ```
 o"XW" = b"XXXWWW"
 x"U-" = b"UUUU----"
 ```
+]
+]
 
 === Time literals
 

@@ -37,6 +37,7 @@ The only way to create a bit string value containing meta values is to explicitl
 The below table presents unary negation operation results applied to possible bit string data type values.
 
 #set align(center)
+#block(breakable:false)[
 #table(
   stroke: none,
   align: center,
@@ -47,18 +48,24 @@ The below table presents unary negation operation results applied to possible bi
   [*In Value*], [*Out Value*],
   table.hline(),
   [`0`], [`1`],
+  table.hline(stroke: (thickness: 0.1pt)),
   [`1`], [`0`],
+  table.hline(stroke: (thickness: 0.1pt)),
   [`-`], [`-`],
+  table.hline(stroke: (thickness: 0.1pt)),
   [`U`], [`U`],
+  table.hline(stroke: (thickness: 0.1pt)),
   [`W`], [`W`],
+  table.hline(stroke: (thickness: 0.1pt)),
   [`X`], [`X`],
 )
+]
 #set align(left)
 
 Below tables present binary operation results applied to possible bit string data type values.
 
 #set align(center)
-
+#block(breakable:false)[
 #table(
   stroke: none,
   align: center,
@@ -88,7 +95,9 @@ Below tables present binary operation results applied to possible bit string dat
   table.hline(stroke: (thickness: 0.1pt)),
   [`Z`],        [`0`], [`1`], [`X`], [`U`], [`W`], [`X`], [`Z`],
 )
+]
 
+#block(breakable:false)[
 #table(
   stroke: none,
   align: center,
@@ -118,7 +127,9 @@ Below tables present binary operation results applied to possible bit string dat
   table.hline(stroke: (thickness: 0.1pt)),
   [`Z`],        [`0`], [`1`], [`X`], [`U`], [`W`], [`X`], [`Z`],
 )
+]
 
+#block(breakable:false)[
 #table(
   stroke: none,
   align: center,
@@ -148,6 +159,7 @@ Below tables present binary operation results applied to possible bit string dat
   table.hline(stroke: (thickness: 0.1pt)),
   [`Z`],        [`0`], [`1`], [`X`], [`U`], [`W`], [`X`], [`Z`],
 )
+]
 
 #set align(left)
 
@@ -160,14 +172,16 @@ The boolean `true` value shall be converted to the integer value 1.
 In the following example, the value of `I1` evaluates to 1, and the value of `I2` evaluates to 2.
 
 
-#line(length: 100%)
+#block(breakable:false)[
+#pad(left: 1em)[
 ```fbd
 const B0 = false
 const B1 = true
 const I1 = B0 + B1
 const I2 = B1 + B1
 ```
-#line(length: 100%)
+]
+]
 
 The bool - integer conversion is asymmetric.
 Implicit conversion of a value of the integer type to a value of the bool type is forbidden.
@@ -205,10 +219,12 @@ Values of time type can be added regardless of their time units.
 Values of the time type can also be multiplied by values of the integer type.
 All of the below property assignments are valid.
 
-#line(length: 100%)
+#block(breakable:false)[
+#pad(left: 1em)[
 ```fbd
 delay = 1 s + 1 ms + 1 us + 1 ns
 delay = 5 * 60 s # Sleep for 5 minutes.
 delay = 10 ms * 4 + 7 * 8 us
 ```
-#line(length: 100%)
+]
+]

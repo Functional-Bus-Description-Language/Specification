@@ -19,7 +19,9 @@ Valid values of the reset property are _`"Sync"`_ for synchronous reset and _`"A
 ]
 
 The following example presents how to limit the scope of access for particular requester.
-#line(length: 100%)
+
+#block(breakable: false)[
+#pad(left: 1em)[
 ```fbd
 Main bus
   C config
@@ -27,7 +29,8 @@ Main bus
     masters = 2
     S status
 ```
-#line(length: 100%)
+]
+]
 
 The logical connection of the system components may look as follows:
 

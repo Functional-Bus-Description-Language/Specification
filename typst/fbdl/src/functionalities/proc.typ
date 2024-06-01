@@ -16,6 +16,7 @@ However, if a proc having only returns has the delay property set, then it also 
 The existence or absence of call and exit signals is summarized in the below table.
 
 #set align(center)
+#block(breakable: false)
 #table(
   stroke: none,
   align: center,
@@ -32,6 +33,7 @@ The existence or absence of call and exit signals is summarized in the below tab
   table.hline(stroke: (thickness: 0.1pt)),
   [Yes], [call & exit], [call & exit], [call & exit], [call & exit],
 )
+]
 #set align(left)
 
 The proc functionality has following properties:

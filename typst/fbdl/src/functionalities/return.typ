@@ -12,10 +12,12 @@ The width property defines the bit width of the return.
 
 The following example presents the definition of a procedure returning four element byte array, and a single bit flag indicating whether the data is valid.
 
-#line(length: 100%)
+#block(breakable: false)[
+#pad(left: 1em)[
 ```fbd
 Read_Data proc
   data [4]return; width = 8
   valid return; width = 1
 ```
-#line(length: 100%)
+]
+]
