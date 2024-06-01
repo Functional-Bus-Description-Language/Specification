@@ -29,9 +29,9 @@ The existence or absence of call and exit signals is summarized in the below tab
   table.hline(),
   [*Delay Set*], [*Empty*], [*Only Params*], [*Only Returns*], [*Params & Returns*],
   table.hline(),
-  [No], [call], [call], [exit], [call & exit],
+  [*No*], [call], [call], [exit], [call & exit],
   table.hline(stroke: (thickness: 0.1pt)),
-  [Yes], [call & exit], [call & exit], [call & exit], [call & exit],
+  [*Yes*], [call & exit], [call & exit], [call & exit], [call & exit],
 )
 ]
 #set align(left)
