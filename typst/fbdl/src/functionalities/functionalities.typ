@@ -32,3 +32,4 @@ There are following 13 functionalities:
 #include "return.typ"
 #include "static.typ"
 #include "status.typ"
+#include "stream.typ"
