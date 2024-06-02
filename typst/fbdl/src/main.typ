@@ -41,3 +41,4 @@
 #include "data-types.typ"
 #include "expressions.typ"
 #include "functionalities/functionalities.typ"
+#include "parametrization.typ"
