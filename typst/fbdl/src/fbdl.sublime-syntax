@@ -6,7 +6,7 @@ scope: source.fbd
 
 contexts:
   main:
-    - match: \b(blackbox|block|bus|config|irq|mask|memory|param|proc|return|static|status|stream)\b
+    - match: \b(blackbox|block|bus|config|group|irq|mask|memory|param|proc|return|static|status|stream)\b
       scope: markup.bold
     - match: \b(const|import|type)\b
       scope: markup.bold
