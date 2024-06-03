@@ -3,30 +3,24 @@
 The irq functionality represents an interrupt handling.
 The irq functionality allows for automatic connection of the following interrupt producers (in-trigger) and consumers (out-trigger):
 
-#block(breakable: false)[
+#set enum(numbering: "1)")
+
 + edge producer and edge sensitive consumer,
   #set align(center)
   #image("../images/irq-edge-edge.svg", width: 80%)
   #set align(left)
-]
-#block(breakable: false)[
 + edge producer and level sensitive consumer,
   #set align(center)
   #image("../images/irq-edge-level.svg", width: 80%)
   #set align(left)
-]
-#block(breakable: false)[
 + level producer and edge sensitive consumer,
   #set align(center)
   #image("../images/irq-level-edge.svg", width: 80%)
   #set align(left)
-]
-#block(breakable: false)[
 + level producer and level sensitive consumer,
   #set align(center)
   #image("../images/irq-level-level.svg", width: 80%)
   #set align(left)
-]
 
 The irq functionality has following properties:
 
