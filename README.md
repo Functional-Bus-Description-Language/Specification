@@ -4,7 +4,7 @@ This repository contains the official specification of the Functional Bus Descri
 
 ## Citation
 
-If you find FBDL useful, and write any academic publication on a project utilizing FBDL please consider citing.
+If you find FBDL useful, and write any academic publication on a project utilizing FBDL please consider citing [How Shifting Focus from Register to Data Functionality Can Enhance Register and Bus Management](https://www.mdpi.com/2079-9292/13/4/719).
 
 ```
 @Article{electronics13040719,
