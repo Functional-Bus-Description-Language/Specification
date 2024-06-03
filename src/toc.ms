@@ -1,2 +1,0 @@
-.pdfswitchtopage after cover
-.TC
