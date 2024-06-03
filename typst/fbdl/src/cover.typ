@@ -1,6 +1,6 @@
 #import "vars.typ"
 
-#v(5cm)
+#v(4cm)
 
 #set align(center)
 
@@ -11,10 +11,10 @@
 #text(11pt)[
 Revision #vars.rev
 
-#datetime.today().display()
+#datetime.today().display("[day padding:none] [month repr:long] [year]")
 ]
 
-#v(4cm)
+#v(3cm)
 
 #text(12pt)[
 _Abstract_
@@ -32,7 +32,7 @@ In the functionality-centric approach, the user defines the functionality of the
 By defining the functionality of the data placed in the registers, it is possible to generate more code, increase code robustness, improve system design readability, and shorten the implementation process.
 ]
 
-#v(2cm)
+#v(4cm)
 
 #par(justify: true)[
 *keywords*:
