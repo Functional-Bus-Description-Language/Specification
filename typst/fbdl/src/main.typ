@@ -42,3 +42,4 @@
 #include "expressions.typ"
 #include "functionalities/functionalities.typ"
 #include "parametrization.typ"
+#include "scope-and-visibility.typ"
