@@ -25,6 +25,11 @@
   numbering: "1.1.1"
 )
 
+#set page(footer: {
+  set text(9pt)
+  align(center, context counter(page).display())
+})
+
 #set par(justify: true)
 
 #outline(indent: 1em)
