@@ -145,13 +145,24 @@ My_Irq irq
 
 == Addressing
 
-The FBDL specification does not impose byte or word addressing.
-There is also no property allowing to switch between these two addressing modes.
-The addressing mode handling is completely left to the particular compiler implementation.
-If the compiler has a monolithic structure (no distinction between the compiler frontend and backend), then it is probably the best decision to use the addressing mode used by the target bus (for example, byte addressing for AXI or word addressing for Wishbone).
-Another option is providing a compiler flag or parameter to specify the addressing mode during the compiler call.
-However, in the case of a compiler frontend implementation, it is recommended to use word addressing with a word width equal to the bus width.
-As it is not known whether the compiler backend will use the word or byte addressing, using the word addressing in the compiler frontend is usually a more straightforward approach, as the byte addresses are word addresses multiplied by the number of bytes in the single word.
+The FBDL specification does not impose any addressing mode, for example, byte or word.
+There is also no property allowing to switch between different addressing modes.
+The handling of the addressing mode is left to the particular compiler implementation.
+
+Depending on the use case and target bus, at least a few approaches are possible.
++ Suppose the compiler has a monolithic structure (no distinction between the compiler front-end and back-end).
+  In that case, it is best to use the addressing mode required or preferred by the target bus (for example, byte addressing for AXI or word addressing for Wishbone).
++ Suppose the compiler is just a generic front-end:
+  - The compiler might provide command line flag or parameter to specify the addressing mode during the compiler call.
+  - The compiler might assume byte addressing.
+    The drawback of this approach is that the data bus width must be a multiple of the number of bits in a byte.
+    In such a case, word addressing is obtained by simply discarding a proper number of the least significant bits of the address bus.
+    The address bus shift operation is carried out by the compiler back-end.
+  - The compiler might assume word addressing.
+    The advantage of this approach is that there is no extra restriction on the data bus width when the back-end utilizes word addressing.
+    If the back-end utilizes byte addressing, the address is obtained by adding a proper number of the least significant bits to the address bus.
+    The address bus shift operation is carried out by the compiler back-end.
+    The back-end must also ensure that the data bus width has the proper value.
 
 == Positive logic
 
