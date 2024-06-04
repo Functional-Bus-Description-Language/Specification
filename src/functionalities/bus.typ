@@ -7,7 +7,9 @@ The bus functionality has following properties:
 
 *`masters`*` integer (1) {definitive}`
 #pad(left: 1em)[
-The masters property defines the number of bus masters.
+The masters property defines the number of bus master ports.
+This property deﬁnes how many master ports shall be generated.
+However, it is up to the user to how many master ports are connected in the design.
 ]
 
 *`reset`*` string (None) {definitive}`

@@ -28,7 +28,7 @@ Functionality properties are defined in the following notation.
 
 Due to implicit data type conversion rules, some properties accept more than one data type.
 For example, the range property expects a value of the range data type.
-However, as there is a rule for implicit conversion from the integer type to the range type, the "`range = 5`" assignment is also valid.
+However, as there is a rule for implicit conversion from the integer type to the range type, the `"range = 5"` assignment is also valid.
 
 The property kind indicates whether the property is a definitive or a declarative property as described in @concepts-properties.
 
