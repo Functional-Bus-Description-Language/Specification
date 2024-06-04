@@ -10,7 +10,7 @@ The block functionality has following properties:
 #pad(left: 1em)[
 The `masters` property defines the number of block master ports.
 This property defines how many master ports shall be generated.
-However, it is up to the user to how many master ports are connected in the design.
+However, it is up to the user how many master ports are connected in the design.
 ]
 
 *`reset`*` string (None) {definitive}`
