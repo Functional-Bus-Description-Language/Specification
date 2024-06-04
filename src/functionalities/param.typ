@@ -16,9 +16,10 @@ The range property on param behaves exactly the same as the range property on co
 The width property defines the bit width of the param.
 ]
 
+#block(breakable: false)[
+
 The following example presents the definition of a downstream with three parameters.
 
-#block(breakable: false)[
 #pad(left: 1em)[
 ```fbd
 Sum_Reduce stream
