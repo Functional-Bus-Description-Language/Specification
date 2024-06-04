@@ -18,6 +18,16 @@ Some of them are formally defined because they are helpful when discussing, for 
 ]
 
 #block(breakable:false)[
+/ compiler back-end:
+  The part of a compiler responsible for taking registerification result and generating provider or requester firmware, gateware, or software.
+]
+
+#block(breakable:false)[
+/ compiler front-end:
+  The part of a compiler responsible for parsing files with functional bus description and carrying out the registerification process.
+]
+
+#block(breakable:false)[
 / data:
   The data term is used to refer to the content of the registers.
   Unless it is used in the context of internal data types of the language.
@@ -83,6 +93,12 @@ Some of them are formally defined because they are helpful when discussing, for 
 #block(breakable:false)[
 / pure exit register:
   The term pure exit register is used to refer to the exit register containing no proc params.
+]
+
+#block(breakable:false)[
+/ register:
+  A logical set of storage elements which content can be read or written by providing a single address.
+  The set can be empty when the number of physical storage elements equals 0.
 ]
 
 #block(breakable:false)[
