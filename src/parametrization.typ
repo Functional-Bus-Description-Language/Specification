@@ -16,7 +16,7 @@ The following code presents a bus description with three functionalities, all ha
 #block(breakable: false)[
 #pad(left: 1em)[
 ```fbd
-Main width
+Main bus
   const ELEMENT_COUNT = 4
   const WIDTH = 8
   C [ELEMENT_COUNT]config; width = WIDTH
@@ -30,7 +30,7 @@ Constants must be included in the generated code, both for the provider and for 
 This allows for having a single source of the constant value.
 
 A constant can be defined in a single line in the single-line constant definition or as a part of the multi-constant definition.
- 
+
 #block(breakable: false)[
 `single_constant_definition ::= `*`const`*` identifier = expression newline`
 
@@ -102,7 +102,7 @@ The former leads to shorter descriptions and helps to avoid duplication.
 ]
 
 `parameter_list ::= `*`(`*` parameters `*`)`*
- 
+
 `parameters ::= parameter { `*`,`*` parameter }`
 
 `parameter ::= identifier [ `*`=`*` expression ]`
@@ -135,13 +135,13 @@ Main bus
   type irq_t irq; clear = "On Read"
   I1 irq_t
   I2 irq_t
-  
+
   C1 cfg_t
   C2 cfg_t(6)
   C3 cfg_t(width = 8)
 
   Blk1 blk_t(7)
-  Blk2 blk_t(with_status = false, mask_count = 11)  
+  Blk2 blk_t(with_status = false, mask_count = 11)
 ```
 ]
 ]
