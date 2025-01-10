@@ -62,19 +62,30 @@ The procedure must obey following rules.
 
 #set enum(numbering: "1)")
 
-+ If the compiler working directory contains a directory named `"fbd"`, then each of the `"fbd"` subdirectories is considered a package directory if it contains at least one file with the `".fbd"` extension.
-  The name of the package is the same as the name of the subdirectory, unless it has `"fbd-"` prefix.
-  In such a case, the prefix shall be removed from the package name.
-  If the name of the subdirectory matches exactly the `"fbd-"` pattern, then a compiler must report an error on an invalid package name.
-+ The compiler must recursively check all subdirectories of its working path (except the `"fbd"` directory in the working directory that is described in rule number 1).
++ All files with the `".fbd"` extension in the compiler working directory belong to the main package.
+
++ If the compiler working directory contains a directory named `"fbd"`, then:
+
+  #set enum(numbering: "a)")
+  + The `"fbd"` directory is a part of the main package.
+    The directory does not have to contain any files with the `".fbd"` extension.
+
+  + Each of the `"fbd"` subdirectories is considered a package directory if it contains at least one file with the `".fbd"` extension.
+    Package directory may be arbitrarily nested.
+    The name of the package is the same as the name of the subdirectory, unless it has `"fbd-"` prefix.
+    In such a case, the prefix shall be removed from the package name.
+    If the name of the subdirectory matches exactly the `"fbd-"` pattern, then a compiler must report an error on an invalid package name.
+
++ The compiler must recursively check all subdirectories of its working path (except the `"fbd"` directory in the working directory that is described in rule number 2).
   Each subdirectory with a name starting with the `"fbd-"` prefix is considered a package directory if it contains at least one file with the `".fbd"` extension.
   If the name of the subdirectory matches exactly the `"fbd-"` pattern, then a compiler must report an error on an invalid package name
+
 + The compiler must recursively check all subdirectories of the paths defined in the `FBDPATH` environment variable.
   The variable may contain multiple paths separated by the ’:’ (colon) character.
   Each subdirectory with a name starting with the `"fbd-"` prefix is considered a package directory if it contains at least one file with the `".fbd"` extension.
   If the name of the subdirectory matches exactly the `"fbd-"` pattern, then a compiler must report an error on an invalid package name.
-Compilers are also free to have their own parameters allowing to provide extra paths to look for packages.
-The below snippet presents a tree of example working directory.
+Compilers are also free to have their parameters allowing to provide extra paths to look for packages.
+The below snippet presents a tree of an example working directory.
 
 #block(breakable: false)[
 #pad(left: 1em)[
@@ -86,6 +97,7 @@ The below snippet presents a tree of example working directory.
 |       `-- gw
 |           `-- bar.vhd
 |-- fbd
+|   |-- main.fbd
 |   |-- fbd-pkg1
 |   |   `-- a.fbd
 |   |-- not-a-pkg
@@ -103,10 +115,19 @@ The below snippet presents a tree of example working directory.
 ]
 ]
 
-In this case each FBDL compilant compiler must automatically discover following three packages:
-- `bar` - path `"./externals/bar/fbd-bar"`,
+In this case each FBDL compilant compiler must automatically discover following four packages:
+- `main` - path `"./fbd"`,
 - `pkg1` - path `"./fbd/fbd-pkg1"`,
-- `pkg2` - path `"./fbd/pkg2"`.
+- `pkg2` - path `"./fbd/pkg2"`,
+- `bar` - path `"./externals/bar/fbd-bar"`.
+
+By default, any FBDL compiler must start the instantiation process from the `Main` bus instantiation in the main package.
+This rule, together with package discovery rules, implies that the file with the `Main` bus instantiation must be placed in one of the following directories:
++ compiler working directory,
++ `"fbd"` directory in the compiler working directory,
++ `"fbd-main"` directory nested somewhere in the compiler working directory,
++ `"fbd-main"` directory nested somewhere in directories defined in the `FBDPATH` environment variable,
++ `"fbd-main"` directory nested somewhere in directories provided to the compiler via custom compiler parameters.
 
 == Scope rules
 
