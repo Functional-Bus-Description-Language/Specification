@@ -138,7 +138,7 @@ type cfg2_t config
 
 == Keywords
 
-FBDL has following keywords: *`atomic`*, *`block`*, *`bus`*, *`clear`*, *`config`*, *`const`*, *`false`*, *`import`*, *`init-value`*, *`irq`*, *`mask`*, *`memory`*, *`param`*, *`proc`*, *`range`*, *`reset`*, *`read-value`*, *`reset-value`*, *`return`*, *`static`*, *`stream`*, *`true`*, *`type`*, *`in-trigger`*, *`out-trigger`*.
+FBDL has following keywords: *`atomic`*, *`block`*, *`bus`*, *`clear`*, *`config`*, *`const`*, *`false`*, *`import`*, *`init-value`*, *`irq`*, *`mask`*, *`param`*, *`proc`*, *`range`*, *`reset`*, *`read-value`*, *`reset-value`*, *`return`*, *`static`*, *`stream`*, *`true`*, *`type`*, *`in-trigger`*, *`out-trigger`*.
 
 Keywords can be used as identifiers with one exception.
 Keywords denoting built-in types (functionalities) cannot be used as identifiers for custom types.

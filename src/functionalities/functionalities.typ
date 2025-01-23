@@ -5,7 +5,7 @@
 Functionalities are the core part of the FBDL.
 They define the capabilities of the provider.
 Each functionality is distinct and unambiguously defines the provider behavior and the interface that must be generated for the requester.
-There are following 14 functionalities:
+There are following 13 functionalities:
 + blackbox,
 + block,
 + bus,
@@ -13,7 +13,6 @@ There are following 14 functionalities:
 + group,
 + irq,
 + mask,
-+ memory,
 + param,
 + proc,
 + return,
@@ -39,7 +38,6 @@ The property kind indicates whether the property is a definitive or a declarativ
 #include "group.typ"
 #include "irq.typ"
 #include "mask.typ"
-#include "memory.typ"
 #include "param.typ"
 #include "proc.typ"
 #include "return.typ"
