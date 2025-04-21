@@ -1,8 +1,12 @@
 #import "vars.typ"
 
-#v(4cm)
+#v(1cm)
 
 #set align(center)
+
+#image("logo.svg", width: 20%)
+
+#v(2cm)
 
 #text(18pt)[
 *Functional Bus Description Language*
@@ -14,7 +18,7 @@ Revision #vars.rev
 #datetime.today().display("[day padding:none] [month repr:long] [year]")
 ]
 
-#v(3cm)
+#v(2cm)
 
 #text(12pt)[
 _Abstract_
@@ -32,7 +36,7 @@ In the functionality-centric approach, the user defines the functionality of the
 By defining the functionality of the data placed in the registers, it is possible to generate more code, increase code robustness, improve system design readability, and shorten the implementation process.
 ]
 
-#v(4cm)
+#v(2cm)
 
 #par(justify: true)[
 *keywords*:

@@ -1,5 +1,5 @@
 fbdl.pdf: src/* src/functionalities/* src/images/*
-	typst compile --font-path font src/main.typ fbdl.pdf
+	typst compile src/main.typ fbdl.pdf
 
 .PHONY: show
 show: fbdl.pdf
