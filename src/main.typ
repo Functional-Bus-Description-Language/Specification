@@ -3,6 +3,9 @@
   size: 11pt
 )
 
+#show link: set text(fill: blue)
+#show ref: set text(fill: blue)
+
 #set document(
   title: [Functional Bus Description Language - Specification],
   author: "Michał Kruszewski"
