@@ -26,7 +26,7 @@ Main bus
 ]
 ]
 
-Constants must be included in the generated code, both for the provider and for the requester.
+Constants defined inside bus or block functionalities must be included in the generated code, both for the provider and for the requester.
 This allows for having a single source of the constant value.
 
 A constant can be defined in a single line in the single-line constant definition or as a part of the multi-constant definition.
