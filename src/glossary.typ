@@ -39,6 +39,11 @@ Some of them are formally defined because they are helpful when discussing, for 
 ]
 
 #block(breakable:false)[
+/ dynamic generator:
+  A generator capable of loading registerification results and producing access code during target system runtime.
+]
+
+#block(breakable:false)[
 / exit register:
   The proc register with the associated exit pulse signal.
   When the exit register is read, the exit pulse is generated.
@@ -65,7 +70,7 @@ Some of them are formally defined because they are helpful when discussing, for 
 
 #block(breakable:false)[
 / generator:
-  The part of a compiler directly responsible for the target code generation based on registerification results.
+  A software, usually a part of a compiler, directly responsible for the access code generation based on the registerification results.
 ]
 
 #block(breakable:false)[
@@ -111,6 +116,11 @@ Some of them are formally defined because they are helpful when discussing, for 
 #block(breakable:false)[
 / requester:
   The system component accessing the generated registers and requesting described functionalities.
+]
+
+#block(breakable:false)[
+/ static generator:
+  A generator producing access code that is afterward processed by a proper language toolchain or read by another software before being used.
 ]
 
 #block(breakable:false)[
