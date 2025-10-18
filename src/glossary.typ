@@ -50,6 +50,11 @@ Some of them are formally defined because they are helpful when discussing, for 
 ]
 
 #block(breakable:false)[
+/ empty proc:
+  A procedure without parameters and returns.
+]
+
+#block(breakable:false)[
 / functionality:
   The functionality of given data.
   It can be seen as a type of the data.
@@ -86,6 +91,16 @@ Some of them are formally defined because they are helpful when discussing, for 
 ]
 
 #block(breakable:false)[
+/ mixed proc:
+  A procedure with both, parameters and returns.
+]
+
+#block(breakable:false)[
+/ param proc:
+  A procedure with parameters only.
+]
+
+#block(breakable:false)[
 / provider:
   The system component containing the generated registers and providing described functionalities.
 ]
@@ -116,6 +131,11 @@ Some of them are formally defined because they are helpful when discussing, for 
 #block(breakable:false)[
 / requester:
   The system component accessing the generated registers and requesting described functionalities.
+]
+
+#block(breakable:false)[
+/ return proc:
+  A procedure with returns only.
 ]
 
 #block(breakable:false)[
