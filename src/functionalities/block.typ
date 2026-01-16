@@ -6,6 +6,12 @@ The block might also be used to limit the access for particular provider to only
 
 The block functionality has following properties:
 
+*`align`*` integer (inherited from bus align) {definitive}`
+#pad(left: 1em)[
+The align property defines the alignment of the block's address space.
+The default value is inherited from the bus align property value.
+]
+
 *`masters`*` integer (1) {definitive}`
 #pad(left: 1em)[
 The `masters` property defines the number of block master ports.

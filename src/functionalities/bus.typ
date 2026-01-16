@@ -5,6 +5,21 @@ Every valid description must have at least one bus instantiated, as the bus is t
 
 The bus functionality has following properties:
 
+*`align`*` integer (0) {definitive}`
+#pad(left: 1em)[
+The align property defines the alignment of blocks address space.
+The default value (0) means that no specific alignment is imposed.
+
+By default, all blocks within the bus inherit the align property value from the bus align property.
+However, a specific block alignment can be modified by changing the align property value within the block.
+
+A proper value of the align property might be required for some buses.
+For example, the AMBA AXI protocol specification requires that the address space of blocks (Subordinates) is aligned to 4 KB.
+In the case of 32-bit wide data bus, the align property should be set to 1024 (4096 / 32 \* 8).
+However, any value being a multiple of 1024 is correct.
+A compiler back-end supporting the AMBA AXI generator should assert that the align property value is correct.
+]
+
 *`masters`*` integer (1) {definitive}`
 #pad(left: 1em)[
 The masters property defines the number of bus master ports.
