@@ -28,16 +28,16 @@ The following code shows examples of documentation comments:
 ```fbd
 # Number of receivers
 const RECEIVERS_COUNT = 7
-Main bus
+main bus
   # Data receivers
-  Receivers [RECEIVERS_COUNT]block
+  receivers [RECEIVERS_COUNT]block
     # 0 disable receiver, 1 enable receiver
-    Enable config; width = 1
+    enable config; width = 1
     # Number of frames in the buffer
-    Frame_Count status
+    frame_count status
     # Documentation comments can consist of
     # multiple single-line comments.
-    Read_Frame proc
+    read_frame proc
       data [4]return; width = 8
 ```
 ]
@@ -70,7 +70,7 @@ The following code contains some valid and invalid identifiers:
 ```fbd
 const C_20 = 20 # Valid
 const _C20 = 20 # Invalid
-Main bus
+main bus
   cfg1 config # Valid
   1cfg config # Invalid
 ```
@@ -108,11 +108,11 @@ The number of indents always equals the number of dedents in the syntactically a
 1: type cfg_t config
 2:   atomic = false
 3:   width = 64
-4: Main bus
-5:   C cfg_t
-6:   Blk block
-7:     C cfg_t
-8:     S status
+4: main bus
+5:   c cfg_t
+6:   blk block
+7:     c cfg_t
+8:     s status
 ```
 ]
 ]

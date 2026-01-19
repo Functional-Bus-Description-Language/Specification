@@ -15,11 +15,11 @@ For example, lets consider the following bus description:
 #block(breakable:false)[
 #pad(left: 1em)[
 ```fbd
-Main bus
-  P proc
-    p param
-  S stream
-    p param
+main bus
+  p proc
+    par param
+  s stream
+    par param
 ```
 ]
 ]
@@ -29,8 +29,8 @@ The code generated for the requester, implemented in the C language, might inclu
 #block(breakable:false)[
 #pad(left: 1em)[
 ```
-int Main_P(const uint32_t p);
-int Main_S(const uint32_t * p, size_t count);
+int main_p(const uint32_t par);
+int main_s(const uint32_t * par, size_t count);
 ```
 ]
 ]

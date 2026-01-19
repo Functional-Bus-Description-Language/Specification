@@ -12,7 +12,7 @@ The provider code usually refers to the generated gateware or hardware implement
 However, implementing the provider, for example as a firmware, using the C language and a microcontroller is practically doable and valid.
 
 The description of functionalities shall be placed in files with the `.fbd` extension.
-By default, the bus named `Main` is the entry point for the description used for the code generation.
+By default, the bus named `"main"` is the entry point for the description used for the code generation.
 A compiler is free to support a parameter for changing the name of the main bus.
 
 ```

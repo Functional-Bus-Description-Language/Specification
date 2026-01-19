@@ -16,12 +16,12 @@ The following code presents a bus description with three functionalities, all ha
 #block(breakable: false)[
 #pad(left: 1em)[
 ```fbd
-Main bus
+main bus
   const ELEMENT_COUNT = 4
   const WIDTH = 8
-  C [ELEMENT_COUNT]config; width = WIDTH
-  M [ELEMENT_COUNT]mask; width = WIDTH
-  S [ELEMENT_COUNT]status; width = WIDTH
+  c [ELEMENT_COUNT]config; width = WIDTH
+  m [ELEMENT_COUNT]mask; width = WIDTH
+  s [ELEMENT_COUNT]status; width = WIDTH
 ```
 ]
 ]
@@ -131,17 +131,17 @@ type blk_t(with_status = true, mask_count) block
   S [with_status]status
   M [mask_count]mask
 
-Main bus
+main bus
   type irq_t irq; clear = "On Read"
-  I1 irq_t
-  I2 irq_t
+  i1 irq_t
+  i2 irq_t
 
-  C1 cfg_t
-  C2 cfg_t(6)
-  C3 cfg_t(width = 8)
+  c1 cfg_t
+  c2 cfg_t(6)
+  c3 cfg_t(width = 8)
 
-  Blk1 blk_t(7)
-  Blk2 blk_t(with_status = false, mask_count = 11)
+  blk1 blk_t(7)
+  blk2 blk_t(with_status = false, mask_count = 11)
 ```
 ]
 ]
@@ -157,16 +157,16 @@ Example:
 #pad(left: 1em)[
 ```fbd
 type blk_common_t block
-  C1 config
-  M1 mask
-  S1 status
-Main bus
-  Blk_C blk_common_t
-    C2 config
-  Blk_M blk_common_t
-    M2 mask
-  Blk_S blk_common_t
-    S2 status
+  c1 config
+  m1 mask
+  s1 status
+main bus
+  blk_c blk_common_t
+    c2 config
+  blk_m blk_common_t
+    m2 mask
+  blk_s blk_common_t
+    s2 status
 ```
 ]
 ]
@@ -177,19 +177,19 @@ This description is equivalent to the following description:
 #pad(left: 1em)[
 ```fbd
 type blk_common_t block
-  C1 config
-  M1 mask
-  S1 status
-type blk_C_t blk_common_t
-  C2 config
-type blk_M_t blk_common_t
-  M2 mask
-type blk_S_t blk_common_t
-  S2 status
-Main bus
-  Blk_C blk_C_t
-  Blk_M blk_M_t
-  Blk_S blk_S_t
+  c1 config
+  m1 mask
+  s1 status
+type blk_c_t blk_common_t
+  c2 config
+type blk_m_t blk_common_t
+  m2 mask
+type blk_s_t blk_common_t
+  s2 status
+main bus
+  blk_c blk_c_t
+  blk_m blk_m_t
+  blk_s blk_s_t
 ```
 ]
 ]

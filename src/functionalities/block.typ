@@ -31,11 +31,11 @@ The following example presents how to limit the scope of access for particular r
 #block(breakable: false)[
 #pad(left: 1em)[
 ```fbd
-Main bus
-  C config
-  Blk block
+main bus
+  c config
+  blk block
     masters = 2
-    S status
+    s status
 ```
 ]
 ]

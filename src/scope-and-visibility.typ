@@ -115,26 +115,26 @@ The following example presents all scopes.
 #pad(left: 1em)[
 ```fbd
 const WIDTH = 16
-Main bus
+main bus
   width = WIDTH
   const C20 = 20
-  Blk block
+  blk block
     const C30 = 30
     type cfg_t(WIDTH = WIDTH) config
       atomic = false
       width = WIDTH
-    Cfg16 cfg_t
-    Cfg20 cfg_t(C20)
-    Cfg30 cfg_t(C30)
+    cfg16 cfg_t
+    cfg20 cfg_t(C20)
+    cfg30 cfg_t(C30)
 ```
 ]
 ]
 
-The `WIDTH` constant has package scope, and it is visible at the package level, in the `Main` bus instantiation and in the `Blk` block instantiation.
+The `WIDTH` constant has package scope, and it is visible at the package level, in the `main` bus instantiation and in the `Blk` block instantiation.
 It would also be visible in the `cfg_t` type definition.
 However, the `cfg_t` type has the parameter with the same name `WIDTH`.
 As a result, only the `WIDTH` parameter is visible within the type definition.
 The `WIDTH` parameter has a default value that equals `16`.
 This is because at this point the name `WIDTH` denotes the package level `WIDTH` constant.
 Type parameters are visible inside the type definition, but not in the type parameter list.
-The `Cfg16` is thus a non-atomic config of width `16`, the `Cfg20` is a non-atomic config of width `20` and the `Cfg30` is a non-atomic config of width `30`.
+The `cfg16` is thus a non-atomic config of width `16`, the `cfg20` is a non-atomic config of width `20` and the `cfg30` is a non-atomic config of width `30`.
