@@ -258,3 +258,12 @@ A time literal is a sequence of integer literal and a time unit.
 `time_literal ::= integer_literal time_unit`
 
 Time literals are used to create values of time data type, required for example by the `delay` property.
+
+
+== Line Split
+
+As the newline character is a part of semantics, there is a need for an explicit line split element.
+The line split is the backslash character (`'\'`) placed at the end of a line.
+No extra characters, even whitespaces, are allowed after the line split.
+
+The content of the line after the line split character shall be treated as if it were placed in the preceding line.
