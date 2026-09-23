@@ -255,7 +255,7 @@ A time literal is a sequence of integer literal and a time unit.
 
 `time_unit ::= `*`ns`*` | `*`us`*` | `*`ms`*` | `*`s`*
 
-`time_literal ::= integer_literal time_unit`
+`time_literal ::= integer_literal'time_unit`
 
 Time literals are used to create values of time data type, required for example by the `delay` property.
 

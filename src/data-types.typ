@@ -224,9 +224,9 @@ All of the below property assignments are valid.
 #block(breakable:false)[
 #pad(left: 1em)[
 ```fbd
-delay = 1 s + 1 ms + 1 us + 1 ns
-delay = 5 * 60 s # Sleep for 5 minutes.
-delay = 10 ms * 4 + 7 * 8 us
+delay = 1's + 1'ms + 1'us + 1'ns
+delay = 5 * 60's # Sleep for 5 minutes.
+delay = 10'ms * 4 + 7 * 8'us
 ```
 ]
 ]
