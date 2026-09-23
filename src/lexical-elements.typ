@@ -201,14 +201,14 @@ A string literal is a sequence of zero or more UTF-8 characters enclosed by doub
 A bit string literal is a sequence of zero or more digit or meta value characters enclosed by double quotes ("") and preceded by a base specifier.
 The meta value characters are supported because of hardware description languages, that also have a concept of metalogical values.
 
-`meta_character ::= `*`-`*` | `*`U`*` | `*`W`*` | `*`X`*` | `*`Z`*
+`meta_character ::= `*`-`*` | `*`U`*` | `*`u`*` | `*`W`*` | `*`w`*` | `*`X`*` | `*`x`*` | `*`Z`*` | `*`z`*
 
 The meta characters have following meaning:
-- '-' - don't care,
-- 'U' - uninitialized,
-- 'W' - weak unknown,
-- 'X' - unknown,
-- 'Z' - high-impedance state.
+- `'-'` - don't care,
+- `'U' | 'u'` - uninitialized,
+- `'W' | 'w'` - weak unknown,
+- `'X' | 'x'`  - unknown,
+- `'Z' | 'z'` - high-impedance state.
 
 `binary_or_meta ::= binary_digit | meta_character`
 
