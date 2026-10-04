@@ -86,7 +86,7 @@ binary_operator ::=
 
 `binary_arithmetic_operator ::= `*`+`*` | `*`-`*` | `*`*`*` | `*`/`*` | `*`%`*` | `*`**`*
 
-`binary_bitwise_operator ::= `*`<<`*` | `*`>>`*
+`binary_bitwise_operator ::= `*`<<`*` | `*`>>`*` | `*`&`*` | `*`|`*` | `*`^`*
 
 `binary_comparison_operator ::= `*`==`*` | `*`!=`*` | `*`<`*` | `*`<=`*` | `*`>`*` | `*`>=`*
 
@@ -115,7 +115,7 @@ binary_operator ::=
   table.hline(stroke: (thickness: 0.1pt)),
   [\ \ `*`], [\ \ Multiplication], [Integer \ Integer \ Real \ Real \ Integer \ Time], [Integer \ Real \ Integer \ Real \ Time \ Integer], [Integer \ Real \ Real \ Real \ Time \ Time],
   table.hline(stroke: (thickness: 0.1pt)),
-  [\ `-`], [\ Division], [Integer \ Integer \ Real \ Real], [Integer \ Real \ Integer \ Real], [Real \ Real \ Real \ Real],
+  [\ `/`], [\ Division], [Integer \ Integer \ Real \ Real], [Integer \ Real \ Integer \ Real], [Real \ Real \ Real \ Real],
   table.hline(stroke: (thickness: 0.1pt)),
   [`%`], [Remainder], [Integer], [Integer], [Integer],
   table.hline(stroke: (thickness: 0.1pt)),

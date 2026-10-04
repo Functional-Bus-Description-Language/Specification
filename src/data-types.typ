@@ -91,11 +91,11 @@ Below tables present binary operation results applied to possible bit string dat
   table.hline(stroke: (thickness: 0.1pt)),
   [`U`],        [`U`], [`U`], [`U`], [`U`], [`U`], [`U`], [`U`],
   table.hline(stroke: (thickness: 0.1pt)),
-  [`W`],        [`0`], [`1`], [`X`], [`U`], [`W`], [`X`], [`W`],
+  [`W`],        [`0`], [`1`], [`W`], [`U`], [`W`], [`X`], [`W`],
   table.hline(stroke: (thickness: 0.1pt)),
   [`X`],        [`X`], [`X`], [`X`], [`U`], [`X`], [`X`], [`X`],
   table.hline(stroke: (thickness: 0.1pt)),
-  [`Z`],        [`0`], [`1`], [`X`], [`U`], [`W`], [`X`], [`Z`],
+  [`Z`],        [`0`], [`1`], [`Z`], [`U`], [`W`], [`X`], [`Z`],
 )
 ]
 
@@ -123,11 +123,11 @@ Below tables present binary operation results applied to possible bit string dat
   table.hline(stroke: (thickness: 0.1pt)),
   [`U`],        [`U`], [`U`], [`U`], [`U`], [`U`], [`U`], [`U`],
   table.hline(stroke: (thickness: 0.1pt)),
-  [`W`],        [`0`], [`1`], [`X`], [`U`], [`W`], [`X`], [`W`],
+  [`W`],        [`0`], [`1`], [`W`], [`U`], [`W`], [`X`], [`W`],
   table.hline(stroke: (thickness: 0.1pt)),
   [`X`],        [`X`], [`X`], [`X`], [`U`], [`X`], [`X`], [`X`],
   table.hline(stroke: (thickness: 0.1pt)),
-  [`Z`],        [`0`], [`1`], [`X`], [`U`], [`W`], [`X`], [`Z`],
+  [`Z`],        [`0`], [`1`], [`Z`], [`U`], [`W`], [`X`], [`Z`],
 )
 ]
 
@@ -155,11 +155,11 @@ Below tables present binary operation results applied to possible bit string dat
   table.hline(stroke: (thickness: 0.1pt)),
   [`U`],        [`U`], [`U`], [`U`], [`U`], [`U`], [`U`], [`U`],
   table.hline(stroke: (thickness: 0.1pt)),
-  [`W`],        [`0`], [`1`], [`X`], [`U`], [`W`], [`X`], [`W`],
+  [`W`],        [`0`], [`1`], [`W`], [`U`], [`W`], [`X`], [`W`],
   table.hline(stroke: (thickness: 0.1pt)),
   [`X`],        [`X`], [`X`], [`X`], [`U`], [`X`], [`X`], [`X`],
   table.hline(stroke: (thickness: 0.1pt)),
-  [`Z`],        [`0`], [`1`], [`X`], [`U`], [`W`], [`X`], [`Z`],
+  [`Z`],        [`0`], [`1`], [`Z`], [`U`], [`W`], [`X`], [`Z`],
 )
 ]
 

@@ -44,7 +44,7 @@ Examples of declarative properties include `access` or `in-trigger` properties.
 `property_assignment ::= property_identifier `*`=`*` expression`
 
 `property_assignments ::=` \
-`  property_assignments` \
+`  property_assignment` \
 `  { `*`;`*` property_assignment }` \
 `  newline`
 
@@ -55,6 +55,7 @@ Examples of declarative properties include `access` or `in-trigger` properties.
 #h(1em)
 *`access`*` | `
 *`add-enable`*` | `
+*`align`*` | `
 *`atomic`*` | `
 *`byte-write-enable`*` | `
 *`clear`*` | `
@@ -65,19 +66,20 @@ Examples of declarative properties include `access` or `in-trigger` properties.
 *`enable-reset-value`*` | `
 *`groups`*` | `
 *`init-value`*` | `
+*`in-trigger`*` | `
 #linebreak()
 #h(1em)
-*`in-trigger`*` | `
 *`masters`*` | `
 *`out-trigger`*` | `
 *`range`*` | `
 *`read-latency`*` | `
-#linebreak()
-#h(1em)
 *`read-value`*` | `
 *`reset`*` | `
+#linebreak()
+#h(1em)
 *`reset-value`*` | `
 *`size`*` | `
+*`virtual`*` | `
 *`width`*
 ]
 
